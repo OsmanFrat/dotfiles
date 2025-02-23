@@ -110,3 +110,4 @@
 
 (map! :leader
       :desc "Hızlı Commit & Push" "g q" #'my/magit-quick-commit)
+;; test
