@@ -32,15 +32,15 @@ tooltip {
     }
 
 #temperature {
-    color: cyan;
-}
-
-#temperature.critical {
-    color: red;
+    color: #A1BDCE;
 }
 
 #temperature.warning {
     color: orange;
+}
+
+#temperature.critical {
+    color: red;
 }
 
 #workspaces{
