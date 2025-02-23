@@ -2,7 +2,7 @@
 
 # Bulunduğun dizinin Git repo olup olmadığını kontrol et
 if [ ! -d ".git" ]; then
-    echo "❌ Bu dizin bir Git deposu değil!"
+    echo "❌ There is no git repo in this path!"
     exit 1
 fi
 
@@ -12,7 +12,7 @@ if [[ -n $(git status --porcelain) ]]; then
     git add .
     git commit -m "Auto commit - $(date)"
     git push origin main
-    echo "✅ Git deposu güncellendi!"
+    echo "✅ Git repo updated!"
 else
     echo "⚡ No changes to commit."
 fi
