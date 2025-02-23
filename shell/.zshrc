@@ -5,7 +5,7 @@ export EDITOR=nvim
 export VISUAL=nvim
 
 # Installation aliasses
-alias indir='sudo pacman -S'
+alias ekle='sudo pacman -S'
 alias aur='yay -S'
 alias sil='sudo pacman -R'
 alias aur-sil='yay -R'
@@ -24,6 +24,7 @@ alias ncon='nvim ~/.config/nvim/lua/plugins/init.lua'
 alias dcon='nvim ~/.config/doom/config.el'
 alias vcon='vim ~/.vimrc && source ~/.vimrc'
 alias wcon='nvim ~/.config/waybar/config.jsonc'
+alias dnscon='sudo chattr -i /etc/resolv.conf && sudo nvim /etc/resolv.conf'
 
 # python aliases
 alias p='python main.py'
