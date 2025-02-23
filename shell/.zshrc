@@ -8,6 +8,7 @@ alias aur='yay -S'
 alias sil='sudo pacman -R'
 alias aur-sil='yay -R'
 alias yedek='~/dotfiles/git-auto-commit.sh'
+alias note-yedek='~/GitHub/notes/git-auto-commit.sh'
 
 alias n='nvim'
 alias v='vim'
