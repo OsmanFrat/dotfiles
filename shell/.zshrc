@@ -11,7 +11,7 @@ alias aur-sil='yay -R'
 # ozu custom scripts
 alias yedek='~/dotfiles/git-auto-commit.sh'
 alias note-yedek='~/GitHub/notes/git-auto-commit.sh'
-alias create-repo='~/scripts/create-repo.sh'
+alias create-repo='~/dotfiles/scripts/create-repo.sh'
 
 alias n='nvim'
 alias v='vim'
