@@ -16,7 +16,6 @@ alias fast-commit='~/dotfiles/scripts/git-auto-commit.sh'
 
 alias n='nvim'
 alias v='vim'
-alias dcon='nvim ~/.config/doom/config.el'
 alias ovim='nvim $(fzf)'
 alias cf='cat $(fzf) | wl-copy'
 
