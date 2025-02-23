@@ -25,7 +25,7 @@ alias dcon='nvim ~/.config/doom/config.el'
 alias vcon='vim ~/.vimrc && source ~/.vimrc'
 alias wcon='nvim ~/.config/waybar/config.jsonc'
 
-# python alias
+# python aliases
 alias p='python main.py'
 alias py='python'
 alias penv='python -m venv venv'
@@ -34,15 +34,12 @@ alias senv='source venv/bin/activate'
 # General
 alias n='nvim'
 alias v='vim'
-alias fontr='sudo fc-cache -f -v'
 alias c='clear'
 alias ls='lsd'
-alias ovim='nvim $(fzf)'
 alias cf='cat $(fzf) | wl-copy'
-
+alias fontr='sudo fc-cache -f -v'
 
 # System path idk xd
 export PATH=$PATH:/usr/local/bin/
 export PATH="$HOME/.config/emacs/bin:$PATH"
-# Created by `pipx` on 2025-02-22 15:42:32
 export PATH="$PATH:/home/ozu/.local/bin"
