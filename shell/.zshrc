@@ -20,6 +20,7 @@ alias dcon='nvim ~/.config/doom/config.el'
 alias ovim='nvim $(fzf)'
 alias cf='cat $(fzf) | wl-copy'
 
+# Open settings
 alias zcon='nvim ~/.zshrc && source ~/.zshrc'
 alias hcon='nvim ~/.config/hypr/hyprland.conf && hyprctl reload'
 alias fontr='sudo fc-cache -f -v'
