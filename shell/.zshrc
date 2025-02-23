@@ -7,6 +7,7 @@ alias indir='sudo pacman -S'
 alias aur='yay -S'
 alias sil='sudo pacman -R'
 alias aur-sil='yay -R'
+alias backup-dotfiles='~/dotfiles/git-auto-commit.sh'
 
 alias n='nvim'
 alias v='vim'
