@@ -31,6 +31,10 @@ tooltip {
 
     }
 
+#temperature {
+    color: cyan;
+}
+
 #temperature.critical {
     color: red;
 }
@@ -39,9 +43,6 @@ tooltip {
     color: orange;
 }
 
-#temperature {
-    color: white; /* Normal sıcaklıkta beyaz */
-}
 #workspaces{
     background: rgba(23, 23, 23, 0.0);
     box-shadow: none;
