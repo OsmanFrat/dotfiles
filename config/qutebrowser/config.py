@@ -1,7 +1,12 @@
 config.load_autoconfig(False)  # Otomatik yapılandırmayı kapat
+
 c.url.searchengines = {
-    'DEFAULT': 'https://www.google.com/search?q={}'
+    'DEFAULT': 'https://www.google.com/search?q={}',
+    'ddg': 'https://duckduckgo.com/?q={}',
+    'yt': 'https://www.youtube.com/results?search_query={}',
+    'gh': 'https://github.com/search?q={}',
 }
+
 c.url.start_pages = "file:///home/ozu/GitHub/ozu-web/index.html"
 c.content.javascript.clipboard = 'access'
 config.bind('jk', 'mode-leave', mode='insert')
