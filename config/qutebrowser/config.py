@@ -18,3 +18,4 @@ c.content.blocking.adblock.lists = [
     "https://easylist.to/easylist/easyprivacy.txt",
     "https://secure.fanboy.co.nz/fanboy-annoyance.txt"
 ]
+
