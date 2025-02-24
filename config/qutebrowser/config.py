@@ -19,6 +19,7 @@ c.content.blocking.adblock.lists = [
     "https://secure.fanboy.co.nz/fanboy-annoyance.txt"
 ]
 
+# close audio and camera recording and youtube autoplay 
 c.content.autoplay = False
 c.content.media.audio_capture = False
 c.content.media.video_capture = False
