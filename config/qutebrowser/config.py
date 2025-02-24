@@ -2,7 +2,6 @@ config.load_autoconfig(False)  # Otomatik yapılandırmayı kapat
 
 c.url.searchengines = {
     'DEFAULT': 'https://www.google.com/search?q={}',
-    'ddg': 'https://duckduckgo.com/?q={}',
     'yt': 'https://www.youtube.com/results?search_query={}',
     'gh': 'https://github.com/search?q={}',
 }
