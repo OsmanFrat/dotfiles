@@ -24,3 +24,5 @@ c.content.media.audio_capture = False
 c.content.media.video_capture = False
 c.content.media.audio_video_capture = False
 
+# use ; semicolon as : colon to run commands
+# config.bind(':', 'repeat-separator')
