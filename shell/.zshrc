@@ -6,6 +6,7 @@ export VISUAL=nvim
 
 # Installation aliasses
 alias ekle='sudo pacman -S'
+alias temizle='sudo pacman -Rns $(pacman -Qtdq)'
 alias aur='yay -S'
 alias sil='sudo pacman -R'
 alias aur-sil='yay -R'
@@ -20,7 +21,8 @@ alias fast-commit='~/dotfiles/scripts/git-auto-commit.sh'
 alias zcon='nvim ~/.zshrc && source ~/.zshrc'
 alias hcon='nvim ~/.config/hypr/hyprland.conf && hyprctl reload'
 alias ycon='nvim ~/.config/yazi/yazi.toml'
-alias ncon='nvim ~/.config/nvim/'
+# alias ncon='nvim ~/.config/nvim/'
+alias ncon='nvim ~/.config/nvim/init.lua +"lua require(\"nvim-tree.api\").tree.open({ path = \"~/.config/nvim\" })"'
 alias dcon='nvim ~/.config/doom/config.el'
 alias vcon='vim ~/.vimrc && source ~/.vimrc'
 alias wcon='nvim ~/.config/waybar/config.jsonc'
