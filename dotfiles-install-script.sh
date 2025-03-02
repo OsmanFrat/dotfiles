@@ -15,3 +15,7 @@ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/ya
 
 echo "Installing yay apps..."
 yay -S ani-cli hyprshot
+
+echo "Installing doom emacs..."
+git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
+~/.config/emacs/bin/doom install
