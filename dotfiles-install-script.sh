@@ -51,6 +51,9 @@ systemctl --user daemon-reload || { echo "Daemon reload failed"; exit 1; }
 systemctl --user enable emacs.service || { echo "Failed to enable emacs service"; exit 1; }
 systemctl --user start emacs || { echo "Failed to start emacs service"; exit 1; }
 
+# Cron servisini etkinleştir ve başlat
+sudo systemctl enable cronie --now || { echo "Cronie service failed"; exit 1; }
+
 echo "Doom emacs installed"
 echo "Installation completed!"
 
