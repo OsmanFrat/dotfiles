@@ -44,10 +44,11 @@ Restart=always
 [Install]
 WantedBy=default.target" > ~/.config/systemd/user/emacs.service
 
-# Systemd servisini başlatma ve etkinleştirme
 systemctl --user daemon-reload
 systemctl --user enable emacs
 systemctl --user start emacs
+
+echo "Doom emacs installed"
 
 echo "Installation completed!"
 
