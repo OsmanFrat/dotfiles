@@ -6,7 +6,7 @@ c.url.searchengines = {
     'gh': 'https://github.com/search?q={}',
 }
 
-c.url.start_pages = "file:///home/ozu/GitHub/ozu-web/index.html"
+c.url.start_pages = "file:///home/ozu/github/ozu-web/index.html"
 c.content.javascript.clipboard = 'access'
 config.bind('jk', 'mode-leave', mode='insert')
 

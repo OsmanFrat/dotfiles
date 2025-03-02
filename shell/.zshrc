@@ -6,9 +6,10 @@ export VISUAL=nvim
 
 # Installation aliasses
 alias ekle='sudo pacman -S'
-alias temizle='sudo pacman -Rns $(pacman -Qtdq)'
-alias aur='yay -S'
 alias sil='sudo pacman -R'
+alias temizle='sudo pacman -Rns $(pacman -Qtdq)'
+alias guncelle='sudo pacman -Syu'
+alias aur='yay -S'
 alias aur-sil='yay -R'
 
 # Custom scripts of ozu 
