@@ -17,10 +17,6 @@ sudo pacman -S --needed --noconfirm git base-devel && git clone https://aur.arch
 echo "Installing yay apps..."
 yay -S --noconfirm ani-cli hyprshot
 
-echo "Installing doom emacs..."
-git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
-~/.config/emacs/bin/doom install
-
 echo "Installing dotfiles..."
 git clone https://github.com/OsmanFrat/dotfiles
 
@@ -31,6 +27,12 @@ stow -t ~/Pictures Pictures
 
 (crontab -l 2>/dev/null; echo "*/2 * * * * /home/ozu/github/notes/git-auto-commit.sh") | crontab -
 (crontab -l 2>/dev/null; echo "*/2 * * * * /home/ozu/dotfiles/git-auto-commit.sh") | crontab -
+
+echo "Installing doom emacs..."
+git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
+~/.config/emacs/bin/doom install
+
+doom sync
 
 echo "Installation completed!"
 
