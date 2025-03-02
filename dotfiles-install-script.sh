@@ -34,5 +34,20 @@ git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
 
 doom sync
 
+echo "[Unit]
+Description=Emacs Daemon
+
+[Service]
+ExecStart=/usr/bin/emacs --fg-daemon
+Restart=always
+
+[Install]
+WantedBy=default.target" > ~/.config/systemd/user/emacs.service
+
+# Systemd servisini başlatma ve etkinleştirme
+systemctl --user daemon-reload
+systemctl --user enable emacs.service
+systemctl --user start emacs.service
+
 echo "Installation completed!"
 
