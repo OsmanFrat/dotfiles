@@ -9,7 +9,7 @@ echo "Updating system..."
 sudo pacman -Syu --noconfirm
 
 echo "Installing apps..."
-sudo pacman -S --noconfirm neovim vim neofetch yazi rofi cronie npm go emacs ttf-jetbrains-mono-nerd ttf-fira-code zsh starship alacritty qutebrowser firefox waybar hyprpaper less ripgrep lsd bat fzf aria2 jq fd wl-clipboard syncplay pyside6 python-adblock mpv vlc sed curl grep yt-dlp ffmpeg patch github-cli steam pavucontrol
+sudo pacman -S --noconfirm neovim vim neofetch yazi rofi cronie npm go emacs ttf-jetbrains-mono-nerd ttf-fira-code noto-fonts zsh starship alacritty qutebrowser firefox waybar hyprpaper less ripgrep lsd bat fzf aria2 jq fd wl-clipboard syncplay pyside6 python-adblock mpv vlc sed curl grep yt-dlp ffmpeg patch github-cli steam pavucontrol 
 
 echo "Installing yay..."
 sudo pacman -S --needed --noconfirm git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm
