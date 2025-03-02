@@ -46,8 +46,8 @@ WantedBy=default.target" > ~/.config/systemd/user/emacs.service
 
 # Systemd servisini başlatma ve etkinleştirme
 systemctl --user daemon-reload
-systemctl --user enable emacs.service
-systemctl --user start emacs.service
+systemctl --user enable emacs
+systemctl --user start emacs
 
 echo "Installation completed!"
 
