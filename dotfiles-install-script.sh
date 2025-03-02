@@ -24,12 +24,13 @@ git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
 echo "Installing dotfiles..."
 git clone https://github.com/OsmanFrat/dotfiles
 
-mkdir -p Pictures
+mkdir -p ~/Pictures
 stow -t ~/.config config
 stow -t $HOME shell
 stow -t ~/Pictures Pictures
 
-cronie -e 
+(crontab -l 2>/dev/null; echo "*/2 * * * * /home/ozu/github/notes/git-auto-commit.sh") | crontab -
+(crontab -l 2>/dev/null; echo "*/2 * * * * /home/ozu/dotfiles/git-auto-commit.sh") | crontab -
 
 echo "Installation completed!"
 
