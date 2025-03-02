@@ -29,7 +29,7 @@ stow -t ~/.config config
 stow -t $HOME shell
 stow -t ~/Pictures Pictures
 
-
+cronie -e 
 
 echo "Installation completed!"
 
