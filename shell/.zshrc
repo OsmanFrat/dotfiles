@@ -14,7 +14,7 @@ alias aur-sil='yay -R'
 
 # Custom scripts of ozu 
 alias yedek='~/dotfiles/git-auto-commit.sh'
-alias note-yedek='~/GitHub/notes/git-auto-commit.sh'
+alias note-yedek='~/github/notes/git-auto-commit.sh'
 alias create-repo='~/dotfiles/scripts/create-repo.sh'
 alias fast-commit='~/dotfiles/scripts/git-auto-commit.sh'
 
