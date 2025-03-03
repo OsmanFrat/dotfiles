@@ -8,7 +8,7 @@ c.url.searchengines = {
 
 c.url.start_pages = "file:///home/ozu/github/ozu-web/index.html"
 c.content.javascript.clipboard = 'access'
-config.bind('jk', 'mode-leave', mode='insert')
+# config.bind('jk', 'mode-leave', mode='insert', sequence=True)
 
 
 c.content.blocking.method = 'adblock'
