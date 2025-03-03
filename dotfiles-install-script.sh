@@ -5,10 +5,6 @@ echo "Installation started..."
 
 cd ~
 
-echo "Configuring Git..."
-git config --global user.name "OsmanFrat"
-git config --global user.email "osmanfrat@yahoo.com"
-
 echo "Backing up existing configurations..."
 mkdir -p ~/dotfiles_backup
 cp -r ~/.config ~/dotfiles_backup/config_$(date +%F)
