@@ -70,4 +70,4 @@ systemctl --user start emacs
 echo "Doom emacs installed"
 
 echo "Installation completed!"
-
+echo "Please restart your computer."
