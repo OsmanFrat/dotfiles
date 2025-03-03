@@ -39,7 +39,8 @@ alias n='nvim'
 alias v='vim'
 alias c='clear'
 alias ls='lsd'
-alias cf='cat $(fzf) | wl-copy'
+# alias cf='cat $(fzf) | wl-copy'
+alias cf='fd . . --type f -H | fzf --preview "bat --style=numbers --color=always --theme=TwoDark {}" --preview-window=right:50% | xargs -r cat | wl-copy'
 alias fontr='sudo fc-cache -f -v'
 
 # System path idk xd
