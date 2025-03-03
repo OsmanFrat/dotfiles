@@ -1,5 +1,5 @@
 eval "$(starship init zsh)"
-
+#https://youtu.be/Vj_wCVipuPo?si=mBaIAg9nVRh6pL9H
 # System default appps
 export EDITOR=nvim
 export VISUAL=nvim
