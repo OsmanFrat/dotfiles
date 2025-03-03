@@ -5,6 +5,17 @@ echo "Installation started..."
 
 cd ~
 
+echo "Configuring Git..."
+
+read -p "Enter your GitHub username: " git_username
+read -p "Enter your GitHub email: " git_email
+
+git config --global user.name "$git_username"
+git config --global user.email "$git_email"
+
+echo "Git configuration completed."
+echo "Set your new ssh key when installation is ower."
+
 echo "Backing up existing configurations..."
 mkdir -p ~/dotfiles_backup
 cp -r ~/.config ~/dotfiles_backup/config_$(date +%F)
