@@ -45,7 +45,7 @@ echo "Installing yay..."
 sudo pacman -S --needed --noconfirm git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm
 
 echo "Installing yay apps..."
-yay -S --noconfirm ani-cli hyprshot
+yay -S --noconfirm ani-cli hyprshot clipman
 
 echo "Changing shell to zsh..."
 if chsh -s /bin/zsh $(whoami); then
