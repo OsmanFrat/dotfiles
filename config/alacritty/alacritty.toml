@@ -6,7 +6,8 @@ size = 16
 normal = {family = "JetBrains Mono Nerd Font", style = "Regular"}
 
 [cursor]
-shape = "Beam"
+style = { shape = "Beam", blinking = "On" }
+thickness = 0.2
 
 # Default colors
 [colors.primary]
