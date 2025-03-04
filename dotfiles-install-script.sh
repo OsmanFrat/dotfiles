@@ -54,6 +54,9 @@ else
     echo "Failed to change shell. Try running 'chsh -s /bin/zsh' manually."
 fi
 
+echo "Adding history settings for zsh..."
+mkdir -p ~/.zsh_history
+
 echo "Adding cron jobs..."
 (crontab -l 2>/dev/null; echo "*/2 * * * * /home/ozu/github/notes/git-auto-commit.sh") | crontab -
 (crontab -l 2>/dev/null; echo "*/2 * * * * /home/ozu/dotfiles/git-auto-commit.sh") | crontab -
