@@ -5,6 +5,9 @@ program = "/bin/zsh"
 size = 16
 normal = {family = "JetBrains Mono Nerd Font", style = "Regular"}
 
+[cursor]
+shape = "Beam"
+
 # Default colors
 [colors.primary]
 background = '#303446' # base
