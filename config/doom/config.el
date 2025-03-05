@@ -111,3 +111,10 @@
 (map! :leader
       :desc "Hızlı Commit & Push" "g q" #'my/magit-quick-commit)
 ;; test
+
+
+(after! recentf
+  (setq recentf-save-file (concat doom-cache-dir "recentf")
+        recentf-auto-cleanup 'never
+        recentf-max-saved-items 100)
+  (recentf-mode 1))
