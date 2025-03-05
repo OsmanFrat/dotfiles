@@ -17,7 +17,7 @@ export VISUAL=nvim
 # Installation aliasses
 alias ekle='sudo pacman -S'
 alias sil='sudo pacman -R'
-alias temizle='sudo pacman -Rns $(pacman -Qtdq)'
+alias pacman-temizlik='sudo pacman -Rns $(pacman -Qtdq)'
 alias guncelle='sudo pacman -Syu'
 alias aur='yay -S'
 alias aur-sil='yay -R'
