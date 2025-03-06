@@ -4,15 +4,10 @@
 add_newline = false
 
 # Ana prompt formatı (batarya en solda, diğer her şey ortada)
-format = """\
-$all$character\
-"""
+format = "$all$character"
 
 # Sağ tarafta gösterilecek modüller
-right_format = """\
-$battery\
-$time\
-"""
+right_format = "$battery$time"
 
 command_timeout = 1000
 
