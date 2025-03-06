@@ -14,7 +14,7 @@ right_format = """\
 $time\
 """
 
-command_timeout = 1000
+# command_timeout = 1000
 
 # Battery modülü (en solda olacak)
 [battery]
