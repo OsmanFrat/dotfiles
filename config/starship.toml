@@ -4,7 +4,7 @@
 # Inserts a blank line between shell prompts
 add_newline = false
 
-format = '$all$character$battery$time'
+# format = '$all$character$battery$time'
 
 command_timeout = 1000
 # # Replace the '❯' symbol in the prompt with '➜'
