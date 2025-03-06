@@ -1,16 +1,33 @@
-# Get editor completions based on the config schema
+
 "$schema" = 'https://starship.rs/config-schema.json'
 
 # Inserts a blank line between shell prompts
 add_newline = false
 
-# format = '$all$character$battery$time'
+# Ana prompt formatı (batarya en solda, diğer her şey ortada)
+format = """\
+$battery$all$character\
+"""
+
+# Sağ tarafta gösterilecek modüller
+right_format = """\
+$time\
+"""
 
 command_timeout = 1000
-# # Replace the '❯' symbol in the prompt with '➜'
-# [character] # The name of the module we are configuring is 'character'
-# success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
-#
-# Disable the package module, hiding it from the prompt completely
+
+# Battery modülü (en solda olacak)
+[battery]
+disabled = false
+
+# Time modülü (sağda olacak)
+[time]
+disabled = false
+format = "[$time]($style) "
+time_format = "%H:%M:%S"  # 24 saat formatı
+style = "bold yellow"
+
+# Package modülü devre dışı
 [package]
 disabled = true
+
