@@ -1,17 +1,9 @@
 # Get editor completions based on the config schema
-"$schema" = 'https://starship.rs/config-schema.json
+"$schema" = 'https://starship.rs/config-schema.json'
 
 # Inserts a blank line between shell prompts
 add_newline = false
 
-# format = '$all$character$battery$time'
-
-command_timeout = 1000
-# # Replace the '❯' symbol in the prompt with '➜'
-# [character] # The name of the module we are confi
-# success_symbol = '[➜](bold green)' # The 'success
-green'
-#
-# Disable the package module, hiding it from the pr
+# Disable the package module, hiding it from the prompt completely
 [package]
 disabled = true
