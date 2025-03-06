@@ -6,28 +6,35 @@ add_newline = false
 
 # Ana prompt formatı (batarya en solda, diğer her şey ortada)
 format = """\
-$battery$all$character\
+$all$character\
 """
 
 # Sağ tarafta gösterilecek modüller
 right_format = """\
+$battery\
 $time\
 """
 
-# command_timeout = 1000
+command_timeout = 1000
 
-# Battery modülü (en solda olacak)
+# Batarya modülü (renkli ve sembollü)
 [battery]
 disabled = false
+format = "[$symbol$percentage]($style) "
 
-# Time modülü (sağda olacak)
-[time]
-disabled = false
-format = "[$time]($style) "
-time_format = "%H:%M:%S"  # 24 saat formatı
+[[battery.display]]  # %50'nin üstü -> Yeşil
+threshold = 50
+style = "bold green"
+
+[[battery.display]]  # %50 - %15 arası -> Sarı
+threshold = 15
 style = "bold yellow"
 
-# Package modülü devre dışı
-[package]
-disabled = true
+[[battery.display]]  # %15 - %1 arası -> Kırmızı
+threshold = 1
+style = "bold red"
+
+full_symbol = "🔋 "       # Batarya dolu
+charging_symbol = "⚡ "    # Şarj oluyor
+discharging_symbol = "🔻 " # Şarj olmuyor
 
