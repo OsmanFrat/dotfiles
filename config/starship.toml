@@ -1,34 +1,17 @@
-"$schema" = 'https://starship.rs/config-schema.json'
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json
 
 # Inserts a blank line between shell prompts
 add_newline = false
 
-# Ana prompt formatı (batarya en solda, diğer her şey ortada)
-format = "$all$character"
-
-# Sağ tarafta gösterilecek modüller
-right_format = "$battery$time"
+# format = '$all$character$battery$time'
 
 command_timeout = 1000
-
-# Batarya modülü (renkli ve sembollü)
-[battery]
-disabled = false
-format = "[$symbol$percentage]($style) "
-full_symbol = "🔋 "       # Batarya dolu
-charging_symbol = "⚡ "    # Şarj oluyor
-discharging_symbol = "🔻 " # Şarj olmuyor
-
-[[battery.display]]  # %50'nin üstü -> Yeşil
-threshold = 50
-style = "bold green"
-
-[[battery.display]]  # %50 - %15 arası -> Sarı
-threshold = 15
-style = "bold yellow"
-
-[[battery.display]]  # %15 - %1 arası -> Kırmızı
-threshold = 1
-style = "bold red"
-
-
+# # Replace the '❯' symbol in the prompt with '➜'
+# [character] # The name of the module we are confi
+# success_symbol = '[➜](bold green)' # The 'success
+green'
+#
+# Disable the package module, hiding it from the pr
+[package]
+disabled = true
