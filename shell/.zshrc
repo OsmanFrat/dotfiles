@@ -12,12 +12,21 @@ setopt SHARE_HISTORY
 
 function fh() {
   local cmd
-  cmd=$(history | tac | fzf | awk '{ $1=""; print $0 }' | sed 's/^ //')
+  cmd=$(tac ~/.zsh_history | fzf | awk '{ $1=""; print $0 }' | sed 's/^ //')
   if [[ -n "$cmd" ]]; then
     # Komutu terminalde yazdır ve komut satırında görünsün
     print -z "$cmd"
   fi
 }
+#
+# function fh() {
+#   local cmd
+#   cmd=$(history | tac | fzf | awk '{ $1=""; print $0 }' | sed 's/^ //')
+#   if [[ -n "$cmd" ]]; then
+#     # Komutu terminalde yazdır ve komut satırında görünsün
+#     print -z "$cmd"
+#   fi
+# }
 
 # System default appps
 export EDITOR=nvim
