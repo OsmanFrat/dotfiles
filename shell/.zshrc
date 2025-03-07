@@ -14,7 +14,6 @@ function fh() {
   local cmd
   cmd=$(tac ~/.zsh_history | fzf | awk '{ $1=""; print $0 }' | sed 's/^ //')
   if [[ -n "$cmd" ]]; then
-    # Komutu terminalde yazdır ve komut satırında görünsün
     print -z "$cmd"
   fi
 }
