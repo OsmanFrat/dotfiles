@@ -12,7 +12,7 @@ setopt SHARE_HISTORY
 
 function fh() {
   local cmd
-  cmd=$(tac ~/.zsh_history | fzf | awk '{ $1=""; print $0 }' | sed 's/^ //')
+  cmd=$(fc -ln 1 | fzf)
   if [[ -n "$cmd" ]]; then
     print -z "$cmd"
   fi
