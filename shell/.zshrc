@@ -10,23 +10,6 @@ setopt HIST_IGNORE_DUPS
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 
-function fh() {
-  local cmd
-  cmd=$(fc -ln 1 | fzf)
-  if [[ -n "$cmd" ]]; then
-    print -z "$cmd"
-  fi
-}
-#
-# function fh() {
-#   local cmd
-#   cmd=$(history | tac | fzf | awk '{ $1=""; print $0 }' | sed 's/^ //')
-#   if [[ -n "$cmd" ]]; then
-#     # Komutu terminalde yazdır ve komut satırında görünsün
-#     print -z "$cmd"
-#   fi
-# }
-
 # System default appps
 export EDITOR=nvim
 export VISUAL=nvim
