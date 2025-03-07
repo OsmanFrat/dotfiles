@@ -10,6 +10,15 @@ setopt HIST_IGNORE_DUPS
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 
+function fh() {
+  local cmd
+  cmd=$(history | tac | fzf | awk '{ $1=""; print $0 }' | sed 's/^ //')
+  if [[ -n "$cmd" ]]; then
+    # Komutu terminalde yazdır ve komut satırında görünsün
+    print -z "$cmd"
+  fi
+}
+
 # System default appps
 export EDITOR=nvim
 export VISUAL=nvim
@@ -52,6 +61,7 @@ alias ls='lsd'
 # alias cf='cat $(fzf) | wl-copy'
 alias cf='fd . . --type f -H | fzf --preview "bat --style=numbers --color=always --theme=TwoDark {}" --preview-window=right:50% | xargs -r cat | wl-copy'
 alias fontr='sudo fc-cache -f -v'
+
 
 # yt-dlp
 alias yt='function _yt(){
