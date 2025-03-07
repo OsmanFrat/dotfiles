@@ -9,6 +9,7 @@ SAVEHIST=10000
 setopt HIST_IGNORE_DUPS
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
+setopt HIST_SAVE_NO_DUPS
 
 # System default appps
 export EDITOR=nvim
