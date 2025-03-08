@@ -159,15 +159,6 @@
       "format": "{name}"
     },
 
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "rotate": 0,
-        "format-icons": {
-            "activated": "󰥔",
-            "deactivated": ""
-        }
-    },
-
     "clock": {
         "format": "{:%b %d | %H:%M | %A}",
         "rotate": 0,
