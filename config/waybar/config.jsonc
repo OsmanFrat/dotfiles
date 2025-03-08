@@ -22,6 +22,16 @@
 	"modules-center": ["custom/padd","custom/l_end","custom/r_end","custom/padd","clock"],
 	"modules-right": ["custom/padd","custom/l_end","group/expand","network","group/expand-3","group/expand-2","group/expand-4","memory","cpu","temperature", "custom/notification", "custom/power"],
 
+
+// sourced from modules based on config.ctl //
+
+"custom/led": {
+    "format": "<span color='#021c18'>󰍿</span> <span color='#313436'></span> ",
+    "format-alt": "󰍿 <span color='#bbc2c7'></span> ",
+    "on-click": "~/mouse.sh",
+    "tooltip": false
+},
+
 "upower": {
      "icon-size": 20,
       "format": "",
@@ -67,6 +77,20 @@
     "max-length": 10
 },
 
+
+"mpris": {
+	"format": "{player_icon} {dynamic}",
+	"format-paused": "<span color='grey'>{status_icon} {dynamic}</span>",
+	"max-length": 50,
+	"player-icons": {
+		"default": "⏸",
+		"mpv": "🎵"
+	},
+	"status-icons": {
+		"paused": "▶" 
+	}
+	// "ignored-players": ["firefox"]
+},
 "tray": {
         "icon-size": 16,
         "rotate": 0,
@@ -88,6 +112,15 @@
  "format": "󰅃",
  "rotate": 90
  },
+ 
+
+  "hyprland/window": {  
+//"format": "{}"   // <--- these is the default value  
+"format": "<span  weight='bold' >{class}</span>",
+ "max-length": 120,
+ "icon": false,
+ "icon-size": 13
+},
 
     "custom/power": {
         "format": "@{}",
