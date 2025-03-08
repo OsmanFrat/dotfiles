@@ -22,16 +22,6 @@
 	"modules-center": ["custom/padd","custom/l_end","custom/r_end","custom/padd","clock"],
 	"modules-right": ["custom/padd","custom/l_end","group/expand","network","group/expand-3","group/expand-2","group/expand-4","memory","cpu","temperature", "custom/notification", "custom/power"],
 
-
-// sourced from modules based on config.ctl //
-
-"custom/led": {
-    "format": "<span color='#021c18'>󰍿</span> <span color='#313436'></span> ",
-    "format-alt": "󰍿 <span color='#bbc2c7'></span> ",
-    "on-click": "~/mouse.sh",
-    "tooltip": false
-},
-
 "upower": {
      "icon-size": 20,
       "format": "",
@@ -77,20 +67,6 @@
     "max-length": 10
 },
 
-
-"mpris": {
-	"format": "{player_icon} {dynamic}",
-	"format-paused": "<span color='grey'>{status_icon} {dynamic}</span>",
-	"max-length": 50,
-	"player-icons": {
-		"default": "⏸",
-		"mpv": "🎵"
-	},
-	"status-icons": {
-		"paused": "▶" 
-	}
-	// "ignored-players": ["firefox"]
-},
 "tray": {
         "icon-size": 16,
         "rotate": 0,
@@ -112,36 +88,6 @@
  "format": "󰅃",
  "rotate": 90
  },
- 
-
-"custom/notification": {
-    "tooltip": false,
-    "format": "{icon}",
-    "format-icons": {
-      "notification": "󰅸",
-      "none": "󰂜",
-      "dnd-notification": "󰅸",
-      "dnd-none": "󱏨",
-      "inhibited-notification": "󰅸",
-      "inhibited-none": "󰂜",
-      "dnd-inhibited-notification": "󰅸",
-      "dnd-inhibited-none": "󱏨"
-    },
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click-right": "swaync-client -d -sw",
-    "on-click": "swaync-client -t -sw",
-    "escape": true
-  },
-  
-  "hyprland/window": {  
-//"format": "{}"   // <--- these is the default value  
-"format": "<span  weight='bold' >{class}</span>",
- "max-length": 120,
- "icon": false,
- "icon-size": 13
-},
 
     "custom/power": {
         "format": "@{}",
@@ -263,48 +209,6 @@
          "default": ["", "", ""]
         }
     },
-
-    "pulseaudio#microphone": {
-        "format": "{format_source}",
-        "rotate": 0,
-        "format-source": "",
-        "format-source-muted": "",
-        "on-click": "pavucontrol -t 4",
-        "on-click-middle": "volumecontrol.sh -i m",
-        "on-scroll-up": "volumecontrol.sh -i i",
-        "on-scroll-down": "volumecontrol.sh -i d",
-        "tooltip-format": "{format_source} {source_desc} // {source_volume}%",
-        "scroll-step": 5
-    },
-
-    "custom/notifications": {
-        "tooltip": false,
-        "format": "{icon} {}",
-        "rotate": 0,
-        "format-icons": {
-            "chat-notification": "󱋊<span foreground='white'><sup></sup></span>",
-            "warning-notification": "󱨪<span foreground='yellow'><sup></sup></span>",
-            "error-notification": "󱨪<span foreground='red'><sup></sup></span>",
-            "network-notification": "󱂇<span foreground='white'><sup></sup></span>",
-            "battery-notification": "󰁺<span foreground='white'><sup></sup></span>",
-            "update-notification": "󰚰<span foreground='white'><sup></sup></span>",
-            "music-notification": "󰝚<span foreground='white'><sup></sup></span>",
-            "volume-notification": "󰕿<span foreground='white'><sup></sup></span>",
-            "notification": "<span foreground='white'><sup></sup></span>",
-            "none": ""
-        },
-        "return-type": "json",
-        "exec-if": "which dunstctl",
-        "exec": "notifications.py",
-        "on-click": "sleep 0.1 && dunstctl history-pop",
-        "on-click-middle": "dunstctl history-clear",
-        "on-click-right": "dunstctl close-all",
-        "interval": 1,
-        "tooltip": true,
-        "escape": true
-    },
-
-   // modules for padding //
 
     "custom/l_end": {
         "format": " ",
