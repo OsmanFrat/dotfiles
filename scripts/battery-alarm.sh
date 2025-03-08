@@ -6,6 +6,6 @@ charging_status=$(upower -i $(upower -e | grep 'BAT') | grep state | awk '{print
 
 if [ "$charging_status" != "charging" ] && [ "$battery_percent" -le 20 ]; then
   notify-send -u critical "Low battery! $battery_percent %"
-  mpv /home/ozu/dotfiles/scripts/2.m4a
+  # mpv /home/ozu/dotfiles/scripts/2.m4a
 fi
 
