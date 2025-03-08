@@ -155,24 +155,8 @@
     "format": "|"
     },
     
-
-
-    
-    
 "hyprland/workspaces": {
-	"format": "{name}",
-	//"format-icons": {
-	//"default": "",
-	//"active": ""
-	//}
-},
-
-"wlr/workspaces": {
-    "persistent-workspaces": {
-        "3": [], // Always show a workspace with name '3', on all outputs if it does not exists
-        "4": ["eDP-1"], // Always show a workspace with name '4', on output 'eDP-1' if it does not exists
-        "5": ["eDP-1", "DP-2"] // Always show a workspace with name '5', on outputs 'eDP-1' and 'DP-2' if it does not exists
-    }
+	"format": "{name}"
 },
 
 
@@ -337,7 +321,7 @@
         "rotate": 0,
         "format-charging": "<span color='#a6d189'>󱐋</span>",
         "format-plugged": "󰂄",
-        "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
+        //"format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
         "on-click-right": "pkill waybar & hyprctl dispatch exec waybar"
     
     },
@@ -424,7 +408,6 @@
         "format": "{icon} {}",
         "rotate": 0,
         "format-icons": {
-            "email-notification": "<span foreground='white'><sup></sup></span>",
             "chat-notification": "󱋊<span foreground='white'><sup></sup></span>",
             "warning-notification": "󱨪<span foreground='yellow'><sup></sup></span>",
             "error-notification": "󱨪<span foreground='red'><sup></sup></span>",
@@ -447,19 +430,7 @@
         "escape": true
     },
 
-    "custom/keybindhint": {
-        "format": " ",
-        "rotate": 0,
-        "on-click": "keybinds_hint.sh"
-    },
-    
-"custom/expand": {
-        "on-click":"~/.config/hypr/scripts/expand_toolbar",
-        "format":"{}",
-        "exec":"~/.config/hypr/scripts/tools/expand arrow-icon"
-    },
-
-// modules for padding //
+   // modules for padding //
 
     "custom/l_end": {
         "format": " ",
