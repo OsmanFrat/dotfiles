@@ -7,17 +7,14 @@
 #custom-notification {
   font-family: "JetBrains Mono Nerd Font";
   font-size: 17px;
- color: #A1BDCE;
- margin: 2px 0px 0px 0px;
+  color: #A1BDCE;
+  margin: 2px 0px 0px 0px;
 }
 
 window#waybar {
-    background: #0F0F17; 
-  /*  border-radius: 15px; */
- /*  border: 2px solid #124323; */
-/* border: 0px solid #A1BDCE; */
- border: 3px solid rgba(255, 255, 255, 0.1);
- border-radius: 10px;
+  background: #0F0F17; 
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
 }
 
 
@@ -27,8 +24,6 @@ tooltip {
         font-size: 13px;
         border-radius: 7px;
        border: 2px solid #101a24;
-
-
     }
 
 #temperature {
