@@ -232,8 +232,9 @@ border-radius: 7px;
 margin-right: 6px;
 }
 #custom-gpuinfo,
-#custom-keybindhint,
-#language,
+#language {
+  color: #A1BDCE;
+}
 #memory{
 font-weight: normal;
 font-size: 22px;
