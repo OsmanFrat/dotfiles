@@ -241,8 +241,8 @@
   "hyprland/language": {
     "format": " {}",
     "xkb-map": {
-      "us": "eng",
-      "tr": "tr"
+      "English (US)": "eng",
+      "Türkçe": "tr"
     }
   },
 
