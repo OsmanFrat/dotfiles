@@ -19,7 +19,7 @@
 // positions generated based on config.ctl //
 
 	"modules-left": ["custom/smallspacer","hyprland/workspaces","custom/spacer","mpris"],
-	"modules-center": ["custom/padd","custom/l_end","custom/r_end","custom/padd","clock"],
+	"modules-center": [,"custom/padd","clock"],
 	"modules-right": ["custom/padd","custom/l_end","group/expand","network","group/expand-3","group/expand-2","group/expand-4","memory","cpu","temperature", "custom/notification", "custom/power"],
 
 
@@ -278,13 +278,6 @@
         "interval" : "once",
         "tooltip": false
     },
-
-    "custom/padd": {
-        "format": "  ",
-        "interval" : "once",
-        "tooltip": false
-    },
-
 
 "backlight/slider": {
     "min": 5,
