@@ -15,7 +15,9 @@
 
 	"modules-left": ["custom/smallspacer","hyprland/workspaces","custom/spacer"],
 	"modules-center": ["clock"],
-	"modules-right": ["group/expand", "hyprland/language", "network", "group/expand-3","group/expand-2","group/expand-4","memory","cpu","temperature", "custom/power"],
+	"modules-right": ["group/expand",  "network", "group/expand-3","group/expand-2","group/expand-4","memory","cpu","temperature", "custom/power"],
+
+//	"modules-right": ["group/expand", "hyprland/language", "network", "group/expand-3","group/expand-2","group/expand-4","memory","cpu","temperature", "custom/power"],
 
 "upower": {
      "icon-size": 20,
@@ -76,7 +78,7 @@
        "transition-to-left": true
        //  "click-to-reveal": true
      },
-     "modules": ["custom/menu","custom/spacer","tray"]
+     "modules": ["custom/menu","custom/spacer","tray","hyprland/language"]
    },
 
  "custom/menu":{
@@ -239,10 +241,9 @@
   },
 
   "hyprland/language": {
-    "format": "{flag}",
+    "format": " {short}",
     "on-click": "hyprctl keyword input:kb_layout tr",
-    "on-click-right": "hyprctl keyword input:kb_layout us",
-    "tooltip-format": "Left click for English(us) keyboard.\nRight click for Turkish(tr) keyboard."
+    "on-click-right": "hyprctl keyword input:kb_layout us"
   },
 
   "custom/power": {
