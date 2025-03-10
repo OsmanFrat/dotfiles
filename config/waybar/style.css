@@ -31,10 +31,6 @@ tooltip {
   margin-right: 5px;
 }
 
-#temperature.warning {
-    color: orange;
-}
-
 #temperature.critical {
     color: red;
 }

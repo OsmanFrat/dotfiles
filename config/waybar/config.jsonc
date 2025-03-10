@@ -20,11 +20,10 @@
 
 "upower": {
      "icon-size": 20,
-      "format": "",
+     "format": "",
      "format-alt": "{}<span color='orange'>[{time}]</span>",
      "tooltip": true,
-     "tooltip-spacing": 20,
-      "on-click-right": "pkill waybar & hyprctl dispatch exec waybar"
+     "tooltip-spacing": 20
 },
 
 "upower#headset": {
@@ -235,7 +234,6 @@
     "critical-threshold": 80,
     "interval": 5,
     "format": "{temperatureC}°C",
-    "tooltip": true,
     "on-click-right": "pkill waybar & hyprctl dispatch exec waybar"
   },
 
