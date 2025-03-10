@@ -239,11 +239,8 @@
   },
 
   "hyprland/language": {
-//    "format": " {short}",
- //   "on-click": ""
     "format": " {sort}",
-    "exec": "hyprctl keyword input:kb_layout us",
-    "exec_on_click": "if [ $(hyprctl keyword input:kb_layout) = 'us' ]; then hyprctl keyword input:kb_layout tr; else hyprctl keyword input:kb_layout us; fi",
+    "on-click": "if [ $(hyprctl keyword input:kb_layout) = 'us' ]; then hyprctl keyword input:kb_layout tr; else hyprctl keyword input:kb_layout us; fi",
     "tooltip": "Click to toggle keyboard layout"
     //"format-map": {
      // "English (US)": "eng",
