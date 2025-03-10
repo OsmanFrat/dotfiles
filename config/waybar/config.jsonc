@@ -239,11 +239,11 @@
   },
 
   "hyprland/language": {
-    "format": " {}",
-    "xkb-map": {
-      "English (US)": "eng",
-      "Türkçe": "tr"
-    }
+    "format": " {short}"
+    //"format-map": {
+     // "English (US)": "eng",
+      //"Türkçe": "tr"
+  //  }
   },
 
   "custom/power": {
