@@ -15,14 +15,7 @@
 
 	"modules-left": ["custom/smallspacer","hyprland/workspaces","custom/spacer"],
 	"modules-center": ["clock"],
-	"modules-right": ["group/expand","network","group/expand-3","group/expand-2","group/expand-4","memory","cpu","temperature", "custom/notification", "custom/power"],
-
-"custom/led": {
-    "format": "<span color='#021c18'>󰍿</span> <span color='#313436'></span> ",
-    "format-alt": "󰍿 <span color='#bbc2c7'></span> ",
-    "on-click": "~/mouse.sh",
-    "tooltip": false
-},
+	"modules-right": ["group/expand","network","group/expand-3","group/expand-2","group/expand-4","memory","cpu","temperature", "keyboard", "custom/power"],
 
 "upower": {
      "icon-size": 20,
