@@ -239,7 +239,7 @@
   },
 
   "hyprland/language": {
-    "format": " {short}",
+    "format": "{flag}",
     "on-click": "hyprctl keyword input:kb_layout tr",
     "on-click-right": "hyprctl keyword input:kb_layout us",
     "tooltip-format": "Left click for English(us) keyboard.\nRight click for Turkish(tr) keyboard."
