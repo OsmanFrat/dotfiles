@@ -238,7 +238,7 @@
     "on-click-right": "pkill waybar & hyprctl dispatch exec waybar"
   },
 
-  "keyboard":{
+  "keyboard": {
     "format": " {}",
     "xkb-map": {
       "us": "eng",
