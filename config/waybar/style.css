@@ -27,7 +27,8 @@ tooltip {
     }
 
 #temperature {
-    color: #A1BDCE;
+  color: #A1BDCE;
+  margin-right: 5px;
 }
 
 #temperature.warning {
@@ -148,6 +149,7 @@ background:  #161320;
     color: red;
     background:  rgba(22, 19, 32, 0.9);
     margin: 6px 0px 6px 0px;
+    margin-right: 4px;
     padding-left: 4px;
     padding-right: 4px;
     }
@@ -242,6 +244,7 @@ margin-right: 6px;
 font-weight: normal;
 font-size: 22px;
 color: #E4C9AF;
+margin-bottom: 4px;
 }
 #mpris{
 color: white;
