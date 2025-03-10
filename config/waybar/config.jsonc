@@ -242,7 +242,7 @@
     "format": " {short}",
     "on-click": "hyprctl keyword input:kb_layout tr",
     "on-click-right": "hyprctl keyword input:kb_layout us",
-    "tooltip": "Left click for English(us) keyboard. Right click for Turkish(tr) keyboard."
+    "tooltip-format": "Left click for English(us) keyboard.\nRight click for Turkish(tr) keyboard."
   },
 
   "custom/power": {
