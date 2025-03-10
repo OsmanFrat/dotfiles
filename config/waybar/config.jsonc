@@ -241,8 +241,7 @@
   "hyprland/language": {
 //    "format": " {short}",
  //   "on-click": ""
-    "format": "{icon} {short}",
-    "icon": " ",
+    "format": " {sort}",
     "exec": "hyprctl keyword input:kb_layout us",
     "exec_on_click": "if [ $(hyprctl keyword input:kb_layout) = 'us' ]; then hyprctl keyword input:kb_layout tr; else hyprctl keyword input:kb_layout us; fi",
     "tooltip": "Click to toggle keyboard layout"
