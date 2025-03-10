@@ -15,7 +15,7 @@
 
 	"modules-left": ["custom/smallspacer","hyprland/workspaces","custom/spacer"],
 	"modules-center": ["clock"],
-	"modules-right": ["group/expand", "network", "group/expand-3","group/expand-2","group/expand-4","memory","cpu","temperature", "custom/power"],
+	"modules-right": ["group/expand", "network", "hyprland/language", "group/expand-3","group/expand-2","group/expand-4","memory","cpu","temperature", "custom/power"],
 
 "upower": {
      "icon-size": 20,
@@ -76,7 +76,7 @@
        "transition-to-left": true
        //  "click-to-reveal": true
      },
-     "modules": ["custom/menu","custom/spacer","tray", "language"]
+     "modules": ["custom/menu","custom/spacer","tray"]
    },
 
  "custom/menu":{
@@ -238,7 +238,7 @@
     "on-click-right": "pkill waybar & hyprctl dispatch exec waybar"
   },
 
-  "language": {
+  "hyprland/language": {
     "format": " {}",
     "xkb-map": {
       "us": "eng",
