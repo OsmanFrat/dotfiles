@@ -76,7 +76,7 @@
        "transition-to-left": true
        //  "click-to-reveal": true
      },
-     "modules": ["custom/menu","custom/spacer","tray", "keyboard"]
+     "modules": ["custom/menu","custom/spacer","tray", "language"]
    },
 
  "custom/menu":{
@@ -238,7 +238,7 @@
     "on-click-right": "pkill waybar & hyprctl dispatch exec waybar"
   },
 
-  "keyboard": {
+  "language": {
     "format": " {}",
     "xkb-map": {
       "us": "eng",
