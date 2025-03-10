@@ -234,6 +234,8 @@ margin-right: 6px;
 #custom-gpuinfo,
 #language {
   color: #A1BDCE;
+  font-weight: normal;
+  font-size: 12px;
 }
 #memory{
 font-weight: normal;
