@@ -239,13 +239,8 @@
   },
 
   "hyprland/language": {
-    "format": " {sort}",
-    "on-click": "if [ $(hyprctl keyword input:kb_layout) = 'us' ]; then hyprctl keyword input:kb_layout tr; else hyprctl keyword input:kb_layout us; fi",
-    "tooltip": "Click to toggle keyboard layout"
-    //"format-map": {
-     // "English (US)": "eng",
-      //"Türkçe": "tr"
-  //  }
+    "format": " {short}",
+    "tooltip": true
   },
 
   "custom/power": {
