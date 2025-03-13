@@ -1,4 +1,3 @@
-
 #!/bin/sh
 
 # Feed script a URL or file location.
@@ -16,7 +15,8 @@ fi
 
 case "$url" in
     *mkv*|*webm*|*mp4*|*youtube.com/watch*|*youtube.com/playlist*|*youtube.com/shorts*|*youtu.be*|*hooktube.com*|*bitchute.com*|*videos.lukesmith.xyz*|*odysee.com*)
-        setsid -f mpv --quiet "$url" >/dev/null 2>&1 ;;
+        # Run yt-dlp and pipe to mpv, disown the process to avoid terminal clearing
+        nohup yt-dlp -f 'bestvideo[height<=1080]+bestaudio/best' "$url" -o - | mpv - --force-seekable=yes >/dev/null 2>&1 & disown ;;
     *png*|*jpg*|*jpeg*|*gif*)
         curl -sL "$url" -o "/tmp/image" && feh "/tmp/image" >/dev/null 2>&1 & ;;
     *pdf*|*cbz*|*cbr*)
@@ -26,3 +26,4 @@ case "$url" in
     *)
         setsid -f firefox "$url" >/dev/null 2>&1 ;;
 esac
+
