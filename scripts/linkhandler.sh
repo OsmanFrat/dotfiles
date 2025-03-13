@@ -1,4 +1,3 @@
-
 #!/bin/sh
 
 # Feed script a URL or file location.
@@ -17,7 +16,7 @@ fi
 case "$url" in
     *mkv*|*webm*|*mp4*|*youtube.com/watch*|*youtube.com/playlist*|*youtube.com/shorts*|*youtu.be*|*hooktube.com*|*bitchute.com*|*videos.lukesmith.xyz*|*odysee.com*)
         # Run yt-dlp in the background and suppress output
-        setsid -f yt-dlp -f 'bestvideo[height<=720]+bestaudio/best' "$url" -o - | mpv --cache=yes --cache-secs=300 --force-seekable=yes --no-cache-pause - >/dev/null 2>&1 & ;;
+        setsid -f yt-dlp -f 'bestvideo[height<=720]+bestaudio/best' "$url" -o - | mpv --cache=yes --force-seekable=yes --no-cache-pause - >/dev/null 2>&1 & ;;
     *png*|*jpg*|*jpeg*|*gif*)
         curl -sL "$url" -o "/tmp/image" && feh "/tmp/image" >/dev/null 2>&1 & ;;
     *pdf*|*cbz*|*cbr*)
