@@ -35,7 +35,7 @@ stow -t $HOME ~/dotfiles/shell
 stow -t ~/Pictures ~/dotfiles/Pictures
 
 echo "Installing apps..."
-sudo pacman -S --noconfirm neovim vim fastfetch unzip 7zip thunar feh zathura imagemagick zoxide poppler wl-clipboard yazi rofi cronie npm go emacs ttf-jetbrains-mono-nerd ueberzugpp \
+sudo pacman -S --noconfirm neovim vim newsboat fastfetch unzip 7zip thunar feh zathura imagemagick zoxide poppler wl-clipboard yazi rofi cronie npm go emacs ttf-jetbrains-mono-nerd ueberzugpp \
 ttf-fira-code noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra noto-fonts-emoji \
 zsh starship alacritty qutebrowser firefox waybar hyprpaper less ripgrep lsd bat fzf aria2 jq fd \
 syncplay pyside6 python-adblock mpv vlc sed curl grep yt-dlp ffmpeg patch github-cli \
