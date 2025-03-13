@@ -30,9 +30,12 @@ sudo pacman -Syu stow --noconfirm
 
 echo "Applying dotfiles with stow..."
 mkdir -p ~/Pictures
-stow -t ~/.config ~/dotfiles/config
-stow -t $HOME ~/dotfiles/shell
-stow -t ~/Pictures ~/dotfiles/Pictures
+cd ~/dotfiles/
+stow -t ~/.config config
+stow -t $HOME shell
+stow -t ~/Pictures Pictures
+
+cd
 
 echo "Installing apps..."
 sudo pacman -S --noconfirm neovim vim newsboat fastfetch unzip 7zip thunar feh zathura imagemagick zoxide poppler wl-clipboard yazi rofi cronie npm go emacs ttf-jetbrains-mono-nerd ueberzugpp \
