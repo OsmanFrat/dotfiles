@@ -35,7 +35,7 @@ stow -t ~/.config config
 stow -t $HOME shell
 stow -t ~/Pictures Pictures
 
-cd
+cd ~
 
 echo "Installing apps..."
 sudo pacman -S --noconfirm neovim vim newsboat fastfetch unzip 7zip thunar feh zathura imagemagick zoxide poppler wl-clipboard yazi rofi cronie npm go emacs ttf-jetbrains-mono-nerd ueberzugpp \
