@@ -27,7 +27,7 @@ alias aur-sil='yay -R'
 alias yedek='~/dotfiles/git-auto-commit.sh'
 alias note-yedek='~/github/notes/git-auto-commit.sh'
 alias create-repo='~/dotfiles/scripts/create-repo.sh'
-alias fast-commit='~/dotfiles/scripts/git-auto-commit.sh'
+alias fast-commit='~/dotfiles/scripts/fast-commit.sh'
 
 # Open settings
 alias zcon='nvim ~/.zshrc && source ~/.zshrc'
