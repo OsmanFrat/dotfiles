@@ -37,7 +37,7 @@ alias ncon='nvim ~/.config/nvim/'
 alias dcon='nvim ~/.config/doom/config.el'
 alias vcon='vim ~/.vimrc && source ~/.vimrc'
 alias wcon='nvim ~/.config/waybar/config.jsonc'
-alias dns='sudo chattr -i /etc/resolv.conf && sudo nvim /etc/resolv.conf && sudo chattr +i /etc/resolv.conf'
+alias dns='sudo chattr -i /etc/resolv.conf && sudo -E nvim /etc/resolv.conf && sudo chattr +i /etc/resolv.conf'
 
 # python aliases
 alias p='python main.py'
