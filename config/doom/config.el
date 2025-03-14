@@ -89,17 +89,7 @@
 (after! org
   (setq org-hide-emphasis-markers t))
 
-;; magit ayarlari - doom emacs git programi
-;(defun my/magit-quick-commit ()
-;  "Tüm değişiklikleri ekleyip rastgele bir commit mesajı ile push eden fonksiyon."
-;  (interactive)
-;  (magit-stage-modified)
-;  (magit-commit-create `("-m" "Update"))
-;  (magit-push-current-to-upstream nil))
-;
-;(map! :leader
-;      :desc "Hızlı Commit & Push" "g q" #'my/magit-quick-commit)
-
+;; magit-quick-commit
 (defun my/magit-quick-commit ()
   "Tüm değişiklikleri ekleyip tarih bazlı bir commit mesajı ile push eden fonksiyon."
   (interactive)
@@ -110,5 +100,4 @@
 
 (map! :leader
       :desc "Hızlı Commit & Push" "g q" #'my/magit-quick-commit)
-;; test
 
