@@ -115,3 +115,5 @@ alias ytscon='function _ytscon() {
 export PATH=$PATH:/usr/local/bin/
 export PATH="$HOME/.config/emacs/bin:$PATH"
 export PATH="$PATH:/home/ozu/.local/bin"
+fpath=(~/.zsh.d/ $fpath)
+fpath=(~/.zsh.d/ $fpath)
