@@ -11,6 +11,8 @@ set completeopt=menu,menuone,noselect
 set showmatch
 set autowrite
 set mouse=a
+set clipboard=unnamedplus
+
 
 " Normal mode change to kj buttons
 inoremap jk <Esc>
