@@ -85,8 +85,16 @@ echo "Installing cronie and adding jobs..."
 sudo systemctl start cronie
 sudo systemctl enable cronie
 
+chmod +x ~/dotfiles/git-auto-commit.sh
+chmod +x ~/github/notes/git-auto-commit.sh
+chmod +x ~/dotfiles/scripts/battery-alarm.sh
+chmod +x ~/dotfiles/scripts/clone-repo.sh
+chmod +x ~/dotfiles/scripts/create-repo.sh
+chmod +x ~/dotfiles/scripts/linkhandler.sh
+
 (crontab -l 2>/dev/null; echo "*/2 * * * * /home/ozu/github/notes/git-auto-commit.sh") | crontab -
 (crontab -l 2>/dev/null; echo "*/2 * * * * /home/ozu/dotfiles/git-auto-commit.sh") | crontab -
+(crontab -l 2>/dev/null; echo "*/1 * * * * /home/ozu/dotfiles/scripts/battery-alarm.sh") | crontab -
 
 echo "Installing doom emacs..."
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
