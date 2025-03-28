@@ -79,7 +79,12 @@ fi
 echo "Adding history settings for zsh..."
 mkdir -p ~/.zsh_history
 
-echo "Adding cron jobs..."
+
+echo "Installing cronie and adding jobs..."
+
+sudo systemctl start cronie
+sudo systemctl enable cronie
+
 (crontab -l 2>/dev/null; echo "*/2 * * * * /home/ozu/github/notes/git-auto-commit.sh") | crontab -
 (crontab -l 2>/dev/null; echo "*/2 * * * * /home/ozu/dotfiles/git-auto-commit.sh") | crontab -
 
@@ -105,5 +110,6 @@ systemctl --user start emacs
 
 echo "Doom emacs installed"
 
+echo ""
 echo "Installation completed!"
 echo "Please restart your computer."
