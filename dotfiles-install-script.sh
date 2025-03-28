@@ -22,6 +22,25 @@ cp -r ~/.config ~/dotfiles_backup/config_$(date +%F)
 cp -r ~/.zshrc ~/dotfiles_backup/zshrc_$(date +%F) 2>/dev/null
 cp -r ~/.bashrc ~/dotfiles_backup/bashrc_$(date +%F) 2>/dev/null
 
+echo "Deleting the old config files to replace with new ones..."
+
+rm -rf ~/.config/hypr
+rm -rf ~/.config/kitty
+rm -rf ~/.config/alacritty
+rm -rf ~/.config/nvim
+rm -rf ~/.config/rofi
+rm -rf ~/.config/yazi
+rm -rf ~/.config/doom
+rm -rf ~/.config/dunst
+rm -rf ~/.config/qutebrowser
+rm -rf ~/.config/waybar
+rm -rf ~/.config/mpv
+rm -rf ~/.config/newsboat
+rm -rf ~/.config/neofetch
+rm -rf ~/.config/Syncplay
+rm -rf ~/.config/starship.toml
+
+
 echo "Cloning dotfiles repository..."
 git clone https://github.com/OsmanFrat/dotfiles ~/dotfiles
 
@@ -38,17 +57,17 @@ stow -t ~/Pictures Pictures
 cd ~
 
 echo "Installing apps..."
-sudo pacman -S --noconfirm neovim vim newsboat fastfetch unzip 7zip thunar feh zathura imagemagick zoxide poppler wl-clipboard yazi rofi cronie npm go emacs ttf-jetbrains-mono-nerd ueberzugpp \
+sudo pacman -S --noconfirm neovim vim newsboat fastfetch unzip 7zip thunar feh zathura imagemagick zoxide poppler wl-clipboard yazi rofi-wayland cronie npm go emacs ttf-jetbrains-mono-nerd ueberzugpp \
 ttf-fira-code noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra noto-fonts-emoji \
 zsh starship alacritty qutebrowser firefox waybar hyprpaper less ripgrep lsd bat fzf aria2 jq fd \
 syncplay pyside6 python-adblock mpv vlc sed curl grep yt-dlp ffmpeg patch github-cli \
-steam pavucontrol 
+steam pavucontrol qbittorent 
 
 echo "Installing yay..."
 sudo pacman -S --needed --noconfirm git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm
 
 echo "Installing yay apps..."
-yay -S --noconfirm ani-cli hyprshot clipman
+yay -S --noconfirm ani-cli hyprshot clipman wlogout
 
 echo "Changing shell to zsh..."
 if chsh -s /bin/zsh $(whoami); then
