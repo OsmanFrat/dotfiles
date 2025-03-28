@@ -90,6 +90,7 @@ chmod +x ~/github/notes/git-auto-commit.sh
 chmod +x ~/dotfiles/scripts/battery-alarm.sh
 chmod +x ~/dotfiles/scripts/clone-repo.sh
 chmod +x ~/dotfiles/scripts/create-repo.sh
+chmod +x ~/dotfiles/scripts/fast-commit.sh
 chmod +x ~/dotfiles/scripts/linkhandler.sh
 
 (crontab -l 2>/dev/null; echo "*/2 * * * * /home/ozu/github/notes/git-auto-commit.sh") | crontab -
