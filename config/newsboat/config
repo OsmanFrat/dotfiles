@@ -44,3 +44,4 @@ highlight article "https?://[^ ]+" color4 default
 highlight article "\[[0-9]+\]" color6 default bold
 
 browser "/home/ozu/dotfiles/scripts/linkhandler.sh %u"
+save-path "/home/ozu/rss-saved"
