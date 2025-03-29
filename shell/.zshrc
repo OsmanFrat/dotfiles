@@ -118,3 +118,4 @@ export PATH="$HOME/.config/emacs/bin:$PATH"
 export PATH="$PATH:/home/ozu/.local/bin"
 fpath=(~/.zsh.d/ $fpath)
 fpath=(~/.zsh.d/ $fpath)
+export PATH="$HOME/.cargo/bin:$PATH"
