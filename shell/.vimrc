@@ -32,11 +32,6 @@ let g:tokyonight_transparent_background = 0
 " Which key - cheat sheet when leader button pressed
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
-" VimTeX settings
-let g:vimtex_view_method = "zathura"
-nnoremap <Leader>ll :VimtexCompile<CR>
-nnoremap <Leader>lk :VimtexStop<CR>
-
 " Plugins
 call plug#begin('~/.vim/plugged')
 
@@ -52,9 +47,6 @@ Plug 'ghifarit53/tokyonight-vim'
 
 " Cheat sheet for shortcuts when pressed space(leader-key)
 Plug 'liuchengxu/vim-which-key'
-
-" Latex
-Plug 'lervag/vimtex', { 'tag': 'v2.15' }
 
 call plug#end()
 
