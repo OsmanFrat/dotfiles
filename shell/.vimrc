@@ -38,6 +38,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-syntastic/syntastic'
 Plug 'octol/vim-cpp-enhanced-highlight'
 
+" Coc for lsp
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " Auto pair brackets/parentheses
 Plug 'jiangmiao/auto-pairs'
 
