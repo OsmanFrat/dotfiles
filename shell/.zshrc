@@ -111,9 +111,6 @@ alias ytscon='function _ytscon() {
   yt-dlp -f bestaudio "$1" -o - | mpv --no-video - --force-seekable=yes --start="$2";
 }; _ytscon'
 
-# fzf setting - dont search in venv or git or node_modules
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude venv --exclude node_modules --exclude .git'
-
 # System paths idk xd
 export PATH=$PATH:/usr/local/bin/
 export PATH="$HOME/.config/emacs/bin:$PATH"
