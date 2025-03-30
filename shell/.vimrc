@@ -18,9 +18,11 @@ inoremap jk <Esc>
 
 syntax enable
 
-" ---- WhichKey shortcuts ----
-" set leader key to space
-let mapleader = "\<Space>"
+" Leader key settings
+let mapleader = " "  " Space as the leader key
+
+" ---- WhichKey Shortcuts ----
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 " -- Python --
 nnoremap <Leader>p :!python main.py<CR>
@@ -32,9 +34,6 @@ let g:tokyonight_style = 'night'
 let g:tokyonight_disable_italic_comment = 1
 let g:tokyonight_transparent_background = 0 
 
-" Which key - cheat sheet when leader button pressed
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
-
 " Plugins
 call plug#begin('~/.vim/plugged')
 
@@ -42,7 +41,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-syntastic/syntastic'
 Plug 'octol/vim-cpp-enhanced-highlight'
 
-" Coc for lsp
+" CoC for LSP (Python)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Auto pair brackets/parentheses
@@ -51,10 +50,11 @@ Plug 'jiangmiao/auto-pairs'
 " Tokyonight theme
 Plug 'ghifarit53/tokyonight-vim'
 
-" Cheat sheet for shortcuts when pressed space(leader-key)
+" Cheat sheet for shortcuts (Which Key)
 Plug 'liuchengxu/vim-which-key'
 
 call plug#end()
 
-" Changing the theme
+" Set the colorscheme
 colorscheme tokyonight
+
