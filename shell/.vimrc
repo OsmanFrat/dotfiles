@@ -11,12 +11,12 @@ set completeopt=menu,menuone,noselect
 set showmatch
 set autowrite
 set mouse=a
-set clipboard=unnamedplus
+set clipboard=unnamed
+
+syntax enable
 
 " Normal mode change to kj buttons
 inoremap jk <Esc>
-
-syntax enable
 
 " Leader key settings
 let mapleader = " "  " Space as the leader key
