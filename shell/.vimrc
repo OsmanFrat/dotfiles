@@ -11,7 +11,7 @@ set completeopt=menu,menuone,noselect
 set showmatch
 set autowrite
 set mouse=a
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 syntax enable
 
