@@ -18,8 +18,12 @@ inoremap jk <Esc>
 
 syntax enable
 
+" ---- WhichKey shortcuts ----
 " set leader key to space
 let mapleader = "\<Space>"
+
+" -- Python --
+nnoremap <Leader>p :!python main.py<CR>
 
 set termguicolors
 
