@@ -13,7 +13,6 @@ set autowrite
 set mouse=a
 set clipboard=unnamedplus
 
-
 " Normal mode change to kj buttons
 inoremap jk <Esc>
 
