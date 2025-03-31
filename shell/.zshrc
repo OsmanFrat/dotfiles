@@ -42,7 +42,7 @@ alias dns='sudo chattr -i /etc/resolv.conf && sudo -E nvim /etc/resolv.conf && s
 
 # python aliases
 # alias p='python main.py'
-alias p='python3 $(ls *.py | head -n 1)'
+alias p='python $(ls *.py | head -n 1)'
 alias py='python'
 alias penv='python -m venv venv'
 alias senv='source venv/bin/activate'
