@@ -41,7 +41,7 @@ alias wcon='nvim ~/.config/waybar/config.jsonc'
 alias dns='sudo chattr -i /etc/resolv.conf && sudo -E nvim /etc/resolv.conf && sudo chattr +i /etc/resolv.conf'
 
 # python aliases
-alias p='python $(ls *.py | head -n 1)'
+alias p='python "$(lsof -p $$ | grep -o "/[^ ]*\.py" | head -n 1)"'
 alias py='python'
 alias penv='python -m venv venv'
 alias senv='source venv/bin/activate'
