@@ -41,7 +41,20 @@ alias wcon='nvim ~/.config/waybar/config.jsonc'
 alias dns='sudo chattr -i /etc/resolv.conf && sudo -E nvim /etc/resolv.conf && sudo chattr +i /etc/resolv.conf'
 
 # python aliases
-alias p='python "$(lsof -p $$ | grep -o "/[^ ]*\.py" | head -n 1)"'
+# alias p='python "$(lsof -p $$ | grep -o "/[^ ]*\.py" | head -n 1)"'
+function run_active_py() {
+  local py_file=$(hyprctl clients | awk '/nvim.*\.py/ {print $NF}' | head -n 1 | sed 's/://')
+  
+  if [ -z "$py_file" ]; then
+    echo "⚠️  Aktif bir Python dosyası bulunamadı!"
+  elif [ ! -f "$py_file" ]; then
+    echo "❌ Dosya bulunamadı: $py_file"
+  else
+    echo "🚀 Çalıştırılıyor: $py_file"
+    python "$py_file"
+  fi
+}
+alias p=run_active_py
 alias py='python'
 alias penv='python -m venv venv'
 alias senv='source venv/bin/activate'
