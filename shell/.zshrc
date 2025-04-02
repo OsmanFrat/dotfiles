@@ -41,7 +41,6 @@ alias wcon='nvim ~/.config/waybar/config.jsonc'
 alias dns='sudo chattr -i /etc/resolv.conf && sudo -E nvim /etc/resolv.conf && sudo chattr +i /etc/resolv.conf'
 
 # python aliases
-# alias p='python "$(lsof -p $$ | grep -o "/[^ ]*\.py" | head -n 1)"'
 function run_active_py() {
   local py_file=$(hyprctl clients | awk '/nvim.*\.py/ {print $NF}' | head -n 1 | sed 's/://')
   
