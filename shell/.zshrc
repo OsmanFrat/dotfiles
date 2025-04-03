@@ -29,6 +29,7 @@ alias note-yedek='~/github/notes/git-auto-commit.sh'
 alias create-repo='~/dotfiles/scripts/create-repo.sh'
 alias clone-repo='~/dotfiles/scripts/clone-repo.sh'
 alias fast-commit='~/dotfiles/scripts/fast-commit.sh'
+alias cheat='~/dotfiles/scripts/cht-fzf.sh'
 
 # Open settings
 alias zcon='nvim ~/.zshrc && source ~/.zshrc'
