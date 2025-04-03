@@ -70,6 +70,9 @@ alias ls='lsd'
 alias cf='fd . . --type f -H | fzf --preview "bat --style=numbers --color=always --theme=TwoDark {}" --preview-window=right:50% | xargs -r cat | wl-copy'
 alias fontr='sudo fc-cache -f -v'
 alias rss='newsboat'
+alias trash='cd ~/.local/share/Trash/files/'
+alias clean-trash='rm -rf ~/.local/share/Trash/{files,info}/*'
+
 
 
 # yt-dlp
