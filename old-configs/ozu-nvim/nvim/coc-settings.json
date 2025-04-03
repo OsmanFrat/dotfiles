@@ -1,0 +1,9 @@
+{
+  "snippets.ultisnips.pythonPrompt": false,
+  "suggest.detailFieldLength": 30,
+  "suggest.floatEnable": true,
+  "suggest.floatPosition": "above",
+  "suggest.autoTrigger": "always",
+  "suggest.noselect": true,
+  "inlayHint.enable": false
+}
