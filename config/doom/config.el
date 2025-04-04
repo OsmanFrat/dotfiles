@@ -101,22 +101,6 @@
 (map! :leader
       :desc "Hızlı Commit & Push" "g q" #'my/magit-quick-commit)
 
-;; lua settings
-(after! lua-mode
-  (setq lua-indent-level 2)  ; 2 boşluk girintisi
-  (setq lsp-lua-workspace-max-preload 2000)
-  (setq lsp-lua-workspace-preload-file-size 500))
-
-(add-hook 'lua-mode-hook #'lsp!)  ; LSP’yi Lua moduna ekle
-(add-hook 'lua-mode-hook #'company-mode)  ; Otomatik tamamlama
-
-;; love2d settings
-(defun love2d-run ()
-  "Run Love2D on the current project."
-  (interactive)
-  (let ((default-directory (projectile-project-root)))
-    (start-process "love" "*love2d*" "love" ".")))
-
-(map! :leader
-      (:prefix ("g" . "games")
-       :desc "Run Love2D" "l" #'love2d-run))
+;; remap ; to :
+(define-key evil-normal-state-map ";" 'evil-ex)
+(define-key evil-visual-state-map ";" 'evil-ex)
