@@ -45,6 +45,7 @@ alias sop='cd ~/dotfiles/scripts/ && nvim .'
 
 # python aliases
 alias p='python main.py'
+alias pt='python test.py'
 alias py='python'
 alias penv='python -m venv venv'
 alias senv='source venv/bin/activate'
