@@ -42,7 +42,7 @@ Plug 'vim-syntastic/syntastic'
 Plug 'octol/vim-cpp-enhanced-highlight'
 
 " CoC for LSP (Python)
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Auto pair brackets/parentheses
 Plug 'jiangmiao/auto-pairs'
