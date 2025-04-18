@@ -200,6 +200,7 @@ function! ToggleComment() range
     \ 'lua': '--',
     \ 'html': '<!--',
     \ 'css': '/*',
+    \ 'lips': ';;',
     \ }
 
   let l:cmt = get(l:comment_map, &filetype, '#')
