@@ -51,4 +51,3 @@
 ;; ozu-settings
 (package! corfu-terminal)
 (package! doom-themes)
-(package! company-lua)
