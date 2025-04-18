@@ -188,7 +188,7 @@ function! WholeWordReplace()
   endif
 endfunction
 
-" Enhanced comment toggle function with better Lisp/Elisp support
+" toggle comment function
 function! ToggleComment() range
   let l:comment_map = {
     \ 'python': '#',
@@ -211,7 +211,7 @@ function! ToggleComment() range
 
   " Handle filetype detection for Lisp variants
   let l:ft = empty(&filetype) ? 'lisp' : &filetype
-  if expand('%:e') =~? 'el\|lisp' && l:ft ==# 'lisp'
+  if expand('%:e') =~? 'el' && l:ft ==# 'lisp'
     let l:ft = 'elisp'
   endif
 
@@ -222,19 +222,28 @@ function! ToggleComment() range
     let l:line = getline(lnum)
     let l:indent = matchstr(l:line, '^\s*')
 
-    " Skip empty lines
-    if l:line !~# '\S'
+    " Skip empty or whitespace-only lines
+    if l:line =~# '^\s*$'
       continue
     endif
 
-    " Check if line is commented (with optional space after comment char)
-    if l:line =~# '^\s*' . l:cmt . '\>'
+    " Check if line is already commented
+    let l:is_commented = 0
+    if !empty(l:end_cmt)
+      " For multi-line comment styles (HTML/CSS)
+      let l:is_commented = l:line =~# '^\s*' . l:cmt && l:line =~# l:end_cmt . '\s*$'
+    else
+      " For single-line comment styles
+      let l:is_commented = l:line =~# '^\s*' . l:cmt
+    endif
+
+    if l:is_commented
       " Uncomment the line
-      let l:new_line = substitute(l:line, l:cmt . '\s\?', '', '')
+      let l:new_line = substitute(l:line, '\V' . l:cmt . '\s\?', '', '')
       if !empty(l:end_cmt)
         let l:new_line = substitute(l:new_line, '\s*' . l:end_cmt . '\s*$', '', '')
       endif
-      call setline(lnum, l:indent . trim(l:new_line))
+      let l:new_line = trim(l:new_line)
     else
       " Comment the line
       let l:content = trim(l:line[len(l:indent):])
@@ -242,8 +251,9 @@ function! ToggleComment() range
       if !empty(l:end_cmt)
         let l:new_line .= ' ' . l:end_cmt
       endif
-      call setline(lnum, l:indent . l:new_line)
     endif
+
+    call setline(lnum, l:indent . l:new_line)
   endfor
 endfunction
 
