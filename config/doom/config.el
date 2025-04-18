@@ -104,3 +104,7 @@
 ;; remap ; to :
 (define-key evil-normal-state-map ";" 'evil-ex)
 (define-key evil-visual-state-map ";" 'evil-ex)
+
+(after! org-superstar
+  (setq org-superstar-headline-bullets-list '("∘" "›" "∙" "•"))
+  (setq org-superstar-remove-leading-stars t))
