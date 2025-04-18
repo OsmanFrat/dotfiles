@@ -188,7 +188,7 @@ function! WholeWordReplace()
   endif
 endfunction
 
-" Comment toggle
+" Enhanced comment toggle function with better Lisp/Elisp support
 function! ToggleComment() range
   let l:comment_map = {
     \ 'python': '#',
@@ -196,40 +196,57 @@ function! ToggleComment() range
     \ 'c': '//',
     \ 'cpp': '//',
     \ 'javascript': '//',
+    \ 'typescript': '//',
     \ 'sh': '#',
     \ 'lua': '--',
     \ 'html': '<!--',
     \ 'css': '/*',
-    \ 'lips': ';;',
-    \ 'elips': ';;',
+    \ 'lisp': ';;',
+    \ 'elisp': ';;',
+    \ 'emacs-lisp': ';;',
     \ 'scheme': ';;',
+    \ 'clojure': ';;',
+    \ 'fennel': ';;',
     \ }
 
-  let l:cmt = get(l:comment_map, &filetype, '#')
-  let l:end_cmt = &filetype =~? 'html' ? '-->' : &filetype =~? 'css' ? '*/' : ''
-  
-  " Seçili satırlar için
+  " Handle filetype detection for Lisp variants
+  let l:ft = empty(&filetype) ? 'lisp' : &filetype
+  if expand('%:e') =~? 'el\|lisp' && l:ft ==# 'lisp'
+    let l:ft = 'elisp'
+  endif
+
+  let l:cmt = get(l:comment_map, l:ft, '#')
+  let l:end_cmt = l:ft ==# 'html' ? '-->' : l:ft ==# 'css' ? '*/' : ''
+
   for lnum in range(a:firstline, a:lastline)
     let l:line = getline(lnum)
-    let l:indent = matchstr(l:line, '^\s*') " Girintiyi al
-    
-    if l:line =~# '^\s*'.l:cmt
-      " Yorumu kaldır (girintiyi koru)
-      let l:new_line = substitute(l:line, l:cmt.'\s\?', '', '')
-      if l:end_cmt != ''
-        let l:new_line = substitute(l:new_line, '\s*'.l:end_cmt.'\s*$', '', '')
+    let l:indent = matchstr(l:line, '^\s*')
+
+    " Skip empty lines
+    if l:line !~# '\S'
+      continue
+    endif
+
+    " Check if line is commented (with optional space after comment char)
+    if l:line =~# '^\s*' . l:cmt . '\>'
+      " Uncomment the line
+      let l:new_line = substitute(l:line, l:cmt . '\s\?', '', '')
+      if !empty(l:end_cmt)
+        let l:new_line = substitute(l:new_line, '\s*' . l:end_cmt . '\s*$', '', '')
       endif
-      call setline(lnum, l:indent.trim(l:new_line))
-    elseif l:line =~# '\S'
-      " Yorum ekle (girintiyi koru)
-      let l:new_line = l:cmt.' '.trim(l:line[len(l:indent):])
-      if l:end_cmt != ''
-        let l:new_line .= ' '.l:end_cmt
+      call setline(lnum, l:indent . trim(l:new_line))
+    else
+      " Comment the line
+      let l:content = trim(l:line[len(l:indent):])
+      let l:new_line = l:cmt . ' ' . l:content
+      if !empty(l:end_cmt)
+        let l:new_line .= ' ' . l:end_cmt
       endif
-      call setline(lnum, l:indent.l:new_line)
+      call setline(lnum, l:indent . l:new_line)
     endif
   endfor
 endfunction
+
 
 " terminal test
 lua << EOF
