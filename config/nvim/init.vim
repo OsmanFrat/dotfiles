@@ -201,6 +201,8 @@ function! ToggleComment() range
     \ 'html': '<!--',
     \ 'css': '/*',
     \ 'lips': ';;',
+    \ 'elips': ';;',
+    \ 'scheme': ';;',
     \ }
 
   let l:cmt = get(l:comment_map, &filetype, '#')
