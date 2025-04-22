@@ -1,0 +1,321 @@
+;; -*- lexical-binding: t; -*-
+
+(require 'package)
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+                         ("gnu" . "https://elpa.gnu.org/packages/")
+                         ("nongnu" . "https://elpa.nongnu.org/nongnu/")
+                         ("org" . "https://orgmode.org/elpa/")))
+(package-initialize)
+
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(setq use-package-always-ensure t)
+(require 'use-package);; Temel ayarlar
+
+
+(setq inhibit-startup-message t)
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+(setq ring-bell-function 'ignore
+      visible-bell nil)
+(add-hook 'server-after-make-frame-hook
+          (lambda ()
+            (when (display-graphic-p)
+              (scroll-bar-mode -1))))
+
+;; Tamamen mode-line'ı devre dışı bırak
+(setq-default mode-line-format nil)
+
+(dolist (buffer (buffer-list))
+  (with-current-buffer buffer
+    (setq mode-line-format nil)))
+
+(add-hook 'after-change-major-mode-hook
+          (lambda ()
+            (setq mode-line-format nil)))
+
+
+
+(setq default-frame-alist '((font . "JetBrainsMono Nerd Font-15")))
+; (setq default-frame-alist '((font . "Fira code-15")))
+
+;; Sadece programlama modlarında aç
+(add-hook 'prog-mode-hook (lambda ()
+                            (display-line-numbers-mode 1)
+                            (setq display-line-numbers-type 'relative)))
+
+
+
+;; Vim kısayolları
+(use-package evil
+  :init (evil-mode 1))
+
+(use-package key-chord
+  :ensure t
+  :config
+  (key-chord-mode 1)
+  (key-chord-define evil-insert-state-map "jk" 'evil-normal-state))
+
+
+;; Tema
+(use-package doom-themes
+  :config (load-theme 'doom-monokai-pro t))
+
+(use-package all-the-icons)
+
+
+;; Which Key (tuş kombinasyonları gösterimi)
+(use-package which-key
+  :init (which-key-mode)
+  :config
+  (setq which-key-idle-delay 0.3))
+
+;; Dashboard Yapılandırması
+(use-package dashboard
+  :init
+  (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
+  (setq dashboard-startup-banner "~/.emacs.d/logo.txt") ;; logo.txt dosyasını göster
+  (setq dashboard-center-content t)
+  (setq dashboard-items '((recents  . 5)
+                          (bookmarks . 3)
+                          (agenda . 5)))
+  :config
+  (dashboard-setup-startup-hook))
+
+(setq dashboard-set-file-icons t)
+(setq dashboard-set-heading-icons t)
+
+
+;; Ivy/Counsel (Telescope benzeri dosya arama)
+(use-package ivy
+  :init (ivy-mode 1)
+  :config
+  (setq ivy-use-virtual-buffers t
+        ivy-count-format "(%d/%d) "
+        enable-recursive-minibuffers t))
+
+(use-package counsel
+  :after ivy
+  :bind (("C-x C-f" . counsel-find-file)
+         ("M-x" . counsel-M-x)))
+
+
+(use-package vterm
+  :ensure t
+  :commands (vterm)
+  :config
+  (setq vterm-max-scrollback 10000))
+  ;; (setq buffer-read-only t)
+
+
+;; (defun my/toggle-vterm ()
+;;   "Toggle a vterm buffer."
+;;   (interactive)
+;;   (if (get-buffer "*vterm*")
+;;       (if (eq (current-buffer) (get-buffer "*vterm*"))
+;;           (previous-buffer)
+;;         (switch-to-buffer "*vterm*"))
+;;     (vterm)))
+
+(defun my/toggle-vterm ()
+  "Toggle a vterm buffer."
+  (interactive)
+  (if (get-buffer "*vterm*")
+      (if (eq (current-buffer) (get-buffer "*vterm*"))
+          (previous-buffer)
+        (progn
+          (switch-to-buffer "*vterm*")
+          (read-only-mode -1))) ;; bu satırı ekle
+    (vterm)))
+
+
+
+
+(defun my/open-or-create-notes-org ()
+  "Open notes.org in current directory, creating it if necessary."
+  (interactive)
+  (let ((notes-path (expand-file-name "notes.org" default-directory)))
+    ;; Dosya yoksa oluştur
+    (unless (file-exists-p notes-path)
+      (with-temp-buffer (write-file notes-path)))
+    ;; Dosyayı aç
+    (find-file notes-path)))
+
+(defadvice counsel-find-file (after protect-buffers activate)
+  "Yeni dosya açarken eski buffer'ları korur."
+  (unless (file-exists-p (ad-get-arg 0))
+    (find-file (ad-get-arg 0))))
+
+
+(use-package treesit-auto
+  :custom
+  (treesit-auto-install 'prompt) ;; parser eksikse sorar
+  :config
+  (treesit-auto-add-to-auto-mode-alist 'all)
+  (global-treesit-auto-mode))
+
+(defun my/toggle-comment ()
+  "Toggle comment on line or region."
+  (interactive)
+  (if (use-region-p)
+      (comment-or-uncomment-region (region-beginning) (region-end))
+    (comment-line 1)))
+
+
+;; Leader key ayarları (SPC = boşluk tuşu
+(use-package general
+  :after evil
+  :config
+  (general-create-definer my-leader-def
+    :states '(normal insert visual emacs)
+    :keymaps 'override
+    :prefix "SPC"
+    :non-normal-prefix "C-SPC")
+
+  (my-leader-def
+    "n" '(swich-to-buffer :wk "Next buffer")
+    "/" '(my/toggle-comment :wk "Toggle comment")
+    "i" '(my/toggle-vterm :wk "Toggle vterm")
+    "w" '(save-buffer :wk "Save")
+    "q" '(evil-save-and-quit :wk "Save & Quit")
+    "Q" '(evil-quit-without-save :wk "Quit without saving")
+    "r" '(restart-emacs :wk "Restart emacs")
+    "f" '(:wk "Find")
+    "ff" '(counsel-find-file :wk "Find file")
+    "fo" '(counsel-recentf :wk "Recent files")
+    "o" '(:wk "Org")
+    "oo" '(my/open-or-create-notes-org :wk "Create notes/open notes")
+    "l" '(:wk "Lsp")
+    "ll" '(lsp :wk "Activate lsp")
+    "t" '(:wk "Toggle")
+    "tn" '(display-line-numbers-mode :wk "Toggle line numbers")
+    "tm" '(hide-mode-line-mode :wk "Toggle mode-line")))
+
+
+;; Recentf (son açılan dosyalar)
+(use-package recentf
+  :config
+  (recentf-mode 1)
+  (setq recentf-max-menu-items 50
+        recentf-max-saved-items 50))
+
+;; Org mode
+(use-package org
+  :hook (org-mode . org-indent-mode)
+  :config
+  (setq org-hide-emphasis-markers t
+        org-startup-indented t
+        org-tempo t
+        org-pretty-entities t))
+
+(use-package org-bullets
+  :hook (org-mode . org-bullets-mode)
+  :config
+  (setq org-bullets-bullet-list
+        '("◉" "○" "✿" "◇" "✸")))
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((emacs-lisp . t)
+   (python . t)
+   (C . t)
+   (shell . t))) ;; örnek diller, istediğini ekle
+
+(setq org-confirm-babel-evaluate nil)  ;; Her seferinde "emin misin?" demesin
+
+;; Org-mode Görsel Ayarları
+(setq org-fontify-done-headers t)                ;; Tamamlananları soluk göster
+(setq org-auto-formatting t)                    ;; Otomatik formatlama
+(setq org-list-demote-modify-bullet t)           ;; Madde işaretlerini güncelle
+
+(setq org-checkbox-hierarchical-statistics nil) ;; alt başlıklardan etkilenmesin istersen
+(setq org-log-done 'time) ;; DONE olduğunda zaman eklesin
+
+;; Alt kutucuklar güncellendikçe üst başlıktaki [/], [%] güncellensin
+(add-hook 'org-checkbox-statistics-hook #'org-update-statistics-cookies)
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-checkbox-statistics-done ((t (:foreground "gray50" :strike-through t))))
+ '(org-done ((t (:foreground "gray60" :strike-through t)))))
+
+(use-package yasnippet
+  :config
+  (yas-global-mode 1))
+
+
+;; LSP ve tamamlama
+(use-package company
+  :hook (prog-mode . company-mode)
+  :ensure t
+  :config
+  (global-company-mode))
+
+(use-package lsp-mode
+  :init
+  (setq lsp-keymap-prefix "C-c l")  ; LSP komutları için önek
+  :hook (
+         (c-mode . lsp)
+         (c++-mode . lsp)
+         (python-mode . lsp)
+         (lsp-mode . lsp-enable-which-key-integration))
+  :commands lsp
+  :config
+  (setq lsp-completion-provider :capf)
+  ;; LSP otomatik başlatma için ek ayar
+  (setq lsp-auto-guess-root t)  ; Proje kökünü otomatik tahmin et
+  (setq lsp-restart 'auto-restart))  ; Gerekirse otomatik yeniden başlat
+
+(use-package lsp-ui
+  :commands lsp-ui-mode
+  :config
+  (setq lsp-ui-doc-enable t
+        lsp-ui-doc-position 'bottom
+        lsp-ui-sideline-enable t))
+
+;; Python geliştirme ortamı
+(use-package python
+  :ensure nil ; Built-in paketi kullan
+  :mode ("\\.py\\'" . python-mode)
+  :interpreter ("python" . python-mode)
+  :config
+  (require 'flymake)
+  (require 'python)
+  (use-package lsp-pyright
+    :after lsp-mode
+    :hook (python-mode . (lambda () (require 'lsp-pyright)))))
+
+;; C/C++ geliştirme
+(use-package cc-mode
+  :ensure nil ; Built-in paketi kullan
+  :hook ((c-mode c++-mode) . lsp))
+
+;; clangd ayarları (lsp-mode ile entegre)
+(setq lsp-clients-clangd-executable "clangd"
+      lsp-clients-clangd-args '("--background-index"
+                               "--clang-tidy"
+                               "--completion-style=detailed"
+                               "--header-insertion=never"))
+
+
+;; C/C++ için lsp-clangd otomatik başlatma
+(add-hook 'c-mode-hook 'lsp-deferred)
+(add-hook 'c++-mode-hook 'lsp-deferred)
+
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("f5f80dd6588e59cfc3ce2f11568ff8296717a938edd448a947f9823a4e282b66"
+     default))
+ '(package-selected-packages nil)
+ '(warning-suppress-log-types '((native-compiler))))
