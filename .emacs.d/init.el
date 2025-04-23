@@ -50,12 +50,27 @@
 
 
 ;; Vim kısayolları
+;; (use-package evil
+;;   :init (evil-mode 1))
+
+;; Vim emülasyonu ve katlama özellikleri
 (use-package evil
-  :init (evil-mode 1))
+  :ensure t
+  :init
+  (setq evil-want-keybinding nil) ; evil-collection ile uyumluluk
+  :config
+  (evil-mode 1))
+
+(use-package vimish-fold
+  :ensure t
+  :config
+  (vimish-fold-global-mode 1) ; Global olarak etkinleştir
+  ;; İsteğe bağlı: Katlama görünümünü özelleştirme
+  (setq vimish-fold-indication-mode 'right-fringe))
 
 (use-package evil-vimish-fold
   :ensure t
-  :after evil
+  :after (evil vimish-fold)
   :config
   (evil-vimish-fold-mode 1))
 
