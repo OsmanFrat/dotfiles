@@ -53,6 +53,12 @@
 (use-package evil
   :init (evil-mode 1))
 
+(use-package evil-vimish-fold
+  :ensure t
+  :after evil
+  :config
+  (evil-vimish-fold-mode 1))
+
 (use-package key-chord
   :ensure t
   :config
