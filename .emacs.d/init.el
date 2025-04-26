@@ -208,6 +208,7 @@
     "ff" '(counsel-find-file :wk "Find file")
     "fo" '(counsel-recentf :wk "Recent files")
     "p" '(:wk "python")
+    ;; "ps" '(
     "o" '(:wk "Org")
     "oo" '(my/open-or-create-notes-org :wk "Create notes/open notes")
     "l" '(:wk "Lsp")
