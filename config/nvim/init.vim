@@ -109,7 +109,10 @@ command! -bang -nargs=? -complete=dir Files
 
 
 " Enable treesitter
-autocmd FileType python lua vim.treesitter.start()
+" autocmd FileType python lua vim.treesitter.start()
+autocmd FileType python,c,cpp lua vim.treesitter.start()
+
+
 
 " Alpha.nvim / dashboard settings
 lua <<EOF
