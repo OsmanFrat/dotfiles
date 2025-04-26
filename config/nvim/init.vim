@@ -279,6 +279,21 @@ require("toggleterm").setup({
 })
 EOF
 
+" pyinstaller build function
+
+function! BuildWithPyInstaller()
+  let l:input_name = input("Enter a name: ")
+  execute ":!pyinstaller --onefile --name " . shellescape(l:input_name) . " main.py"
+endfunction
+
+nnoremap <silent> <Leader>pi :call BuildWithPyInstaller()<CR>
+
+
+
+
+
+
+
 
 " Tokyonight theme settings
 let g:tokyonight_style = 'night'
@@ -299,6 +314,7 @@ let g:which_key_map =  {}
 nnoremap <silent> <Leader>pp :w<CR>:!python %<CR>
 nnoremap <silent> <Leader>pe :!python -m venv venv<CR>
 nnoremap <silent> <Leader>ps :!source venv/bin/activate<CR>
+nnoremap <silent> <Leader>pi :!pyinstaller --onefile --name buraya-input-gelecek main.py<CR>
 
 " Reload init.vim
 nnoremap <silent> <leader>R :source /home/ozu/.config/nvim/init.vim<CR>
