@@ -282,11 +282,10 @@ EOF
 " pyinstaller build function
 
 function! BuildWithPyInstaller()
-  let l:input_name = input("Enter a name: ")
+  let l:input_name = input("Enter a name for .exe: ")
   execute ":!pyinstaller --onefile --name " . shellescape(l:input_name) . " main.py"
 endfunction
 
-nnoremap <silent> <Leader>pi :call BuildWithPyInstaller()<CR>
 
 
 
@@ -314,7 +313,7 @@ let g:which_key_map =  {}
 nnoremap <silent> <Leader>pp :w<CR>:!python %<CR>
 nnoremap <silent> <Leader>pe :!python -m venv venv<CR>
 nnoremap <silent> <Leader>ps :!source venv/bin/activate<CR>
-nnoremap <silent> <Leader>pi :!pyinstaller --onefile --name buraya-input-gelecek main.py<CR>
+nnoremap <silent> <Leader>pi :call BuildWithPyInstaller()<CR>
 
 " Reload init.vim
 nnoremap <silent> <leader>R :source /home/ozu/.config/nvim/init.vim<CR>
@@ -358,6 +357,7 @@ let g:which_key_map.p = {
       \ 'p' : 'Run current python script',
       \ 'e' : 'Create python venv',
       \ 's' : 'Source python venv',
+      \ 'i' : 'Build with pyinstaller',
       \ }
 
 let g:which_key_map.f = {
