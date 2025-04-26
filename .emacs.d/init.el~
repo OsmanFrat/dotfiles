@@ -211,9 +211,11 @@
     "oo" '(my/open-or-create-notes-org :wk "Create notes/open notes")
     "l" '(:wk "Lsp")
     "ll" '(lsp :wk "Activate lsp")
+    "zA" '(vimish-fold :wk "Create fold")
     "t" '(:wk "Toggle")
     "tn" '(display-line-numbers-mode :wk "Toggle line numbers")
     "tm" '(hide-mode-line-mode :wk "Toggle mode-line")))
+
 
 
 ;; Recentf (son açılan dosyalar)
