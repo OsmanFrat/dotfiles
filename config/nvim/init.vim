@@ -12,7 +12,7 @@ set hlsearch
 set completeopt=menu,menuone,noselect,noinsert
 set showmatch
 set autowrite
-set autochdir=true
+set autochdir
 set mouse=a
 set timeoutlen=500
 set showtabline=0
