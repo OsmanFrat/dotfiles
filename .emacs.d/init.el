@@ -61,6 +61,12 @@
   :config
   (evil-mode 1))
 
+;; Evil-collection (Dired desteği için)
+(use-package evil-collection
+  :after evil
+  :config
+  (evil-collection-init '(dired))) ; Sadece Dired için etkinleştir
+
 (use-package vimish-fold
   :ensure t
   :config
