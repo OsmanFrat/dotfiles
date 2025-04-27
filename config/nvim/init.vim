@@ -48,6 +48,7 @@ nnoremap j jzz
 nnoremap k kzz
 
 
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 
