@@ -11,10 +11,6 @@ setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 setopt HIST_SAVE_NO_DUPS
 
-# fzf-tab
-autoload -U compinit; compinit
-source ~/fzf-tab/fzf-tab.plugin.zsh
-
 
 # System default appps
 export EDITOR=nvim
