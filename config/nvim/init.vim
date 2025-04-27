@@ -110,14 +110,10 @@ command! -bang -nargs=? -complete=dir Files
   \   <bang>0)
 
 
-" Change to the directory of the file being edited
-" autocmd BufEnter * if isdirectory(expand('%:p:h')) | cd %:p:h | endif
-
 
 " Enable treesitter
 " autocmd FileType python lua vim.treesitter.start()
 autocmd FileType python,c,cpp lua vim.treesitter.start()
-
 
 
 " Alpha.nvim / dashboard settings
