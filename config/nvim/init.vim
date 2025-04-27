@@ -43,6 +43,11 @@ nnoremap <silent> <esc> :nohl<return><esc>
 nnoremap ; :
 vnoremap ; :
 
+" center current line when scroll 
+nnoremap j jzz
+nnoremap k kzz
+
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 
