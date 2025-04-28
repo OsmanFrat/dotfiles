@@ -310,6 +310,9 @@
          ((org-agenda-compact-blocks t)))))
 
 
+(require 'org-habit)
+(add-to-list 'org-modules 'org-habit)
+
 
 (use-package autoinsert
   :ensure nil
