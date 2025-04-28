@@ -61,11 +61,22 @@
   :config
   (evil-mode 1))
 
-;; Evil-collection (Dired desteği için)
-(use-package evil-collection
+
+(use-package dired
+  :ensure nil ; Built-in olduğu için
   :after evil
   :config
-  (evil-collection-init '(dired))) ; Sadece Dired için etkinleştir
+  (evil-define-key 'normal dired-mode-map
+    "h" 'dired-up-directory
+    "l" 'dired-find-file
+    "j" 'dired-next-line
+    "k" 'dired-previous-line
+    "y" 'dired-copy-filename
+    "d" 'dired-flag-file-deletion
+    "D" 'dired-do-delete
+    "r" 'dired-do-rename))
+
+
 
 (use-package vimish-fold
   :ensure t
