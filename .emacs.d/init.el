@@ -285,17 +285,6 @@
  '(org-done ((t (:foreground "gray60" :strike-through t)))))
 
 
-;; Org-mode için otomatik başlık ekleme
-(defun my/org-insert-title ()
-  "Insert title in new Org files."
-  (when (and (eq major-mode 'org-mode)
-             (buffer-file-name)  ;; Dosya diske kaydedilecekse
-             (= (point-min) (point-max)))  ;; Boş dosya kontrolü
-    (insert (format "#+title: %s\n\n" (file-name-base))))  ;; Uzantısız dosya adı
-
-(add-hook 'org-mode-hook 'my/org-insert-title)
-
-
 (use-package yasnippet
   :config
   (yas-global-mode 1))
