@@ -74,7 +74,8 @@
     "y" 'dired-copy-filename
     "d" 'dired-flag-file-deletion
     "D" 'dired-do-delete
-    "r" 'dired-do-rename))
+    "r" 'dired-do-rename
+    "q" 'quit-window))  ; Dired'den çıkmak için
 
 
 

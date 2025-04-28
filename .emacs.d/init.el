@@ -62,6 +62,14 @@
   (evil-mode 1))
 
 
+(defun my/dired-quit ()
+  "Kill the current dired buffer and close its window."
+  (interactive)
+  (let ((buf (current-buffer)))
+    (kill-buffer buf)
+    (unless (one-window-p) (delete-window))))
+
+
 (use-package dired
   :ensure nil ; Built-in olduğu için
   :after evil
@@ -75,7 +83,7 @@
     "d" 'dired-flag-file-deletion
     "D" 'dired-do-delete
     "r" 'dired-do-rename
-    "q" 'quit-window))  ; Dired'den çıkmak için
+    "q" 'my/dired-quit))  ; Dired'den çıkmak için
 
 
 
