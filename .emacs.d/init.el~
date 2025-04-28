@@ -62,20 +62,20 @@
   (evil-mode 1))
 
 
-(use-package dired
-  :ensure nil
-  :after evil
-  :config
-  (evil-define-key 'normal dired-mode-map
-    "h" 'dired-up-directory
-    "l" 'dired-find-file
-    "j" 'dired-next-line
-    "k" 'dired-previous-line
-    "y" 'dired-copy-filename
-    "d" 'dired-flag-file-deletion
-    "D" 'dired-do-delete
-    "r" 'dired-do-rename
-    "q" 'kill-buffer-and-window))  ; Artık doğrudan buffer'ı öldürüyor
+(evil-define-key 'normal dired-mode-map
+  "h" 'dired-up-directory
+  "l" 'dired-find-file
+  "j" 'dired-next-line
+  "k" 'dired-previous-line
+  "y" 'dired-copy-filename
+  "d" 'dired-flag-file-deletion
+  "D" 'dired-do-delete
+  "r" 'dired-do-rename  ;; taşı/kes
+  "c" 'dired-do-copy    ;; kopyala
+  "m" 'dired-mark       ;; işaretle
+  "u" 'dired-unmark     ;; işareti kaldır
+  "q" 'kill-buffer-and-window)
+
 
 (use-package vimish-fold
   :ensure t

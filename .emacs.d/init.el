@@ -70,6 +70,7 @@
   "y" 'dired-copy-filename
   "d" 'dired-flag-file-deletion
   "D" 'dired-do-delete
+  "n" 'dired-create-directory
   "r" 'dired-do-rename  ;; taşı/kes
   "c" 'dired-do-copy    ;; kopyala
   "m" 'dired-mark       ;; işaretle
