@@ -1,9 +1,0 @@
-# -*- mode: snippet -*-
-# name: org-title
-# key: org-title
-# condition: (eq major-mode 'org-mode)
-# --
-#+title: `(file-name-base)`
-#+author: Your Name
-#+date: `(format-time-string "%Y-%m-%d")`
-
