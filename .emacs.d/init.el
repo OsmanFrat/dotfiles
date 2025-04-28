@@ -287,6 +287,21 @@
  '(org-done ((t (:foreground "gray60" :strike-through t)))))
 
 
+(use-package autoinsert
+  :ensure nil
+  :hook (find-file . auto-insert)
+  :custom
+  (auto-insert-query nil) ; otomatik olsun, sormasın
+  :config
+  (define-auto-insert
+    "\\.org\\'"
+    (lambda ()
+      (let ((filename (file-name-base (buffer-file-name))))
+        (insert (format "#+title: %s\n" filename))
+        (insert (format "#+date: %s\n\n" (format-time-string "%Y-%m-%d")))))))
+
+
+
 (use-package yasnippet
   :config
   (yas-global-mode 1))
