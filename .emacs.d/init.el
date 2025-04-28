@@ -75,7 +75,7 @@
     "d" 'dired-flag-file-deletion
     "D" 'dired-do-delete
     "r" 'dired-do-rename
-    "q" 'kill-buffer))  ; Artık doğrudan buffer'ı öldürüyor
+    "q" 'kill-buffer-and-window))  ; Artık doğrudan buffer'ı öldürüyor
 
 (use-package vimish-fold
   :ensure t
