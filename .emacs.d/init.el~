@@ -287,40 +287,18 @@
  '(org-done ((t (:foreground "gray60" :strike-through t)))))
 
 
-;; (use-package autoinsert
-;;   :ensure nil
-;;   :hook (find-file . auto-insert)
-;;   :custom
-;;   (auto-insert-query nil) ; otomatik olsun, sormasın
-;;   :config
-;;   (define-auto-insert
-;;     "\\.org\\'"
-;;     (lambda ()
-;;       (let ((filename (file-name-base (buffer-file-name))))
-;;         (insert (format "#+title: %s\n" filename))
-;;         (insert (format "#+date: %s\n\n" (format-time-string "%Y-%m-%d")))))))
-
 (use-package autoinsert
   :ensure nil
   :hook (find-file . auto-insert)
   :custom
-  (auto-insert-query nil)
+  (auto-insert-query nil) ; otomatik olsun, sormasın
   :config
   (define-auto-insert
     "\\.org\\'"
     (lambda ()
-      (when (= (point-max) 1) ;; sadece boş dosyada çalış
-        (let ((filename (file-name-base (buffer-file-name))))
-          (insert (format "#+title: %s\n" filename))
-          (insert (format "#+date: %s\n" (format-time-string "%Y-%m-%d")))
-          (insert (format "\n#+author: %s" user-full-name))
-          (insert "\n#+startup: folded")
-          (insert "\n#+options: toc:nil")
-          (insert "\n#+filetags: :notlar:")
-          (insert (format "\n#+created: %s\n\n" (format-time-string "%Y-%m-%d %H:%M")))
-          (insert "* Giriş\n\n")
-          (insert "* Notlar\n\n"))))))
-
+      (let ((filename (file-name-base (buffer-file-name))))
+        (insert (format "#+title: %s\n" filename))
+        (insert (format "#+date: %s\n\n" (format-time-string "%Y-%m-%d")))))))
 
 
 
