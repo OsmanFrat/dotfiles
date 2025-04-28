@@ -62,8 +62,13 @@
   (evil-mode 1))
 
 
+(defun my/quit-dired ()
+  "Kill current dired buffer and its window."
+  (interactive)
+  (kill-buffer (current-buffer))  ; current-buffer otomatik olarak mevcut buffer'ı verir
+
 (use-package dired
-  :ensure nil ; Built-in olduğu için
+  :ensure nil
   :after evil
   :config
   (evil-define-key 'normal dired-mode-map
@@ -75,9 +80,7 @@
     "d" 'dired-flag-file-deletion
     "D" 'dired-do-delete
     "r" 'dired-do-rename
-    "q" 'kill-buffer))  ; Dired'den çıkmak için
-
-
+    "q" 'my/quit-dired))  ; Artık doğrudan buffer'ı öldürüyor
 
 (use-package vimish-fold
   :ensure t
