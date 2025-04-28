@@ -250,7 +250,15 @@
   (setq org-hide-emphasis-markers t
         org-startup-indented t
         org-tempo t
-        org-pretty-entities t))
+        org-pretty-entities t
+        org-agenda-files '("~/github/notes/agenda/")  ;; Org dosyalarınızın bulunduğu dizin
+        org-refile-targets '((nil :maxlevel . 3)
+                             (org-agenda-files :maxlevel . 3))
+	org-todo-keywords '((sequence "TODO(t)" "INPROGRESS(i)" "|" "DONE(d)" "CANCELED(c)"))
+        org-log-done 'time
+        org-agenda-start-with-log-mode t
+        org-agenda-span 'week
+        org-agenda-start-on-weekday 1))  ;; Pazartesi ile başla
 
 (use-package org-bullets
   :hook (org-mode . org-bullets-mode)
