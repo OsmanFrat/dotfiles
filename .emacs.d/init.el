@@ -227,6 +227,10 @@
     "fo" '(counsel-recentf :wk "Recent files")
     "o" '(:wk "Org")
     "oo" '(my/open-or-create-notes-org :wk "Create notes/open notes")
+    "a" '(:wk "Agenda")  ;; Agenda için bir prefix
+    "aa" '(org-agenda :wk "Open agenda")  ;; Agenda'yı aç
+    "ad" '(org-agenda-list :wk "Daily agenda")  ;; Günlük agenda
+    "aw" '(org-agenda-list-week :wk "Weekly agenda")  ;; Haftalık agenda
     "l" '(:wk "Lsp")
     "ll" '(lsp :wk "Activate lsp")
     "zA" '(vimish-fold :wk "Create fold")
@@ -293,6 +297,18 @@
  ;; If there is more than one, they won't work right.
  '(org-checkbox-statistics-done ((t (:foreground "gray50" :strike-through t))))
  '(org-done ((t (:foreground "gray60" :strike-through t)))))
+
+;; Org-agenda görünümü
+(setq org-agenda-custom-commands
+      '(("d" "Günlük agenda"
+         ((agenda "" ((org-agenda-span 1)
+                      (org-agenda-overriding-header "Günlük Görevler"))))
+         ((org-agenda-compact-blocks t)))
+        ("w" "Haftalık agenda"
+         ((agenda "" ((org-agenda-span 7)
+                      (org-agenda-overriding-header "Haftalık Görevler"))))
+         ((org-agenda-compact-blocks t)))))
+
 
 
 (use-package autoinsert
