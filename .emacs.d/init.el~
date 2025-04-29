@@ -310,6 +310,11 @@
          ((org-agenda-compact-blocks t)))))
 
 (setq org-agenda-files '("~/github/notes/agenda/task.org"))  # Tek dosya olarak ekleyin
+(setq org-default-notes-file "~/github/notes/agenda/task.org")
+(setq org-capture-templates
+      '(("t" "Todo" entry (file "~/github/notes/agenda/tas.org")
+         "* TODO %?\n  %u\n  %a")))
+
 
 (require 'org-habit)
 (add-to-list 'org-modules 'org-habit)

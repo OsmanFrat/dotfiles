@@ -309,12 +309,13 @@
                       (org-agenda-overriding-header "Haftalık Görevler"))))
          ((org-agenda-compact-blocks t)))))
 
-(setq org-agenda-files '("~/github/notes/agenda/task.org"))  # Tek dosya olarak ekleyin
-(setq org-default-notes-file "~/github/notes/agenda/task.org")
+(setq org-agenda-files '("~/github/notes/agenda/task.org"))
+;; (setq org-default-notes-file "~/github/notes/agenda/task.org")
 (setq org-capture-templates
-      '(("t" "Todo" entry (file "~/github/notes/agenda/tas.org")
+      '(("t" "Todo" entry (file "~/github/notes/agenda/task.org")
          "* TODO %?\n  %u\n  %a")))
 
+(setq org-default-notes-file (concat org-directory "~/github/notes/agenda/notes.org"))
 
 (require 'org-habit)
 (add-to-list 'org-modules 'org-habit)
