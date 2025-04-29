@@ -226,7 +226,8 @@
     "ff" '(counsel-find-file :wk "Find file")
     "fo" '(counsel-recentf :wk "Recent files")
     "o" '(:wk "Org")
-    "oo" '(my/open-or-create-notes-org :wk "Create notes/open notes")
+    "oo" '(org-capture-goto-last-stored :wk "open last capture-note")
+    "op" '(my/open-or-create-notes-org :wk "Create notes/open notes")
     "a" '(:wk "Agenda")  ;; Agenda için bir prefix
     "aa" '(org-agenda :wk "Open agenda")  ;; Agenda'yı aç
     "ad" '(org-agenda-list :wk "Daily agenda")  ;; Günlük agenda
