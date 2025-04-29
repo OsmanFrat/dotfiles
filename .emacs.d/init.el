@@ -309,7 +309,7 @@
                       (org-agenda-overriding-header "Haftalık Görevler"))))
          ((org-agenda-compact-blocks t)))))
 
-(setq org-agenda-files '("~/github/notes/agenda/tasks.org"))  # Tek dosya olarak ekleyin
+(setq org-agenda-files '("~/github/notes/agenda/task.org"))  # Tek dosya olarak ekleyin
 
 (require 'org-habit)
 (add-to-list 'org-modules 'org-habit)
