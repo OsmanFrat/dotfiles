@@ -63,7 +63,7 @@ alias cf='fd . . --type f -H | fzf --preview "bat --style=numbers --color=always
 alias fontr='sudo fc-cache -f -v'
 alias rss='newsboat'
 alias trash='cd ~/.local/share/Trash/files/'
-alias clean-trash='rm -rf ~/.local/share/Trash/{files,info}/*'
+alias clean-trash='sudo rm -rf ~/.local/share/Trash/{files,info}/*'
 
 
 
