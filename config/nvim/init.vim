@@ -94,11 +94,16 @@ set signcolumn=auto:1
 autocmd VimEnter * silent! CocStart
 
 " Auto suggests shortcut for tab button in Coc.nvim
+" inoremap <silent><expr> <TAB>
+      " \ coc#pum#visible() ? coc#pum#next(1) :
+      " \ CheckBackspace() ? "\<Tab>" :
+      " \ coc#refresh()
+" inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : \"\<C-h>"
+
 inoremap <silent><expr> <TAB>
       \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+      \ "\<TAB>"
+
 
 set pumheight=8
 set pumwidth=10
