@@ -53,3 +53,6 @@ echo "$repo_name is created!"
 echo "New Repo Name: $repo_name"
 echo "Privacy setting: $privacy"
 echo "Repo path: ~/github/$repo_name"
+
+# 11. open new repo
+cd ~/github/$repo_name
