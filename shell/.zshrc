@@ -23,6 +23,7 @@ alias pacman-temizlik='sudo pacman -Rns $(pacman -Qtdq)'
 alias guncelle='sudo pacman -Syu'
 alias aur='yay -S'
 alias aur-sil='yay -R'
+alias discord-update='sudo pacman -Sy discord'
 
 # Custom scripts of ozu 
 alias yedek='~/dotfiles/git-auto-commit.sh'
