@@ -27,7 +27,7 @@
               (scroll-bar-mode -1))))
 
 ;; Tamamen mode-line'ı devre dışı bırak
-(setq-default mode-line-format nil)
+;; (setq-default mode-line-format nil)
 
 (dolist (buffer (buffer-list))
   (with-current-buffer buffer
