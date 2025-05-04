@@ -342,11 +342,22 @@
   (yas-global-mode 1))
 
 ;; LSP ve tamamlama
+;; (use-package company
+;;   :hook (prog-mode. lua-mode . company-mode)
+;;   :ensure t
+;;   :config
+;;   (global-company-mode))
+
 (use-package company
-  :hook (prog-mode. lua-mode . company-mode)
   :ensure t
+  :hook ((prog-mode lua-mode) . company-mode)
   :config
+  (setq company-idle-delay 0
+        company-minimum-prefix-length 1)
   (global-company-mode))
+
+
+
 
 (use-package lsp-mode
   :init
@@ -419,19 +430,21 @@
                    :server-id 'lua-ls)))
 
 
-(defun my/tab-indent-or-complete ()
-  "If at the end of a word, try to complete. Else, indent."
+
+(defun my/tab-action ()
+  "Do context-aware tab."
   (interactive)
-  (if (or (looking-at "\\_>")
-          (company-tooltip-visible-p))
-      (company-complete-common)
-    (indent-for-tab-command)))
+  (cond
+   ((and (bound-and-true-p company-mode)
+         (company-tooltip-visible-p))
+    (company-complete-selection))
+   ((and (bound-and-true-p yas-minor-mode)
+         (yas-expand)))
+   (t
+    (indent-for-tab-command))))
 
-;; Insert moddayken TAB tuşunu bu işleve ata
-(define-key evil-insert-state-map (kbd "TAB") 'my/tab-indent-or-complete)
-
-
-
+;; Bu bind hem insert hem normal state için yapılabilir
+(define-key evil-insert-state-map (kbd "TAB") 'my/tab-action)
 
 
 
