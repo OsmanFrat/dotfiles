@@ -29,13 +29,13 @@
 ;; Tamamen mode-line'ı devre dışı bırak
 ;; (setq-default mode-line-format nil)
 
-(dolist (buffer (buffer-list))
-  (with-current-buffer buffer
-    (setq mode-line-format nil)))
+;; (dolist (buffer (buffer-list))
+;;   (with-current-buffer buffer
+;;     (setq mode-line-format nil)))
 
-(add-hook 'after-change-major-mode-hook
-          (lambda ()
-            (setq mode-line-format nil)))
+;; (add-hook 'after-change-major-mode-hook
+;;           (lambda ()
+;;             (setq mode-line-format nil)))
 
 
 
