@@ -435,3 +435,5 @@
 [12:23:43.821][info] [#0:script/workspace/loading.lua:172]: Loaded files takes [0.000] sec: file:///home/ozu/github/mpv-subtitle-downloader-plugin/%23sub_downloader_plugin.lua%23
 [12:23:43.821][info] [#0:script/workspace/loading.lua:181]: Compile files takes [0.000] sec: file:///home/ozu/github/mpv-subtitle-downloader-plugin/%23sub_downloader_plugin.lua%23
 [12:23:43.821][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	file:///home/ozu/github/mpv-subtitle-downloader-plugin/%23sub_downloader_plugin.lua%23
+[12:24:28.106][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin], files count:[12]
+[12:24:28.125][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin] finished, takes [0.009] sec.
