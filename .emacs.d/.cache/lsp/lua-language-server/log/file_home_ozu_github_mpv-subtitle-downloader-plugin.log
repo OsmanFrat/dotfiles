@@ -461,3 +461,11 @@
 [13:24:12.290][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin] finished, takes [0.026] sec.
 [13:26:23.891][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin], files count:[12]
 [13:26:23.920][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin] finished, takes [0.017] sec.
+[13:28:41.176][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin], files count:[12]
+[13:28:41.202][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin] finished, takes [0.014] sec.
+[13:28:49.407][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin], files count:[12]
+[13:28:49.442][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin] finished, takes [0.022] sec.
+[13:28:52.281][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin], files count:[12]
+[13:28:52.310][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin] finished, takes [0.015] sec.
+[13:28:54.936][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin], files count:[12]
+[13:28:54.962][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin] finished, takes [0.014] sec.
