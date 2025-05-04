@@ -400,6 +400,24 @@
 (add-hook 'c-mode-hook 'lsp-deferred)
 (add-hook 'c++-mode-hook 'lsp-deferred)
 
+;; 1. Gerekli paketlerin yüklenmesi
+(use-package lua-mode
+  :ensure t
+  :mode "\\.lua\\'")
+
+(use-package lsp-mode
+  :ensure t
+  :commands lsp
+  :hook (lua-mode . lsp))
+
+;; 2. Lua Language Server ayarı
+(with-eval-after-load 'lsp-mode
+  (lsp-register-client
+   (make-lsp-client :new-connection (lsp-stdio-connection '("lua-language-server"))
+                   :major-modes '(lua-mode)
+                   :server-id 'lua-ls)))
+
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
