@@ -419,6 +419,16 @@
                    :server-id 'lua-ls)))
 
 
+(defun my/tab-indent-or-complete ()
+  "If at the end of a word, try to complete. Else, indent."
+  (interactive)
+  (if (or (looking-at "\\_>")
+          (company-tooltip-visible-p))
+      (company-complete-common)
+    (indent-for-tab-command)))
+
+;; Insert moddayken TAB tuşunu bu işleve ata
+(define-key evil-insert-state-map (kbd "TAB") 'my/tab-indent-or-complete)
 
 
 
