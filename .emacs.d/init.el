@@ -422,6 +422,7 @@
 
 
 
+
 (defun smart-tab ()
   "Smart tab behavior:
 - If at beginning of line (or only whitespace before cursor), do normal tab indent
@@ -434,6 +435,7 @@
       (indent-for-tab-command)
     (if (and (boundp 'company-mode) company-mode
       (company-indent-or-complete-common))))
+
 
 ;; Tüm majör modlarda bu fonksiyonu TAB'a ata
 (add-hook 'prog-mode-hook
