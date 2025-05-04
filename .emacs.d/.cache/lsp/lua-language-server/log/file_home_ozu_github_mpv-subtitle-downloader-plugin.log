@@ -418,3 +418,12 @@
 [13:12:12.608][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin] finished, takes [0.005] sec.
 [13:13:57.969][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin], files count:[12]
 [13:13:57.991][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin] finished, takes [0.015] sec.
+[13:14:43.321][info] [#0:script/workspace/workspace.lua:284]: Scan files at:	file:///home/ozu/github/mpv-subtitle-downloader-plugin/%23sub_downloader_plugin.lua%23
+[13:14:43.322][info] [#0:script/workspace/loading.lua:160]: Load files from disk:	file:///home/ozu/github/mpv-subtitle-downloader-plugin/%23sub_downloader_plugin.lua%23
+[13:14:43.322][info] [#0:script/workspace/loading.lua:172]: Loaded files takes [0.000] sec: file:///home/ozu/github/mpv-subtitle-downloader-plugin/%23sub_downloader_plugin.lua%23
+[13:14:43.322][info] [#0:script/workspace/loading.lua:181]: Compile files takes [0.000] sec: file:///home/ozu/github/mpv-subtitle-downloader-plugin/%23sub_downloader_plugin.lua%23
+[13:14:43.322][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	file:///home/ozu/github/mpv-subtitle-downloader-plugin/%23sub_downloader_plugin.lua%23
+[13:14:47.446][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin], files count:[12]
+[13:14:47.460][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin] finished, takes [0.007] sec.
+[13:14:56.353][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin], files count:[12]
+[13:14:56.387][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin] finished, takes [0.019] sec.
