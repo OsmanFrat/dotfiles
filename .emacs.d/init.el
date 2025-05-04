@@ -431,22 +431,6 @@
 
 
 
-(defun my/tab-action ()
-  "Do context-aware tab."
-  (interactive)
-  (cond
-   ((and (bound-and-true-p company-mode)
-         (company-tooltip-visible-p))
-    (company-complete-selection))
-   ((and (bound-and-true-p yas-minor-mode)
-         (yas-expand)))
-   (t
-    (indent-for-tab-command))))
-
-;; Bu bind hem insert hem normal state için yapılabilir
-(define-key evil-insert-state-map (kbd "TAB") 'my/tab-action)
-
-
 
 
 
