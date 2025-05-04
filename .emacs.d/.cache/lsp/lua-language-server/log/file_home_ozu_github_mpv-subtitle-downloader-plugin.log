@@ -437,3 +437,25 @@
 [12:23:43.821][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	file:///home/ozu/github/mpv-subtitle-downloader-plugin/%23sub_downloader_plugin.lua%23
 [12:24:28.106][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin], files count:[12]
 [12:24:28.125][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin] finished, takes [0.009] sec.
+[12:32:34.707][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 6.709 MB
+        # 00 : 6.351 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.112 MB
+        # 04 : 0.140 MB
+    --------------- Coroutine ---------------
+        Total:     10
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      10
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
