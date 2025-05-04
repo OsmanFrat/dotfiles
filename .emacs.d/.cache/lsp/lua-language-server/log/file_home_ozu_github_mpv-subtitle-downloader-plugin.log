@@ -1,10 +1,10 @@
-[12:22:34.668][info] [#0:/home/ozu/.emacs.d/.cache/lsp/lua-language-server/main.lua:68]: Lua Lsp startup, root: 	/home/ozu/.emacs.d/.cache/lsp/lua-language-server
-[12:22:34.668][info] [#0:/home/ozu/.emacs.d/.cache/lsp/lua-language-server/main.lua:69]: ROOT:	/home/ozu/.emacs.d/.cache/lsp/lua-language-server
-[12:22:34.668][info] [#0:/home/ozu/.emacs.d/.cache/lsp/lua-language-server/main.lua:70]: LOGPATH:	/home/ozu/.emacs.d/.cache/lsp/lua-language-server/log
-[12:22:34.668][info] [#0:/home/ozu/.emacs.d/.cache/lsp/lua-language-server/main.lua:71]: METAPATH:	/home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta
-[12:22:34.668][info] [#0:/home/ozu/.emacs.d/.cache/lsp/lua-language-server/main.lua:72]: VERSION:	3.14.0
-[12:22:34.719][info] [#0:script/proto/proto.lua:260]: Listen Mode: stdio
-[12:22:34.721][info] [#0:script/service/service.lua:145]: 
+[13:11:26.197][info] [#0:/home/ozu/.emacs.d/.cache/lsp/lua-language-server/main.lua:68]: Lua Lsp startup, root: 	/home/ozu/.emacs.d/.cache/lsp/lua-language-server
+[13:11:26.197][info] [#0:/home/ozu/.emacs.d/.cache/lsp/lua-language-server/main.lua:69]: ROOT:	/home/ozu/.emacs.d/.cache/lsp/lua-language-server
+[13:11:26.197][info] [#0:/home/ozu/.emacs.d/.cache/lsp/lua-language-server/main.lua:70]: LOGPATH:	/home/ozu/.emacs.d/.cache/lsp/lua-language-server/log
+[13:11:26.197][info] [#0:/home/ozu/.emacs.d/.cache/lsp/lua-language-server/main.lua:71]: METAPATH:	/home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta
+[13:11:26.198][info] [#0:/home/ozu/.emacs.d/.cache/lsp/lua-language-server/main.lua:72]: VERSION:	3.14.0
+[13:11:26.265][info] [#0:script/proto/proto.lua:260]: Listen Mode: stdio
+[13:11:26.265][info] [#0:script/service/service.lua:145]: 
 ========= Medical Examination Report =========
     --------------- Memory ---------------
         Total: 2.261 MB
@@ -26,7 +26,7 @@
         Holdon:   0
         Waiting:  0
 ==============================================
-[12:22:34.834][info] [#0:script/client.lua:657]: Client init	{
+[13:11:26.377][info] [#0:script/client.lua:657]: Client init	{
   capabilities = {
     general = {
       positionEncodings = { "utf-32", "utf-16" }
@@ -195,18 +195,18 @@
     name = "emacs",
     version = "GNU Emacs 30.1 (build 2, x86_64-pc-linux-gnu, GTK+ Version 3.24.49, cairo version 1.18.4)"
   },
-  processId = 58463,
+  processId = 61859,
   rootPath = "/home/ozu/github/mpv-subtitle-downloader-plugin",
   rootUri = "file:///home/ozu/github/mpv-subtitle-downloader-plugin",
   workDoneToken = "1"
 }
-[12:22:34.834][info] [#0:script/language.lua:137]: VSC language: nil
-[12:22:34.834][info] [#0:script/language.lua:138]: LS  language: en-us
-[12:22:34.834][info] [#0:script/workspace/workspace.lua:38]: Workspace init root: 	file:///home/ozu/github/mpv-subtitle-downloader-plugin
-[12:22:34.834][info] [#0:script/workspace/workspace.lua:42]: Log path: 	/home/ozu/.emacs.d/.cache/lsp/lua-language-server/log/file_home_ozu_github_mpv-subtitle-downloader-plugin.log
-[12:22:34.835][info] [#0:script/workspace/workspace.lua:48]: Workspace create: 	file:///home/ozu/github/mpv-subtitle-downloader-plugin
-[12:22:35.145][info] [#0:script/provider/provider.lua:49]: Load config from client	file:///home/ozu/github/mpv-subtitle-downloader-plugin
-[12:22:35.146][info] [#0:script/provider/provider.lua:50]: {
+[13:11:26.378][info] [#0:script/language.lua:137]: VSC language: nil
+[13:11:26.378][info] [#0:script/language.lua:138]: LS  language: en-us
+[13:11:26.378][info] [#0:script/workspace/workspace.lua:38]: Workspace init root: 	file:///home/ozu/github/mpv-subtitle-downloader-plugin
+[13:11:26.378][info] [#0:script/workspace/workspace.lua:42]: Log path: 	/home/ozu/.emacs.d/.cache/lsp/lua-language-server/log/file_home_ozu_github_mpv-subtitle-downloader-plugin.log
+[13:11:26.379][info] [#0:script/workspace/workspace.lua:48]: Workspace create: 	file:///home/ozu/github/mpv-subtitle-downloader-plugin
+[13:11:26.689][info] [#0:script/provider/provider.lua:49]: Load config from client	file:///home/ozu/github/mpv-subtitle-downloader-plugin
+[13:11:26.689][info] [#0:script/provider/provider.lua:50]: {
   Lua = {
     color = {
       mode = "Semantic"
@@ -270,9 +270,9 @@
   ["files.associations"] = false,
   ["files.exclude"] = false
 }
-[12:22:35.247][info] [#0:script/provider/completion.lua:43]: Enable completion.
-[12:22:35.247][info] [#0:script/provider/provider.lua:65]: Load config from client	fallback
-[12:22:35.247][info] [#0:script/provider/provider.lua:66]: {
+[13:11:26.791][info] [#0:script/provider/completion.lua:43]: Enable completion.
+[13:11:26.791][info] [#0:script/provider/provider.lua:65]: Load config from client	fallback
+[13:11:26.792][info] [#0:script/provider/provider.lua:66]: {
   Lua = {
     color = {
       mode = "Semantic"
@@ -336,126 +336,79 @@
   ["files.associations"] = false,
   ["files.exclude"] = false
 }
-[12:22:35.378][info] [#0:script/library.lua:212]: Init builtin library at:	file:///home/ozu/github/mpv-subtitle-downloader-plugin
-[12:22:35.408][info] [#0:script/library.lua:212]: Init builtin library at:	nil
-[12:22:35.527][info] [#0:script/workspace/workspace.lua:324]: Preload start:	file:///home/ozu/github/mpv-subtitle-downloader-plugin
-[12:22:35.531][info] [#0:script/workspace/workspace.lua:330]: Scan files at:	file:///home/ozu/github/mpv-subtitle-downloader-plugin
-[12:22:35.532][info] [#0:script/workspace/workspace.lua:324]: Preload start:	<fallback>
-[12:22:35.544][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/builtin.lua
-[12:22:35.545][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/string.lua
-[12:22:35.546][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/debug.lua
-[12:22:35.546][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/package.lua
-[12:22:35.547][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/coroutine.lua
-[12:22:35.547][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/builtin.lua
-[12:22:35.547][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/io.lua
-[12:22:35.548][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/string.lua
-[12:22:35.548][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/table.lua
-[12:22:35.548][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/debug.lua
-[12:22:35.549][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/basic.lua
-[12:22:35.549][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/package.lua
-[12:22:35.549][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/math.lua
-[12:22:35.549][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/coroutine.lua
-[12:22:35.550][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/os.lua
-[12:22:35.550][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/io.lua
-[12:22:35.550][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/utf8.lua
-[12:22:35.550][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/table.lua
-[12:22:35.550][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/basic.lua
-[12:22:35.551][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/math.lua
-[12:22:35.551][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/os.lua
-[12:22:35.551][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/utf8.lua
-[12:22:35.652][info] [#0:script/workspace/workspace.lua:379]: Found 11 files at:	<fallback>
-[12:22:35.652][info] [#0:script/workspace/loading.lua:160]: Load files from disk:	<fallback>
-[12:22:35.652][info] [#0:script/workspace/workspace.lua:379]: Found 12 files at:	file:///home/ozu/github/mpv-subtitle-downloader-plugin
-[12:22:35.652][info] [#0:script/workspace/loading.lua:160]: Load files from disk:	file:///home/ozu/github/mpv-subtitle-downloader-plugin
-[12:22:35.656][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/utf8.lua , size = 2.386 KB
-[12:22:35.661][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/utf8.lua
-[12:22:35.661][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/os.lua , size = 5.611 KB
-[12:22:35.670][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/os.lua
-[12:22:35.670][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/os.lua
-[12:22:35.670][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/utf8.lua
-[12:22:35.671][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/math.lua , size = 8.542 KB
-[12:22:35.689][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/math.lua
-[12:22:35.690][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/math.lua
-[12:22:35.690][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/math.lua
-[12:22:35.690][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/basic.lua , size = 15.841 KB
-[12:22:35.719][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/basic.lua
-[12:22:35.719][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/basic.lua
-[12:22:35.719][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/table.lua , size = 4.445 KB
-[12:22:35.725][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/table.lua
-[12:22:35.725][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/table.lua
-[12:22:35.725][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/table.lua
-[12:22:35.726][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/io.lua , size = 6.364 KB
-[12:22:35.733][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/io.lua
-[12:22:35.733][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/io.lua
-[12:22:35.733][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/io.lua
-[12:22:35.734][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/coroutine.lua , size = 2.590 KB
-[12:22:35.738][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/coroutine.lua
-[12:22:35.738][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/coroutine.lua
-[12:22:35.738][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/package.lua , size = 2.944 KB
-[12:22:35.741][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/package.lua
-[12:22:35.741][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/package.lua
-[12:22:35.741][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/package.lua
-[12:22:35.742][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/debug.lua , size = 7.637 KB
-[12:22:35.752][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/debug.lua
-[12:22:35.752][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/debug.lua
-[12:22:35.752][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/debug.lua
-[12:22:35.752][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/string.lua , size = 5.234 KB
-[12:22:35.773][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/string.lua
-[12:22:35.774][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/string.lua
-[12:22:35.774][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/builtin.lua , size = 0.302 KB
-[12:22:35.775][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/builtin.lua
-[12:22:35.775][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/builtin.lua
-[12:22:35.775][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/builtin.lua
-[12:22:35.775][info] [#0:script/workspace/loading.lua:172]: Loaded files takes [0.120] sec: <fallback>
-[12:22:35.775][info] [#0:script/workspace/loading.lua:181]: Compile files takes [0.000] sec: <fallback>
-[12:22:35.775][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	<fallback>
-[12:22:35.775][info] [#0:script/workspace/workspace.lua:381]: Preload finish at:	<fallback>
-[12:22:35.778][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///home/ozu/github/mpv-subtitle-downloader-plugin/sub_downloader_plugin.lua
-[12:22:35.778][info] [#0:script/workspace/loading.lua:172]: Loaded files takes [0.123] sec: file:///home/ozu/github/mpv-subtitle-downloader-plugin
-[12:22:35.779][info] [#0:script/workspace/loading.lua:181]: Compile files takes [0.000] sec: file:///home/ozu/github/mpv-subtitle-downloader-plugin
-[12:22:35.779][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	file:///home/ozu/github/mpv-subtitle-downloader-plugin
-[12:22:35.779][info] [#0:script/workspace/workspace.lua:381]: Preload finish at:	file:///home/ozu/github/mpv-subtitle-downloader-plugin
-[12:22:35.784][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin], files count:[12]
-[12:22:35.808][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin] finished, takes [0.016] sec.
-[12:23:22.744][info] [#0:script/workspace/workspace.lua:284]: Scan files at:	file:///home/ozu/github/mpv-subtitle-downloader-plugin/sub_downloader_plugin.lua
-[12:23:22.744][info] [#0:script/workspace/workspace.lua:284]: Scan files at:	file:///home/ozu/github/mpv-subtitle-downloader-plugin/sub_downloader_plugin.lua~
-[12:23:22.745][info] [#0:script/workspace/loading.lua:160]: Load files from disk:	file:///home/ozu/github/mpv-subtitle-downloader-plugin/sub_downloader_plugin.lua
-[12:23:22.745][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///home/ozu/github/mpv-subtitle-downloader-plugin/sub_downloader_plugin.lua
-[12:23:22.745][info] [#0:script/workspace/loading.lua:160]: Load files from disk:	file:///home/ozu/github/mpv-subtitle-downloader-plugin/sub_downloader_plugin.lua~
-[12:23:22.745][info] [#0:script/workspace/loading.lua:172]: Loaded files takes [0.000] sec: file:///home/ozu/github/mpv-subtitle-downloader-plugin/sub_downloader_plugin.lua~
-[12:23:22.745][info] [#0:script/workspace/loading.lua:181]: Compile files takes [0.000] sec: file:///home/ozu/github/mpv-subtitle-downloader-plugin/sub_downloader_plugin.lua~
-[12:23:22.745][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	file:///home/ozu/github/mpv-subtitle-downloader-plugin/sub_downloader_plugin.lua~
-[12:23:22.745][info] [#0:script/workspace/loading.lua:172]: Loaded files takes [0.000] sec: file:///home/ozu/github/mpv-subtitle-downloader-plugin/sub_downloader_plugin.lua
-[12:23:22.745][info] [#0:script/workspace/loading.lua:181]: Compile files takes [0.000] sec: file:///home/ozu/github/mpv-subtitle-downloader-plugin/sub_downloader_plugin.lua
-[12:23:22.745][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	file:///home/ozu/github/mpv-subtitle-downloader-plugin/sub_downloader_plugin.lua
-[12:23:23.047][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin], files count:[12]
-[12:23:23.061][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin] finished, takes [0.008] sec.
-[12:23:43.818][info] [#0:script/workspace/workspace.lua:284]: Scan files at:	file:///home/ozu/github/mpv-subtitle-downloader-plugin/%23sub_downloader_plugin.lua%23
-[12:23:43.821][info] [#0:script/workspace/loading.lua:160]: Load files from disk:	file:///home/ozu/github/mpv-subtitle-downloader-plugin/%23sub_downloader_plugin.lua%23
-[12:23:43.821][info] [#0:script/workspace/loading.lua:172]: Loaded files takes [0.000] sec: file:///home/ozu/github/mpv-subtitle-downloader-plugin/%23sub_downloader_plugin.lua%23
-[12:23:43.821][info] [#0:script/workspace/loading.lua:181]: Compile files takes [0.000] sec: file:///home/ozu/github/mpv-subtitle-downloader-plugin/%23sub_downloader_plugin.lua%23
-[12:23:43.821][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	file:///home/ozu/github/mpv-subtitle-downloader-plugin/%23sub_downloader_plugin.lua%23
-[12:24:28.106][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin], files count:[12]
-[12:24:28.125][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin] finished, takes [0.009] sec.
-[12:32:34.707][info] [#0:script/service/service.lua:145]: 
-========= Medical Examination Report =========
-    --------------- Memory ---------------
-        Total: 6.709 MB
-        # 00 : 6.351 MB
-        # 01 : 0.053 MB
-        # 02 : 0.053 MB
-        # 03 : 0.112 MB
-        # 04 : 0.140 MB
-    --------------- Coroutine ---------------
-        Total:     10
-        Running:   0
-        Suspended: 0
-        Normal:    0
-        Dead:      10
-    --------------- Cache ---------------
-        Total: 1
-        Dead:  0
-    ---------------  RPC  ---------------
-        Holdon:   0
-        Waiting:  0
-==============================================
+[13:11:26.916][info] [#0:script/library.lua:212]: Init builtin library at:	file:///home/ozu/github/mpv-subtitle-downloader-plugin
+[13:11:26.938][info] [#0:script/library.lua:212]: Init builtin library at:	nil
+[13:11:27.057][info] [#0:script/workspace/workspace.lua:324]: Preload start:	file:///home/ozu/github/mpv-subtitle-downloader-plugin
+[13:11:27.062][info] [#0:script/workspace/workspace.lua:330]: Scan files at:	file:///home/ozu/github/mpv-subtitle-downloader-plugin
+[13:11:27.067][info] [#0:script/workspace/workspace.lua:324]: Preload start:	<fallback>
+[13:11:27.079][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/builtin.lua
+[13:11:27.079][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/string.lua
+[13:11:27.080][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/debug.lua
+[13:11:27.081][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/package.lua
+[13:11:27.081][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/coroutine.lua
+[13:11:27.083][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/io.lua
+[13:11:27.084][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/table.lua
+[13:11:27.085][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/basic.lua
+[13:11:27.085][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/builtin.lua
+[13:11:27.085][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/math.lua
+[13:11:27.085][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/string.lua
+[13:11:27.086][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/os.lua
+[13:11:27.086][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/debug.lua
+[13:11:27.086][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/utf8.lua
+[13:11:27.086][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/package.lua
+[13:11:27.087][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/coroutine.lua
+[13:11:27.087][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/io.lua
+[13:11:27.087][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/table.lua
+[13:11:27.087][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/basic.lua
+[13:11:27.088][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/math.lua
+[13:11:27.089][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/os.lua
+[13:11:27.089][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/utf8.lua
+[13:11:27.190][info] [#0:script/workspace/workspace.lua:379]: Found 11 files at:	<fallback>
+[13:11:27.190][info] [#0:script/workspace/loading.lua:160]: Load files from disk:	<fallback>
+[13:11:27.190][info] [#0:script/workspace/workspace.lua:379]: Found 13 files at:	file:///home/ozu/github/mpv-subtitle-downloader-plugin
+[13:11:27.190][info] [#0:script/workspace/loading.lua:160]: Load files from disk:	file:///home/ozu/github/mpv-subtitle-downloader-plugin
+[13:11:27.194][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/utf8.lua , size = 2.386 KB
+[13:11:27.204][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/utf8.lua
+[13:11:27.204][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/os.lua , size = 5.611 KB
+[13:11:27.220][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/os.lua
+[13:11:27.220][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/os.lua
+[13:11:27.220][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/math.lua , size = 8.542 KB
+[13:11:27.246][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/math.lua
+[13:11:27.246][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/math.lua
+[13:11:27.246][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/basic.lua , size = 15.841 KB
+[13:11:27.276][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/basic.lua
+[13:11:27.276][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/basic.lua
+[13:11:27.276][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/table.lua , size = 4.445 KB
+[13:11:27.282][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/table.lua
+[13:11:27.282][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/table.lua
+[13:11:27.282][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/utf8.lua
+[13:11:27.282][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/io.lua , size = 6.364 KB
+[13:11:27.290][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/io.lua
+[13:11:27.290][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/io.lua
+[13:11:27.290][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/coroutine.lua , size = 2.590 KB
+[13:11:27.293][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/coroutine.lua
+[13:11:27.293][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/coroutine.lua
+[13:11:27.294][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/package.lua , size = 2.944 KB
+[13:11:27.298][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/package.lua
+[13:11:27.298][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/package.lua
+[13:11:27.299][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/debug.lua , size = 7.637 KB
+[13:11:27.319][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/debug.lua
+[13:11:27.319][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/debug.lua
+[13:11:27.319][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/debug.lua
+[13:11:27.320][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/string.lua , size = 5.234 KB
+[13:11:27.326][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/string.lua
+[13:11:27.327][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/string.lua
+[13:11:27.327][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/builtin.lua , size = 0.302 KB
+[13:11:27.328][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/builtin.lua
+[13:11:27.328][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta/Lua%205.4%20en-us%20utf8/builtin.lua
+[13:11:27.328][info] [#0:script/workspace/loading.lua:172]: Loaded files takes [0.139] sec: <fallback>
+[13:11:27.328][info] [#0:script/workspace/loading.lua:181]: Compile files takes [0.000] sec: <fallback>
+[13:11:27.328][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	<fallback>
+[13:11:27.328][info] [#0:script/workspace/workspace.lua:381]: Preload finish at:	<fallback>
+[13:11:27.331][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///home/ozu/github/mpv-subtitle-downloader-plugin/sub_downloader_plugin.lua
+[13:11:27.331][info] [#0:script/workspace/loading.lua:172]: Loaded files takes [0.141] sec: file:///home/ozu/github/mpv-subtitle-downloader-plugin
+[13:11:27.331][info] [#0:script/workspace/loading.lua:181]: Compile files takes [0.000] sec: file:///home/ozu/github/mpv-subtitle-downloader-plugin
+[13:11:27.331][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	file:///home/ozu/github/mpv-subtitle-downloader-plugin
+[13:11:27.331][info] [#0:script/workspace/workspace.lua:381]: Preload finish at:	file:///home/ozu/github/mpv-subtitle-downloader-plugin
+[13:11:27.336][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin], files count:[12]
+[13:11:27.359][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/mpv-subtitle-downloader-plugin] finished, takes [0.015] sec.
