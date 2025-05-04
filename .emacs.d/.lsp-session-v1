@@ -1,1 +1,1 @@
-#s(lsp-session ("/home/ozu/github/ozu-pro" "/home/ozu/github/ozubi" "/home/ozu/github/30-days-of-c/test") nil #s(hash-table test equal) #s(hash-table test equal) #s(hash-table test equal))
+#s(lsp-session ("/home/ozu/github/mpv-subtitle-downloader-plugin" "/home/ozu/github/ozu-pro" "/home/ozu/github/ozubi" "/home/ozu/github/30-days-of-c/test") nil #s(hash-table test equal) #s(hash-table test equal) #s(hash-table test equal))
