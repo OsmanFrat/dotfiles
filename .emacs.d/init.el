@@ -341,10 +341,9 @@
   :config
   (yas-global-mode 1))
 
-
 ;; LSP ve tamamlama
 (use-package company
-  :hook (prog-mode . company-mode)
+  :hook (prog-mode. lua-mode . company-mode)
   :ensure t
   :config
   (global-company-mode))
@@ -400,6 +399,8 @@
 (add-hook 'c-mode-hook 'lsp-deferred)
 (add-hook 'c++-mode-hook 'lsp-deferred)
 
+
+
 ;; 1. Gerekli paketlerin yüklenmesi
 (use-package lua-mode
   :ensure t
@@ -416,6 +417,9 @@
    (make-lsp-client :new-connection (lsp-stdio-connection '("lua-language-server"))
                    :major-modes '(lua-mode)
                    :server-id 'lua-ls)))
+
+
+
 
 
 
