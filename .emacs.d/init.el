@@ -423,30 +423,6 @@
 
 
 
-(defun smart-tab ()
-  "Smart tab behavior:
-- If at beginning of line (or only whitespace before cursor), do normal tab indent
-- Otherwise, trigger completion"
-  (interactive)
-  (if (or (bolp)
-          (save-excursion
-            (skip-chars-backward " \t")
-            (bolp)))
-      (indent-for-tab-command)
-    (if (and (boundp 'company-mode) company-mode
-      (company-indent-or-complete-common))))
-
-
-;; Tüm majör modlarda bu fonksiyonu TAB'a ata
-(add-hook 'prog-mode-hook
-          (lambda ()
-            (local-set-key (kbd "TAB") 'smart-tab)))
-
-;; Eğer evil-mode kullanıyorsanız insert mod için özel ayar
-(with-eval-after-load 'evil
-  (evil-define-key 'insert prog-mode-map (kbd "TAB") 'smart-tab))
-
-
 
 
 
