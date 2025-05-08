@@ -7,7 +7,6 @@ end
 
 -- ost download --file Dumbo.1941.mp4
 function load_sub_with_hash()
-
   local path = mp.get_property("path")
   local dir, filename = utils.split_path(path)
   local sub_name = string.gsub(filename, "%.%w+$", "")
@@ -25,16 +24,4 @@ function load_sub_with_hash()
 end
 
 
---> seach subtitle by video name and download matched top 5 subitle and add to current mpv video <--
-
--- search all .srt files in current directory
-function find_all_sub_file()
-  local path = mp.get_property("path")
-  for dosya in io.popen('ls "' ..path.. '/*.srt"'):lines() do
-    mp.osd_message(dosya)
-  end
-end
-
--- mp.add_key_binding("a", "sub_downloader_plugin", load_sub_with_hash)
-
-mp.add_key_binding("a", "sub_downloader_plugin", find_all_sub_file)
+mp.add_key_binding("a", "sub_downloader_plugin", load_sub_with_hash)
