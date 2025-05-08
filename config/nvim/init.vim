@@ -17,11 +17,20 @@ set mouse=a
 set timeoutlen=500
 set showtabline=0
 set cursorline
-set statusline=%F\ %m\ %r\ %y\ %=Line:\ %l\/%L\ Col:\ %c
+" set statusline=%F\ %m\ %r\ %y\ %=Line:\ %l\/%L\ Col:\ %c
 set clipboard=unnamedplus
 
-
-" History settings
+" status line
+set laststatus=2        " Status line'ı her zaman göster
+set statusline=         " Önceki ayarları temizle
+set statusline+=%F      " Dosya yolu ve adı
+set statusline+=\ %m    " Değiştirilmişse [+] göster
+set statusline+=\ %r    " Salt okunursa [RO] göster
+set statusline+=\ %y    " Dosya türü (ör. [vim])
+set statusline+=%=      " Sağa hizala
+set statusline+=%l/%L   " Satır numarası / Toplam satır
+set statusline+=\ %c    " Sütun numarası
+set statusline+=\ %P    " Yüzde olarak konum (ör. %50)" History settings
 set undofile           " Undo dosyasını kaydet
 set undodir=~/.vim/undodir  " Undo geçmişi için özel bir dizin belirtin
 set undolevels=1000    " Geri alma geçmişi için yeterince büyük bir limit
