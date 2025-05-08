@@ -28,11 +28,12 @@ end
 --> seach subtitle by video name and download matched top 5 subitle and add to current mpv video <--
 
 -- search all .srt files in current directory
-for dosya in io.popen('ls "' ..path.. '/*.srt"'):lines() do
-    print(dosya)
+function find_all_sub_file()
+  for dosya in io.popen('ls "' ..path.. '/*.srt"'):lines() do
+    mp.osd_message(dosya)
+  end
 end
-
-
 
 -- mp.add_key_binding("a", "sub_downloader_plugin", load_sub_with_hash)
 
+mp.add_key_binding("a", "sub_downloader_plugin", find_all_sub_file)
