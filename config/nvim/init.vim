@@ -30,7 +30,9 @@ set statusline+=\ %y    " Dosya türü (ör. [vim])
 set statusline+=%=      " Sağa hizala
 set statusline+=%l/%L   " Satır numarası / Toplam satır
 set statusline+=\ %c    " Sütun numarası
-set statusline+=\ %P    " Yüzde olarak konum (ör. %50)" History settings
+set statusline+=\ %P    " Yüzde olarak konum (ör. %50)
+
+" History settings
 set undofile           " Undo dosyasını kaydet
 set undodir=~/.vim/undodir  " Undo geçmişi için özel bir dizin belirtin
 set undolevels=1000    " Geri alma geçmişi için yeterince büyük bir limit
