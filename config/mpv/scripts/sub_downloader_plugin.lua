@@ -73,10 +73,9 @@ function load_all_subs()
 
   -- if os.execute("cd '"..dir.."' && ost download --file "..filename.." && mv "..sub_name..".srt '"..srt_path.."'") then
   if os.execute("cd '"..dir.."' && ozusub -m "..filename.."") then
-      if add_all_subs() then
-        mp.msg.warn("Subtitle download succeeded")
-        mp.osd_message("Subtitle download succeeded: \n" .. srt_path .. "", 5)
-      end
+      add_all_subs()
+      mp.msg.warn("Subtitle download succeeded")
+      mp.osd_message("Subtitle download succeeded: \n" .. srt_path .. "", 5)
       else
         display_error()
   end
