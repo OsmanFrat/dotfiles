@@ -17,7 +17,6 @@ set mouse=a
 set timeoutlen=500
 set showtabline=0
 set cursorline
-" set statusline=%F\ %m\ %r\ %y\ %=Line:\ %l\/%L\ Col:\ %c
 set clipboard=unnamedplus
 
 " status line
@@ -308,18 +307,10 @@ require("toggleterm").setup({
 EOF
 
 " pyinstaller build function
-
 function! BuildWithPyInstaller()
   let l:input_name = input("Enter a name for .exe: ")
   execute ":!pyinstaller --onefile --name " . shellescape(l:input_name) . " main.py"
 endfunction
-
-
-
-
-
-
-
 
 
 " Tokyonight theme settings
