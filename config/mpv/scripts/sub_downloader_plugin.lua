@@ -5,12 +5,12 @@ function display_error()
   mp.osd_message("Subtitle download failed")
 end
 
-local path = mp.get_property("path")
-local dir, filename = utils.split_path(path)
-
 -- ost download --file Dumbo.1941.mp4
 function load_sub_with_hash()
- local sub_name = string.gsub(filename, "%.%w+$", "")
+
+  local path = mp.get_property("path")
+  local dir, filename = utils.split_path(path)
+  local sub_name = string.gsub(filename, "%.%w+$", "")
   local srt_path = string.gsub(path, "%.%w+$", ".srt")
   mp.osd_message("Searching subtitle...")
 
@@ -29,6 +29,7 @@ end
 
 -- search all .srt files in current directory
 function find_all_sub_file()
+  local path = mp.get_property("path")
   for dosya in io.popen('ls "' ..path.. '/*.srt"'):lines() do
     mp.osd_message(dosya)
   end
