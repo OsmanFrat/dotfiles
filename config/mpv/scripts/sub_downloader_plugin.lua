@@ -23,4 +23,16 @@ function load_sub_with_hash()
       end
 end
 
-mp.add_key_binding("a", "sub_downloader_plugin", load_sub_with_hash)
+
+--> seach subtitle by video name and download matched top 5 subitle and add to current mpv video <--
+
+-- search
+local dizin = "/home/kullanici/filmler"
+for dosya in io.popen('ls "' .. dizin .. '/*.srt"'):lines() do
+    print(dosya)
+end
+
+
+
+-- mp.add_key_binding("a", "sub_downloader_plugin", load_sub_with_hash)
+
