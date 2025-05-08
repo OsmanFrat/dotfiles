@@ -7,7 +7,7 @@ end
 
 local path = mp.get_property("path")
 local dir, filename = utils.split_path(path)
- 
+
 -- ost download --file Dumbo.1941.mp4
 function load_sub_with_hash()
  local sub_name = string.gsub(filename, "%.%w+$", "")
