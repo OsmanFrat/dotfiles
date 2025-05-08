@@ -63,24 +63,22 @@ end
 
 
 -- ost download --file Dumbo.1941.mp4
+
 function load_all_subs()
   local path = mp.get_property("path")
-  local dir = utils.split_path(path)
-  local filename = string.gsub(dir, "%.%w+$", "")
-  local srt_path = string.gsub(path, "%.%w+$", ".srt")
-  -- local downloaded_sub = os.execute("cd '"..dir.."' && ozusub")
+  local dir, filename = utils.split_path(path)
+
   mp.osd_message("Opening subtitle searcher...")
 
-  -- if os.execute("cd '"..dir.."' && ost download --file "..filename.." && mv "..sub_name..".srt '"..srt_path.."'") then
-  if os.execute("cd '"..dir.."' && ozusub -m "..filename.."") then
-      add_all_subs()
-      mp.msg.warn("Subtitle download succeeded")
-      mp.osd_message("Subtitle download succeeded: \n" .. srt_path .. "", 5)
-      else
-        display_error()
+  local exit_code = os.execute("cd '"..dir.."' && ozusub -m "..filename)
+  if exit_code == 0 then
+    add_all_subs()
+    mp.msg.warn("Subtitle download succeeded")
+    mp.osd_message("Subtitle download succeeded", 5)
+  else
+    display_error()
   end
 end
-
 
 -- mp.add_key_binding("a", "sub_downloader_plugin", load_sub_with_hash)
 mp.add_key_binding("a", "sub_downloader_plugin", load_all_subs)
