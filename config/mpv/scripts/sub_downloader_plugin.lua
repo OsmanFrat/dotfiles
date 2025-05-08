@@ -5,11 +5,12 @@ function display_error()
   mp.osd_message("Subtitle download failed")
 end
 
+local path = mp.get_property("path")
+local dir, filename = utils.split_path(path)
+ 
 -- ost download --file Dumbo.1941.mp4
 function load_sub_with_hash()
-  local path = mp.get_property("path")
-  local dir, filename = utils.split_path(path)
-  local sub_name = string.gsub(filename, "%.%w+$", "")
+ local sub_name = string.gsub(filename, "%.%w+$", "")
   local srt_path = string.gsub(path, "%.%w+$", ".srt")
   mp.osd_message("Searching subtitle...")
 
@@ -26,9 +27,8 @@ end
 
 --> seach subtitle by video name and download matched top 5 subitle and add to current mpv video <--
 
--- search
-local dizin = "/home/kullanici/filmler"
-for dosya in io.popen('ls "' .. dizin .. '/*.srt"'):lines() do
+-- search all .srt files in current directory
+for dosya in io.popen('ls "' ..path.. '/*.srt"'):lines() do
     print(dosya)
 end
 
