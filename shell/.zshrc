@@ -65,7 +65,8 @@ alias rss='newsboat'
 alias trash='cd ~/.local/share/Trash/files/'
 alias clean-trash='sudo rm -rf ~/.local/share/Trash/{files,info}/*'
 
-
+# ozu custom scripts part 2
+alias ozusub='/home/ozu/github/subtitle-downloader/ozusub.sh'
 
 # yt-dlp
 alias yt='function _yt(){
