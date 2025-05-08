@@ -17,6 +17,7 @@ set mouse=a
 set timeoutlen=500
 set showtabline=0
 set cursorline
+set statusline=%F\ %m\ %r\ %y\ %=Line:\ %l\/%L\ Col:\ %c
 set clipboard=unnamedplus
 
 
