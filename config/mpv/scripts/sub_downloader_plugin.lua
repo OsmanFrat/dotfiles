@@ -49,6 +49,8 @@ local function load_all_subs()
 
   mp.osd_message("Downloading subtitles...", 2)
   local command = "cd '" .. dir .. "' && ozusub -m \"" .. filename .. "\""
+  -- file name test
+  mp.osd_message(filename)
   local result = os.execute(command)
 
   if result == 0 then
