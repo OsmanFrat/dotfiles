@@ -341,16 +341,9 @@
   :config
   (yas-global-mode 1))
 
-;; LSP ve tamamlama
-;; (use-package company
-;;   :hook (prog-mode. lua-mode . company-mode)
-;;   :ensure t
-;;   :config
-;;   (global-company-mode))
-
 (use-package company
   :ensure t
-  :hook ((prog-mode lua-mode) . company-mode)
+  :hook (prog-mode  . company-mode)
   :config
   (setq company-idle-delay 0
         company-minimum-prefix-length 1)
@@ -409,31 +402,6 @@
 ;; C/C++ için lsp-clangd otomatik başlatma
 (add-hook 'c-mode-hook 'lsp-deferred)
 (add-hook 'c++-mode-hook 'lsp-deferred)
-
-
-
-;; 1. Gerekli paketlerin yüklenmesi
-(use-package lua-mode
-  :ensure t
-  :mode "\\.lua\\'")
-
-(use-package lsp-mode
-  :ensure t
-  :commands lsp
-  :hook (lua-mode . lsp))
-
-;; 2. Lua Language Server ayarı
-(with-eval-after-load 'lsp-mode
-  (lsp-register-client
-   (make-lsp-client :new-connection (lsp-stdio-connection '("lua-language-server"))
-                   :major-modes '(lua-mode)
-                   :server-id 'lua-ls)))
-
-
-
-
-
-
 
 
 (custom-set-variables
