@@ -16,6 +16,6 @@ mkdir -p "$TARGET_DIR"
 # Seçilen reposu SSH ile klonla
 for REPO in $REPOS; do
     SSH_URL="git@github.com:${REPO}.git"
-    echo "Klonlanıyor: $REPO -> $TARGET_DIR"
+    echo "Cloning: $REPO -> $TARGET_DIR"
     git clone "$SSH_URL" "$TARGET_DIR/$(basename "$REPO")"
 done
