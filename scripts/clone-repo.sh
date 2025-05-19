@@ -5,7 +5,7 @@ REPOS=$(gh repo list --limit 1000 --json nameWithOwner --jq '.[].nameWithOwner' 
 
 # Kullanıcı seçim yapmazsa çık
 if [[ -z "$REPOS" ]]; then
-    echo "İşlem iptal edildi."
+    echo "Cloning is canceled."
     exit 1
 fi
 
