@@ -335,7 +335,7 @@ nnoremap <silent> <Leader>ps :!source venv/bin/activate<CR>
 nnoremap <silent> <Leader>pi :call BuildWithPyInstaller()<CR>
 
 " -- Lua love2c --
-nnoremap <silent> <Leader>ll :<CR>!love .<CR>
+nnoremap <silent> <Leader>ll :!love .<CR>
 
 
 " Reload init.vim
