@@ -335,7 +335,7 @@ nnoremap <silent> <Leader>ps :!source venv/bin/activate<CR>
 nnoremap <silent> <Leader>pi :call BuildWithPyInstaller()<CR>
 
 " -- Lua love2c --
-nnoremap <silent> <Leader>ll :!love .<CR>
+nnoremap <silent> <Leader>ll :<CR>!love .<CR>
 
 
 " Reload init.vim
@@ -396,8 +396,8 @@ let g:which_key_map.x = 'Close buffer'
 let g:which_key_map.b = 'New blank buffer'
 
 let g:which_key_map.l = {
-     \ 'name' : '+lsp/lua-love2c',
 zsh:1: command not found: ove
+     \ 'l' : 'Run love2c project',
      \ 'd' : 'Show definition',
      \ 'r' : 'Show reference',
      \ 'h' : 'Show errors',
