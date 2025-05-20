@@ -1,10 +1,10 @@
-[13:11:26.197][info] [#0:/home/ozu/.emacs.d/.cache/lsp/lua-language-server/main.lua:68]: Lua Lsp startup, root: 	/home/ozu/.emacs.d/.cache/lsp/lua-language-server
-[13:11:26.197][info] [#0:/home/ozu/.emacs.d/.cache/lsp/lua-language-server/main.lua:69]: ROOT:	/home/ozu/.emacs.d/.cache/lsp/lua-language-server
-[13:11:26.197][info] [#0:/home/ozu/.emacs.d/.cache/lsp/lua-language-server/main.lua:70]: LOGPATH:	/home/ozu/.emacs.d/.cache/lsp/lua-language-server/log
-[13:11:26.197][info] [#0:/home/ozu/.emacs.d/.cache/lsp/lua-language-server/main.lua:71]: METAPATH:	/home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta
-[13:11:26.198][info] [#0:/home/ozu/.emacs.d/.cache/lsp/lua-language-server/main.lua:72]: VERSION:	3.14.0
-[13:11:26.265][info] [#0:script/proto/proto.lua:260]: Listen Mode: stdio
-[13:11:26.265][info] [#0:script/service/service.lua:145]: 
+[00:28:36.306][info] [#0:/home/ozu/.emacs.d/.cache/lsp/lua-language-server/main.lua:68]: Lua Lsp startup, root: 	/home/ozu/.emacs.d/.cache/lsp/lua-language-server
+[00:28:36.307][info] [#0:/home/ozu/.emacs.d/.cache/lsp/lua-language-server/main.lua:69]: ROOT:	/home/ozu/.emacs.d/.cache/lsp/lua-language-server
+[00:28:36.307][info] [#0:/home/ozu/.emacs.d/.cache/lsp/lua-language-server/main.lua:70]: LOGPATH:	/home/ozu/.emacs.d/.cache/lsp/lua-language-server/log
+[00:28:36.307][info] [#0:/home/ozu/.emacs.d/.cache/lsp/lua-language-server/main.lua:71]: METAPATH:	/home/ozu/.emacs.d/.cache/lsp/lua-language-server/meta
+[00:28:36.328][info] [#0:/home/ozu/.emacs.d/.cache/lsp/lua-language-server/main.lua:72]: VERSION:	3.14.0
+[00:28:36.485][info] [#0:script/proto/proto.lua:260]: Listen Mode: stdio
+[00:28:36.485][info] [#0:script/service/service.lua:145]: 
 ========= Medical Examination Report =========
     --------------- Memory ---------------
         Total: 2.261 MB
@@ -26,7 +26,7 @@
         Holdon:   0
         Waiting:  0
 ==============================================
-[13:11:26.377][info] [#0:script/client.lua:657]: Client init	{
+[00:28:36.600][info] [#0:script/client.lua:657]: Client init	{
   capabilities = {
     general = {
       positionEncodings = { "utf-32", "utf-16" }
@@ -195,12 +195,12 @@
     name = "emacs",
     version = "GNU Emacs 30.1 (build 2, x86_64-pc-linux-gnu, GTK+ Version 3.24.49, cairo version 1.18.4)"
   },
-  processId = 61859,
-  rootPath = "/home/ozu/github/mpv-subtitle-downloader-plugin",
-  rootUri = "file:///home/ozu/github/mpv-subtitle-downloader-plugin",
+  processId = 604,
+  rootPath = "/home/ozu/github/lua-games",
+  rootUri = "file:///home/ozu/github/lua-games",
   workDoneToken = "1"
 }
-[13:11:26.378][info] [#0:script/language.lua:137]: VSC language: nil
-[13:11:26.378][info] [#0:script/language.lua:138]: LS  language: en-us
-[13:11:26.378][info] [#0:script/workspace/workspace.lua:38]: Workspace init root: 	file:///home/ozu/github/mpv-subtitle-downloader-plugin
-[13:11:26.378][info] [#0:script/workspace/workspace.lua:42]: Log path: 	/home/ozu/.emacs.d/.cache/lsp/lua-language-server/log/file_home_ozu_github_mpv-subtitle-downloader-plugin.log
+[00:28:36.600][info] [#0:script/language.lua:137]: VSC language: nil
+[00:28:36.600][info] [#0:script/language.lua:138]: LS  language: en-us
+[00:28:36.600][info] [#0:script/workspace/workspace.lua:38]: Workspace init root: 	file:///home/ozu/github/lua-games
+[00:28:36.601][info] [#0:script/workspace/workspace.lua:42]: Log path: 	/home/ozu/.emacs.d/.cache/lsp/lua-language-server/log/file_home_ozu_github_lua-games.log
