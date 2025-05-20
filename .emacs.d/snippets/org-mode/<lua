@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
 # name:lua code block
-# key:srcLua
+# key:<lua
 # --
 #+begin_src lua
-
+$0
 #+end_src
