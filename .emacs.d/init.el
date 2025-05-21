@@ -203,6 +203,10 @@
       (comment-or-uncomment-region (region-beginning) (region-end))
     (comment-line 1)))
 
+(defun my/run-fast-commit()
+  (interactive)
+  (shell-command "fast-commit"))
+
 
 ;; Leader key ayarları (SPC = boşluk tuşu
 (use-package general
@@ -222,6 +226,8 @@
     "q" '(evil-save-and-quit :wk "Save & Quit")
     "Q" '(evil-quit-without-save :wk "Quit without saving")
     "r" '(restart-emacs :wk "Restart emacs")
+    "g" '(:wk "git")
+    "gg" '(my/
     "f" '(:wk "Find")
     "ff" '(counsel-find-file :wk "Find file")
     "fo" '(counsel-recentf :wk "Recent files")
