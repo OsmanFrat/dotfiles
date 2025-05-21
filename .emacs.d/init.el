@@ -213,6 +213,12 @@
   (let ((script-path (expand-file-name "~/dotfiles/scripts/fast-commit.sh")))
     (call-process script-path nil 0)))
 
+
+(defun my/run-love-project ()
+  (interactive)
+  (shell-command "love ."))
+
+	
 (use-package general
   :after evil
   :config
