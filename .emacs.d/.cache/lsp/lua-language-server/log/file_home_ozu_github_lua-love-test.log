@@ -430,3 +430,29 @@
 [14:16:30.075][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/lua-love-test] finished, takes [0.523] sec.
 [14:20:16.198][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///home/ozu/github/lua-love-test], files count:[23]
 [14:20:17.148][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/lua-love-test] finished, takes [0.519] sec.
+[14:22:19.295][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///home/ozu/github/lua-love-test], files count:[23]
+[14:22:20.240][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/lua-love-test] finished, takes [0.518] sec.
+[14:22:44.502][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///home/ozu/github/lua-love-test], files count:[23]
+[14:22:45.478][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/lua-love-test] finished, takes [0.531] sec.
+[14:23:19.154][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 14.992 MB
+        # 00 : 14.627 MB
+        # 01 : 0.141 MB
+        # 02 : 0.118 MB
+        # 03 : 0.053 MB
+        # 04 : 0.053 MB
+    --------------- Coroutine ---------------
+        Total:     9
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      9
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
