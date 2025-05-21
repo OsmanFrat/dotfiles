@@ -107,16 +107,7 @@
 
 ;; Magit
 (use-package magit :ensure t)
-;; (use-package diff-hl :ensure t)
-(use-package diff-hl
-  :ensure t
-  :hook ((prog-mode . diff-hl-mode))
-  :config
-  ;; Yüz (face) renk tanımlamaları
-  (custom-set-faces
-   '(diff-hl-change ((t (:foreground "orange" :background "orange"))))
-   '(diff-hl-insert ((t (:foreground "green" :background "green"))))
-   '(diff-hl-delete ((t (:foreground "red" :background "red")))))
+(use-package diff-hl :ensure t)
 (add-hook 'after-init-hook 'global-diff-hl-mode)
 
 
