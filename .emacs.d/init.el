@@ -227,7 +227,7 @@
     "Q" '(evil-quit-without-save :wk "Quit without saving")
     "r" '(restart-emacs :wk "Restart emacs")
     "g" '(:wk "git")
-    "gg" '(my/
+    "gg" '(my/run-fast-commit :wk "Commit project")
     "f" '(:wk "Find")
     "ff" '(counsel-find-file :wk "Find file")
     "fo" '(counsel-recentf :wk "Recent files")
