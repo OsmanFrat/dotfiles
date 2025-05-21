@@ -428,3 +428,5 @@
 [14:15:54.912][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/lua-love-test] finished, takes [0.540] sec.
 [14:16:29.151][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///home/ozu/github/lua-love-test], files count:[23]
 [14:16:30.075][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/lua-love-test] finished, takes [0.523] sec.
+[14:20:16.198][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///home/ozu/github/lua-love-test], files count:[23]
+[14:20:17.148][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/lua-love-test] finished, takes [0.519] sec.
