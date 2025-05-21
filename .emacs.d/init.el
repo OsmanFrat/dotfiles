@@ -205,7 +205,8 @@
 
 (defun my/run-fast-commit ()
   (interactive)
-  (shell-command "~/dotfiles/scripts/fast-commit.sh"))
+  (let ((script-path (expand-file-name "~/dotfiles/scripts/fast-commit.sh")))
+    (call-process script-path nil 0)))
 
 (use-package general
   :after evil
