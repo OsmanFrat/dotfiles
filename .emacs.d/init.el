@@ -105,6 +105,11 @@
 
 (use-package all-the-icons)
 
+;; Magit
+(use-package magit :ensure t)
+(use-package diff-hl :ensure t)
+(add-hook 'after-init-hook 'global-diff-hl-mode)
+
 
 ;; Which Key (tuş kombinasyonları gösterimi)
 (use-package which-key
