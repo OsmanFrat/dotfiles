@@ -422,5 +422,9 @@
  '(custom-safe-themes
    '("f5f80dd6588e59cfc3ce2f11568ff8296717a938edd448a947f9823a4e282b66"
      default))
- '(package-selected-packages nil)
+ '(package-selected-packages
+   '(all-the-icons annalist company counsel dashboard diff-hl doom-themes
+		   evil-vimish-fold general key-chord lsp-pyright
+		   lsp-ui lua-mode magit org-bullets treesit-auto
+		   vterm yasnippet))
  '(warning-suppress-log-types '((native-compiler))))
