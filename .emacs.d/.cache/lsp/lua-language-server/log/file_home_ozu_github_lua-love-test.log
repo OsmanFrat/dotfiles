@@ -478,3 +478,6 @@
         Holdon:   0
         Waiting:  0
 ==============================================
+[14:34:56.769][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///home/ozu/github/lua-love-test], files count:[23]
+[14:34:57.728][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/lua-love-test] finished, takes [0.551] sec.
+[14:35:48.687][info] [#0:script/provider/provider.lua:176]: Server shutdown.
