@@ -214,9 +214,16 @@
     (call-process script-path nil 0)))
 
 
+;; (defun my/run-love-project ()
+;;   (interactive)
+;;   (shell-command "love ."))
+
 (defun my/run-love-project ()
   (interactive)
-  (shell-command "love ."))
+  (if (eq system-type 'windows-nt)
+      (call-process-shell-command "love . > NUL 2>&1")
+    (call-process-shell-command "love . > /dev/null 2>&1")))
+
 
 	
 (use-package general
