@@ -203,10 +203,9 @@
       (comment-or-uncomment-region (region-beginning) (region-end))
     (comment-line 1)))
 
-(defun my/run-fast-commit()
+(defun my/run-fast-commit ()
   (interactive)
-  (shell-command "fast-commit"))
-
+  (shell-command "bash -ic 'fast-commit'"))
 
 ;; Leader key ayarları (SPC = boşluk tuşu
 (use-package general
