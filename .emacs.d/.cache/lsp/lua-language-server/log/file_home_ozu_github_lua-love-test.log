@@ -424,3 +424,8 @@
 [02:01:59.916][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	file:///home/ozu/github/lua-love-test
 [02:01:59.916][info] [#0:script/workspace/workspace.lua:381]: Preload finish at:	file:///home/ozu/github/lua-love-test
 [02:01:59.927][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///home/ozu/github/lua-love-test], files count:[23]
+[02:02:01.304][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/lua-love-test] finished, takes [0.713] sec.
+[02:02:04.527][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///home/ozu/github/lua-love-test], files count:[23]
+[02:02:05.570][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/lua-love-test] finished, takes [0.603] sec.
+[02:02:10.092][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///home/ozu/github/lua-love-test], files count:[23]
+[02:02:11.117][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/ozu/github/lua-love-test] finished, takes [0.598] sec.
