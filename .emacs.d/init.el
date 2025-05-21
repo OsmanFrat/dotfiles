@@ -205,9 +205,8 @@
 
 (defun my/run-fast-commit ()
   (interactive)
-  (shell-command "bash -ic 'fast-commit'"))
+  (shell-command "~/dotfiles/scripts/fast-commit.sh"))
 
-;; Leader key ayarları (SPC = boşluk tuşu
 (use-package general
   :after evil
   :config
