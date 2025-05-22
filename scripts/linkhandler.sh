@@ -1,29 +1,85 @@
 #!/bin/sh
 
-# Feed script a URL or file location.
-# If an image, it will view in feh.
-# If a video or gif, it will view in mpv.
-# If a music file, it will play in cmus.
-# If a PDF or comic file, it will open in zathura.
-# Otherwise, it opens the link in Firefox.
+# Güncellenmiş Link Handler Scripti (2024)
+# Özellikler:
+# - YouTube için optimize edilmiş yt-dlp ayarları (720p MP4 öncelikli)
+# - Geçici dosyalar için /tmp yerine $XDG_CACHE_HOME kullanımı
+# - Hata durumlarında fallback tarayıcı açma
+# - Medya oynatıcılarda daha stabil davranış
 
-if [ -z "$1" ]; then
-    url="$(wl-paste)"
-else
-    url="$1"
-fi
+url="${1:-$(wl-paste || xclip -o 2>/dev/null)}"  # Wayland veya X11 clipboard desteği
+
+# Cache dizini oluştur
+cache_dir="${XDG_CACHE_HOME:-$HOME/.cache}/linkhandler"
+mkdir -p "$cache_dir"
+
+cleanup() {
+    [ -f "$tmp_file" ] && rm -f "$tmp_file"
+}
+trap cleanup EXIT
+
+play_media() {
+    case "$1" in
+        *youtube.com/watch*|*youtube.com/playlist*|*youtube.com/shorts*|*youtu.be*)
+            # YouTube için optimize edilmiş ayarlar
+            yt-dlp -f 'bestvideo[ext=mp4][height<=720]+bestaudio[ext=m4a]/best[ext=mp4]/best' \
+                   --geo-bypass \
+                   --no-part \
+                   --merge-output-format mp4 \
+                   "$url" -o - | mpv --cache=yes \
+                                      --force-seekable=yes \
+                                      --no-cache-pause \
+                                      --input-ipc-server=/tmp/mpv-socket \
+                                      - || {
+                echo "YouTube oynatma başarısız, Firefox ile açılıyor..." >&2
+                setsid -f firefox "$url"
+            }
+            ;;
+        *mkv|*webm|*mp4|*hooktube.com|*bitchute.com|*odysee.com)
+            mpv --cache=yes "$url" || setsid -f firefox "$url"
+            ;;
+        *)
+            return 1
+            ;;
+    esac
+}
+
+view_image() {
+    tmp_file="${cache_dir}/image_$(date +%s).${url##*.}"
+    if curl -sL "$url" -o "$tmp_file"; then
+        feh --scale-down --auto-zoom "$tmp_file" &
+    else
+        setsid -f firefox "$url"
+    fi
+}
+
+read_document() {
+    tmp_file="${cache_dir}/doc_$(date +%s).${url##*.}"
+    if curl -sL "$url" -o "$tmp_file"; then
+        zathura "$tmp_file" &
+    else
+        setsid -f firefox "$url"
+    fi
+}
+
+play_audio() {
+    tmp_file="${cache_dir}/audio_$(date +%s).${url##*.}"
+    if curl -sL "$url" -o "$tmp_file"; then
+        pgrep cmus >/dev/null && cmus-remote -f "$tmp_file" || mpv "$tmp_file"
+    else
+        setsid -f firefox "$url"
+    fi
+}
 
 case "$url" in
-    *mkv*|*webm*|*mp4*|*youtube.com/watch*|*youtube.com/playlist*|*youtube.com/shorts*|*youtu.be*|*hooktube.com*|*bitchute.com*|*videos.lukesmith.xyz*|*odysee.com*)
-        # Run yt-dlp 
-        yt-dlp -f 'bestvideo[height<=720]+bestaudio/best' "$url" -o - | mpv --cache=yes --force-seekable=yes --no-cache-pause - ;;
+    *mkv*|*webm*|*mp4*|*youtube.com/watch*|*youtube.com/playlist*|*youtube.com/shorts*|*youtu.be*|*hooktube.com*|*bitchute.com*|*odysee.com*)
+        play_media "$url" ;;
     *png*|*jpg*|*jpeg*|*gif*)
-        curl -sL "$url" -o "/tmp/image" && feh "/tmp/image" >/dev/null 2>&1 & ;;
+        view_image ;;
     *pdf*|*cbz*|*cbr*)
-        curl -sL "$url" -o "/tmp/document" && zathura "/tmp/document" >/dev/null 2>&1 & ;;
-    *mp3*|*flac*|*opus*|*mp3?source*)
-        curl -sL "$url" -o "/tmp/audio" && cmus-remote -q "/tmp/audio" >/dev/null 2>&1 & ;;
+        read_document ;;
+    *mp3*|*flac*|*opus*|*m4a*|*wav*)
+        play_audio ;;
     *)
         setsid -f firefox "$url" >/dev/null 2>&1 ;;
 esac
-
