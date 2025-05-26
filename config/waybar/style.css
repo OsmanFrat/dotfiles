@@ -344,6 +344,9 @@ font-weight: normal;
     color: red;
 }
 
+#mpd {
+  color: #A1BDCE
+}
 
 #taskbar {
     padding: 1px;
