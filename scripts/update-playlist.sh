@@ -1,20 +1,20 @@
 #!/bin/bash
 
-# Değişkenler
+# Variables
 PLAYLIST_URL="https://www.youtube.com/playlist?list=PLTRI6HjSnitdTcJaf_2g7Ssi1OcsaMwxZ"
 ARCHIVE_FILE="$HOME/dotfiles/scripts/downloaded.txt"
 OUTPUT_DIR="$HOME/Music"
 
-# downloaded.txt var mı ve boş mu kontrol et
+# Check if downloaded.txt exists and is not empty
 if [ ! -s "$ARCHIVE_FILE" ]; then
-  echo "Arşiv dosyası bulunamadı veya boş. Tüm şarkılar indirilecek..."
+  echo "Archive file not found or empty. Downloading all songs..."
 
-  # Tüm şarkıların ID'lerini çekip downloaded.txt'ye yaz (arşiv için)
+  # Fetch all video IDs and write them to downloaded.txt (for archive)
   yt-dlp --flat-playlist -J "$PLAYLIST_URL" \
     | jq -r '.entries[].id' \
     | sed 's/^/youtube /' > "$ARCHIVE_FILE"
 
-  # Tüm şarkıları indir
+  # Download all songs
   yt-dlp -x --audio-format opus --audio-quality 0 \
     --embed-thumbnail --embed-metadata \
     --download-archive "$ARCHIVE_FILE" \
@@ -22,12 +22,13 @@ if [ ! -s "$ARCHIVE_FILE" ]; then
     "$PLAYLIST_URL"
 
 else
-  echo "Arşiv dosyası var, sadece yeni şarkılar indirilecek..."
+  echo "Archive file exists, downloading only new songs..."
 
-  # Sadece yeni şarkıları indir
+  # Download only new songs
   yt-dlp -x --audio-format opus --audio-quality 0 \
     --embed-thumbnail --embed-metadata \
     --download-archive "$ARCHIVE_FILE" \
     -o "$OUTPUT_DIR/%(title)s.%(ext)s" \
     "$PLAYLIST_URL"
 fi
+
