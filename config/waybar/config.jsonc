@@ -198,9 +198,7 @@
     "pulseaudio": {
         "format": "{icon}",
         "rotate": 0,
-        "format-muted": "󰝟",
-        "on-click": "pavucontrol",
-        "onc-click-right": ""
+        "format-muted": "婢",
         "tooltip-format": "{icon} {desc} // {volume}%",
         "scroll-step": 5,
         "format-icons": {
