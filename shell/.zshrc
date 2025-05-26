@@ -32,6 +32,7 @@ alias create-repo='~/dotfiles/scripts/create-repo.sh'
 alias clone-repo='~/dotfiles/scripts/clone-repo.sh'
 alias fast-commit='~/dotfiles/scripts/fast-commit.sh'
 alias cheat='~/dotfiles/scripts/cht-fzf.sh'
+alias update-playlist='~/dotfiles/scripts/update-playlist.sh'
 
 # Open settings
 alias zcon='nvim ~/.zshrc && source ~/.zshrc'
