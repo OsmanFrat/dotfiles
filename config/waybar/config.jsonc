@@ -251,6 +251,7 @@
       "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
       "format-disconnected": "Disconnected ",
       "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+      "max-length": 60,
       "interval": 10,
       "consume-icons": {
           "on": " " // Icon shows only when "consume" is on
