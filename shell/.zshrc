@@ -55,6 +55,8 @@ alias py='python'
 alias penv='python -m venv venv'
 alias senv='source venv/bin/activate'
 
+# C programing
+
 # General
 alias n='nvim'
 alias v='vim'
