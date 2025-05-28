@@ -56,6 +56,7 @@ alias penv='python -m venv venv'
 alias senv='source venv/bin/activate'
 
 # C programing
+alias cb='cmake --build build && ./build/game'
 
 # General
 alias n='nvim'
