@@ -51,8 +51,8 @@ inoremap jk <Esc>
 nnoremap <silent> <esc> :nohl<return><esc>
 
 " Setting semicolor(;) as colon(:)
-nnoremap ; :
-vnoremap ; :
+" nnoremap ; :
+" vnoremap ; :
 
 " center current line when scroll 
 nnoremap j jzz
