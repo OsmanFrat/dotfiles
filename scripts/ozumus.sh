@@ -14,7 +14,7 @@ while getopts ":r" opt; do
   case $opt in
     r)
       # run ./update-playlist.sh if -r is passed
-      if [ -f "$HOME/dotfiles/scripts/update-playlist.sh" ]
+      if [ -f "$HOME/dotfiles/scripts/update-playlist.sh" ]; then
         $HOME/dotfiles/scripts/update-playlist.sh
       else
         echo "Error: $HOME/dotfiles/scripts/update-playlist.sh is not found!"
@@ -23,14 +23,9 @@ while getopts ":r" opt; do
       exit 0
       ;;
     \?)
-
-
-cd $HOME/dotfiles/scripts
-./update-playlist.sh
-cd $HOME/Music
-mpc clear
-mpc add /
-mpc play
-
-
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+  esac
+done
 
