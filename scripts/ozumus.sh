@@ -2,7 +2,7 @@
 
 # without an argument - just update local songs and play in a random order
 if [ $# -eq 0 ]; then
-  cd "$HOME/Muzic" || { echo "Error: Could not cd to $HOME/Muzic"; exit 1; }
+  cd "$HOME/Music" || { echo "Error: Could not cd to $HOME/Muzic"; exit 1; }
   mpc clear
   mpc add /
   mpc play
