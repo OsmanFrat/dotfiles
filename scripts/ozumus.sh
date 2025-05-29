@@ -10,7 +10,11 @@ if [ $# -eq 0 ]; then
 fi
 
 # -r argument - run ./update-playlist.sh script to checking new songs in youtube op(song) playlist
-
+while getopts ":r" opt; do
+  case $opt in
+    r)
+      # run ./update-playlist.sh if -r is passed
+      if [ -f "$HOME/dotfiles/scripts/update-playlist.sh" ]
 
 
 cd $HOME/dotfiles/scripts
