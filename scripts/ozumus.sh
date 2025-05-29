@@ -15,6 +15,14 @@ while getopts ":r" opt; do
     r)
       # run ./update-playlist.sh if -r is passed
       if [ -f "$HOME/dotfiles/scripts/update-playlist.sh" ]
+        $HOME/dotfiles/scripts/update-playlist.sh
+      else
+        echo "Error: $HOME/dotfiles/scripts/update-playlist.sh is not found!"
+        exit 1
+      fi
+      exit 0
+      ;;
+    \?)
 
 
 cd $HOME/dotfiles/scripts
