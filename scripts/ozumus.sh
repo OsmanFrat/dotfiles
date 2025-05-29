@@ -9,6 +9,9 @@ if [ $# -eq 0 ]; then
   exit 0
 fi
 
+# -r argument - run ./update-playlist.sh script to checking new songs in youtube op(song) playlist
+
+
 
 cd $HOME/dotfiles/scripts
 ./update-playlist.sh
