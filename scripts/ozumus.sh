@@ -2,7 +2,7 @@
 
 # without an argument
 if [ $# -eq 0 ]; then
-  cd "$HOME/Music"
+  cd "$HOME/Music" || {echo "Error: Could not cd to $HOME/Music"}
   mpc clear
   mpc add /
   mpc play
