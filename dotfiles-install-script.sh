@@ -59,7 +59,7 @@ cd ~
 echo "Installing apps..."
 sudo pacman -S --noconfirm adw-gtk-theme neovim vim newsboat fastfetch unzip 7zip thunar feh zathura imagemagick zoxide poppler wl-clipboard yazi rofi-wayland cronie npm go emacs ttf-jetbrains-mono-nerd ueberzugpp \
 ttf-fira-code noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra noto-fonts-emoji \
-zsh starship alacritty mpc qutebrowser firefox waybar hyprpaper less ripgrep lsd bat fzf aria2 jq fd \
+zsh starship stylua python-black alacritty mpc qutebrowser firefox waybar hyprpaper less ripgrep lsd bat fzf aria2 jq fd \
 syncplay pyside6 python-adblock python-mutagen mpv vlc sed curl grep yt-dlp ffmpeg patch github-cli \
 steam pavucontrol qbittorent 
 
