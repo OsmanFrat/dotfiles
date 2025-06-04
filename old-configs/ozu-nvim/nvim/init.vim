@@ -1,8 +1,8 @@
 " General settings
 set number
 set relativenumber
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set nowrap
 set ignorecase
@@ -12,11 +12,24 @@ set hlsearch
 set completeopt=menu,menuone,noselect,noinsert
 set showmatch
 set autowrite
+set autochdir
 set mouse=a
 set timeoutlen=500
 set showtabline=0
 set cursorline
 set clipboard=unnamedplus
+
+" status line
+set laststatus=2        " Status line'ı her zaman göster
+set statusline=         " Önceki ayarları temizle
+set statusline+=%F      " Dosya yolu ve adı
+set statusline+=\ %m    " Değiştirilmişse [+] göster
+set statusline+=\ %r    " Salt okunursa [RO] göster
+set statusline+=\ %y    " Dosya türü (ör. [vim])
+set statusline+=%=      " Sağa hizala
+set statusline+=%l/%L   " Satır numarası / Toplam satır
+set statusline+=\ %c    " Sütun numarası
+set statusline+=\ %P    " Yüzde olarak konum (ör. %50)
 
 " History settings
 set undofile           " Undo dosyasını kaydet
@@ -38,8 +51,14 @@ inoremap jk <Esc>
 nnoremap <silent> <esc> :nohl<return><esc>
 
 " Setting semicolor(;) as colon(:)
-nnoremap ; :
-vnoremap ; :
+" nnoremap ; :
+" vnoremap ; :
+
+" center current line when scroll 
+nnoremap j jzz
+nnoremap k kzz
+
+
 
 " Plugins
 call plug#begin('~/.vim/plugged')
@@ -83,12 +102,19 @@ call plug#end()
 set updatetime=300
 set signcolumn=auto:1
 
+autocmd VimEnter * silent! CocStart
+
 " Auto suggests shortcut for tab button in Coc.nvim
+" inoremap <silent><expr> <TAB>
+      " \ coc#pum#visible() ? coc#pum#next(1) :
+      " \ CheckBackspace() ? "\<Tab>" :
+      " \ coc#refresh()
+" inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : \"\<C-h>"
+
 inoremap <silent><expr> <TAB>
       \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+      \ "\<TAB>"
+
 
 set pumheight=8
 set pumwidth=10
@@ -100,8 +126,11 @@ command! -bang -nargs=? -complete=dir Files
   \   <bang>0)
 
 
+
 " Enable treesitter
-autocmd FileType python lua vim.treesitter.start()
+" autocmd FileType python lua vim.treesitter.start()
+autocmd FileType python,c,cpp lua vim.treesitter.start()
+
 
 " Alpha.nvim / dashboard settings
 lua <<EOF
@@ -186,7 +215,7 @@ function! WholeWordReplace()
   endif
 endfunction
 
-" Comment toggle
+" toggle comment function
 function! ToggleComment() range
   let l:comment_map = {
     \ 'python': '#',
@@ -194,37 +223,67 @@ function! ToggleComment() range
     \ 'c': '//',
     \ 'cpp': '//',
     \ 'javascript': '//',
+    \ 'typescript': '//',
     \ 'sh': '#',
     \ 'lua': '--',
     \ 'html': '<!--',
     \ 'css': '/*',
+    \ 'lisp': ';;',
+    \ 'elisp': ';;',
+    \ 'emacs-lisp': ';;',
+    \ 'scheme': ';;',
+    \ 'clojure': ';;',
+    \ 'fennel': ';;',
     \ }
 
-  let l:cmt = get(l:comment_map, &filetype, '#')
-  let l:end_cmt = &filetype =~? 'html' ? '-->' : &filetype =~? 'css' ? '*/' : ''
-  
-  " Seçili satırlar için
+  " Handle filetype detection for Lisp variants
+  let l:ft = empty(&filetype) ? 'lisp' : &filetype
+  if expand('%:e') =~? 'el' && l:ft ==# 'lisp'
+    let l:ft = 'elisp'
+  endif
+
+  let l:cmt = get(l:comment_map, l:ft, '#')
+  let l:end_cmt = l:ft ==# 'html' ? '-->' : l:ft ==# 'css' ? '*/' : ''
+
   for lnum in range(a:firstline, a:lastline)
     let l:line = getline(lnum)
-    let l:indent = matchstr(l:line, '^\s*') " Girintiyi al
-    
-    if l:line =~# '^\s*'.l:cmt
-      " Yorumu kaldır (girintiyi koru)
-      let l:new_line = substitute(l:line, l:cmt.'\s\?', '', '')
-      if l:end_cmt != ''
-        let l:new_line = substitute(l:new_line, '\s*'.l:end_cmt.'\s*$', '', '')
-      endif
-      call setline(lnum, l:indent.trim(l:new_line))
-    elseif l:line =~# '\S'
-      " Yorum ekle (girintiyi koru)
-      let l:new_line = l:cmt.' '.trim(l:line[len(l:indent):])
-      if l:end_cmt != ''
-        let l:new_line .= ' '.l:end_cmt
-      endif
-      call setline(lnum, l:indent.l:new_line)
+    let l:indent = matchstr(l:line, '^\s*')
+
+    " Skip empty or whitespace-only lines
+    if l:line =~# '^\s*$'
+      continue
     endif
+
+    " Check if line is already commented
+    let l:is_commented = 0
+    if !empty(l:end_cmt)
+      " For multi-line comment styles (HTML/CSS)
+      let l:is_commented = l:line =~# '^\s*' . l:cmt && l:line =~# l:end_cmt . '\s*$'
+    else
+      " For single-line comment styles
+      let l:is_commented = l:line =~# '^\s*' . l:cmt
+    endif
+
+    if l:is_commented
+      " Uncomment the line
+      let l:new_line = substitute(l:line, '\V' . l:cmt . '\s\?', '', '')
+      if !empty(l:end_cmt)
+        let l:new_line = substitute(l:new_line, '\s*' . l:end_cmt . '\s*$', '', '')
+      endif
+      let l:new_line = trim(l:new_line)
+    else
+      " Comment the line
+      let l:content = trim(l:line[len(l:indent):])
+      let l:new_line = l:cmt . ' ' . l:content
+      if !empty(l:end_cmt)
+        let l:new_line .= ' ' . l:end_cmt
+      endif
+    endif
+
+    call setline(lnum, l:indent . l:new_line)
   endfor
 endfunction
+
 
 " terminal test
 lua << EOF
@@ -247,6 +306,12 @@ require("toggleterm").setup({
 })
 EOF
 
+" pyinstaller build function
+function! BuildWithPyInstaller()
+  let l:input_name = input("Enter a name for .exe: ")
+  execute ":!pyinstaller --onefile --name " . shellescape(l:input_name) . " main.py"
+endfunction
+
 
 " Tokyonight theme settings
 let g:tokyonight_style = 'night'
@@ -267,6 +332,11 @@ let g:which_key_map =  {}
 nnoremap <silent> <Leader>pp :w<CR>:!python %<CR>
 nnoremap <silent> <Leader>pe :!python -m venv venv<CR>
 nnoremap <silent> <Leader>ps :!source venv/bin/activate<CR>
+nnoremap <silent> <Leader>pi :call BuildWithPyInstaller()<CR>
+
+" -- Lua love2c --
+" nnoremap <silent> <Leader>ll :!love .<CR>
+nnoremap <Leader>ll :silent !love .<CR>
 
 " Reload init.vim
 nnoremap <silent> <leader>R :source /home/ozu/.config/nvim/init.vim<CR>
@@ -310,6 +380,7 @@ let g:which_key_map.p = {
       \ 'p' : 'Run current python script',
       \ 'e' : 'Create python venv',
       \ 's' : 'Source python venv',
+      \ 'i' : 'Build with pyinstaller',
       \ }
 
 let g:which_key_map.f = {
@@ -326,6 +397,7 @@ let g:which_key_map.b = 'New blank buffer'
 
 let g:which_key_map.l = {
      \ 'name' : '+lsp',
+     \ 'l' : 'Run love2c project',
      \ 'd' : 'Show definition',
      \ 'r' : 'Show reference',
      \ 'h' : 'Show errors',
