@@ -97,9 +97,7 @@ chmod +x ~/dotfiles/scripts/linkhandler.sh
 (crontab -l 2>/dev/null; echo "*/2 * * * * /home/ozu/dotfiles/git-auto-commit.sh") | crontab -
 (crontab -l 2>/dev/null; echo "*/1 * * * * /home/ozu/dotfiles/scripts/battery-alarm.sh") | crontab -
 
-echo "Installing doom emacs..."
-git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
-~/.config/emacs/bin/doom install
+echo "Installing emacs..."
 
 echo "Setting up Emacs Daemon..."
 mkdir -p ~/.config/systemd/user
@@ -117,7 +115,7 @@ systemctl --user daemon-reload
 systemctl --user enable emacs
 systemctl --user start emacs
 
-echo "Doom emacs installed"
+echo "Emacs installed"
 
 echo ""
 echo "Installation completed!"
