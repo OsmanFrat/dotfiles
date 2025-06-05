@@ -29,5 +29,14 @@ change.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
 -- change.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
 
 -- auto comment shortcut
-change.set("n", "<leader>/", "<cmd>:gcc<CR>", { desc = "Comment current line" })
-change.set("v", "<leader>/", "<cmd>:gc<CR>", { desc = "Comment selected lines" })
+vim.keymap.set("n", "<leader>/", function()
+	require("Comment.api").toggle.linewise.current()
+end, { desc = "Toggle comment line" })
+
+-- Visual modda <leader>/ ile seçili alanı yorumla/aç
+vim.keymap.set(
+	"v",
+	"<leader>/",
+	'<ESC><cmd>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>',
+	{ desc = "Toggle comment for selection" }
+)

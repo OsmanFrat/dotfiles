@@ -22,7 +22,6 @@ return {
 		-- Block-comment keymap
 		--    block = 'gb',
 		--},
-		print("hello"),
 		-- Enable keybindings
 		-- NOTE: If given `false` then the plugin won't create any mappings
 		-- mappings = {
