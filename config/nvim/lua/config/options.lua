@@ -18,10 +18,9 @@ ops.timeoutlen = 500
 ops.showtabline = 0
 ops.cursorline = true
 ops.termguicolors = true
-ops.scrolloff = 15
-vim.g.mapleader = " "  -- <leader> tuşunu boşluk (space) yapar
-vim.g.maplocalleader = " "  -- <localleader> için de aynı (opsiyonel)
-
+ops.scrolloff = 20
+vim.g.mapleader = " " -- <leader> tuşunu boşluk (space) yapar
+vim.g.maplocalleader = " " -- <localleader> için de aynı (opsiyonel)
 
 -- theme
 vim.cmd([[colorscheme monokai-pro]])
