@@ -18,7 +18,7 @@ ops.timeoutlen = 500
 ops.showtabline = 0
 ops.cursorline = true
 ops.termguicolors = true
-ops.scrolloff = 20
+ops.scrolloff = 25
 vim.g.mapleader = " " -- <leader> tuşunu boşluk (space) yapar
 vim.g.maplocalleader = " " -- <localleader> için de aynı (opsiyonel)
 
