@@ -18,7 +18,7 @@ return {
 	settings = {
 		Lua = {
 			diagnostics = {
-				disable = { "missing-parameters", "missing-fields", "undefined-global" },
+				disable = { "missing-parameters", "missing-fields", "undefined-global", "lowercase-global" },
 			},
 		},
 	},
