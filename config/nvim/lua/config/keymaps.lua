@@ -33,10 +33,12 @@ vim.keymap.set("n", "<leader>/", function()
 	require("Comment.api").toggle.linewise.current()
 end, { desc = "Toggle comment line" })
 
--- Visual modda <leader>/ ile seçili alanı yorumla/aç
 vim.keymap.set(
 	"v",
 	"<leader>/",
 	'<ESC><cmd>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>',
 	{ desc = "Toggle comment for selection" }
 )
+
+-- Makefile
+change.set("n", "<leader>m", "<cmd>:!make<CR>", { desc = "Makefile 'make' command" })
