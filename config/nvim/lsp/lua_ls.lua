@@ -15,13 +15,13 @@ return {
 		"selene.yml",
 		"stylua.toml",
 	},
-	-- settings = {
-	--     Lua = {
-	--         diagnostics = {
-	--             --     disable = { "missing-parameters", "missing-fields" },
-	--         },
-	--     },
-	-- },
+	settings = {
+		Lua = {
+			diagnostics = {
+				disable = { "missing-parameters", "missing-fields", "undefined-global" },
+			},
+		},
+	},
 
 	single_file_support = true,
 	log_level = vim.lsp.protocol.MessageType.Warning,
