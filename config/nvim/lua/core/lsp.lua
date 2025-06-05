@@ -3,7 +3,6 @@ vim.lsp.enable({
 	"clangd",
 })
 
-vim.lsp.start()
 vim.diagnostic.config({
 	virtual_lines = true,
 	-- virtual_text = true,
