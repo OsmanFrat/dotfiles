@@ -11,7 +11,7 @@ return {
 				["core.dirman"] = { -- Notların dizin yönetimi
 					config = {
 						workspaces = {
-							notes = "~/test",
+							notes = "~/github/new-notes/",
 						},
 					},
 				},
