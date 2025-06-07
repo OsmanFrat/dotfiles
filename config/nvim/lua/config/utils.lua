@@ -87,7 +87,7 @@ local function toggle_todo_file()
 end
 
 -- <leader>o tuşuna atama
-vim.keymap.set("n", "<leader>o", toggle_todo_file, { desc = "Toggle todo" })
+vim.keymap.set("n", "<leader>oo", toggle_todo_file, { desc = "Toggle todo" })
 
 -- history - undo settings
 local undodir = vim.fn.stdpath("config") .. "/home/ozu/.local/share/nvim/undodir/"
