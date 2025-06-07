@@ -48,7 +48,6 @@ alias sop='cd ~/dotfiles/scripts/ && nvim .'
 alias pop='cd $(ls -d ~/github/*/ | fzf)'
 alias not='nvim ~/github/new-notes/notes.norg'
 
-
 # python aliases
 alias p='python main.py'
 alias pt='python test.py'
