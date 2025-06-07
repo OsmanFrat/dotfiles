@@ -4,7 +4,7 @@ return {
 	lazy = false,
 	build = ":TSUpdate",
 
-	-- A list of parser names, or "all" (the listed parsers MUST always be installed)
+	-- Zorunlu parser listesi
 	ensure_installed = {
 		"c",
 		"cpp",
@@ -17,26 +17,27 @@ return {
 		"query",
 		"markdown",
 		"markdown_inline",
-		"norg",
-		"norg_meta",
-		"norg_table",
+		"norg", -- Neorg temel desteği
+		"norg_meta", -- Neorg metadata
+		"norg_table", -- Neorg tablolar (eğer hala ayrı parser gerekiyorsa)
 	},
 
-	-- Install parsers synchronously (only applied to `ensure_installed`)
 	sync_install = false,
-
-	-- Automatically install missing parsers when entering buffer
-	-- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
 	auto_install = true,
-
-	-- List of parsers to ignore installing (or "all")
 	ignore_install = { "javascript" },
 
-	---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
-	-- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
-
 	highlight = {
-		enable = true,
+		enable = true, -- Syntax vurgulamayı etkinleştir
 		additional_vim_regex_highlighting = false,
 	},
+
+	-- Yapılandırma sonrası hook (TSEnable highlight için)
+	config = function(_, opts)
+		require("nvim-treesitter.configs").setup(opts)
+
+		-- Tree-sitter highlight'ı garanti etmek için
+		vim.defer_fn(function()
+			vim.cmd("TSEnable highlight") -- Gecikmeli olarak çalıştır
+		end, 0)
+	end,
 }
