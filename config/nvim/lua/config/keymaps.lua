@@ -44,4 +44,4 @@ vim.keymap.set(
 change.set("n", "<leader>m", "<cmd>:!make<CR>", { desc = "Makefile 'make' command" })
 
 -- open notes
-vim.keymap.set("n", "<leader>on", ":!not<CR>", { desc = "Open notes.norg file" })
+change.set("n", "<leader>on", ":not<CR>", { desc = "Open notes.norg file" })
