@@ -46,6 +46,7 @@ alias wcon='nvim ~/.config/waybar/config.jsonc'
 alias dns='sudo chattr -i /etc/resolv.conf && sudo -E nvim /etc/resolv.conf && sudo chattr +i /etc/resolv.conf'
 alias sop='cd ~/dotfiles/scripts/ && nvim .'
 alias pop='cd $(ls -d ~/github/*/ | fzf)'
+alias not='nvim ~/github/new-notes/notes.norg'
 
 
 # python aliases
