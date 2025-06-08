@@ -19,6 +19,13 @@ return {
 
 		completion = {
 			documentation = { auto_show = false },
+			-- Yeni eklenen ayarlar
+			list = {
+				selection = {
+					preselect = false, -- İlk seçeneği otomatik seçme
+					-- auto_insert = false, -- Otomatik ekleme yapma
+				},
+			},
 		},
 
 		sources = {
