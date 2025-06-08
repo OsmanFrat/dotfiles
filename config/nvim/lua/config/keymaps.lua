@@ -7,12 +7,23 @@ change.set("n", "<leader>Q", "<cmd>:qa<CR>", { desc = "Close neovim without savi
 change.set("n", "<Leader>n", "<cmd>:bn<CR>", { noremap = true, silent = true, desc = "Next buffer" })
 change.set("n", "<Leader>x", "<cmd>:bd<CR>", { noremap = true, silent = true, desc = "Close buffer" })
 change.set("n", "<Leader>b", "<cmd>:enew<CR>", { noremap = true, silent = true, desc = "New buffer" })
-change.set(
-	"n",
-	"<Leader>w",
-	'<cmd>:w | echo "Saved!" <CR>',
-	{ noremap = true, silent = true, desc = "Save current file" }
-)
+-- change.set(
+-- 	"n",
+-- 	"<Leader>w",
+-- 	'<cmd>:w | echo "Saved!" <CR>',
+-- 	{ noremap = true, silent = true, desc = "Save current file" }
+-- )
+vim.keymap.set("n", "<Leader>w", function()
+	vim.cmd("w")
+	require("noice").api.notify("Saved!", "info", {
+		title = "File Saved",
+		timeout = 1000, -- 1 saniye
+	})
+end, {
+	noremap = true,
+	silent = true,
+	desc = "Save current file",
+})
 change.set("n", "<Leader>q", "<cmd>:wq<CR>", { noremap = true, silent = true, desc = "Save and quit current file" })
 change.set(
 	"n",
