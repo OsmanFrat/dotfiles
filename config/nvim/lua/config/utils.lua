@@ -98,6 +98,6 @@ vim.opt.undodir = undodir
 vim.opt.undofile = true
 
 -- lsp shortcuts
-vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, {})
+vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, { desc = "Lsp quick auto fix" })
 -- Tanıları (diagnostics) listelemek için (örneğin, <space>d)
-vim.keymap.set("n", "<leader>ld", vim.diagnostic.setqflist, {})
+vim.keymap.set("n", "<leader>ld", vim.diagnostic.setqflist, { desc = "Lsp show diagnostics(error, warnings etc.)" })
