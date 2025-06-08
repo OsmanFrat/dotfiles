@@ -100,5 +100,4 @@ vim.opt.undofile = true
 -- lsp shortcuts
 vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, { desc = "Lsp quick auto fix" })
 vim.keymap.set("n", "<leader>ld", ":Telescope diagnostics<CR>", { desc = "Telescope: Show diagnostics" })
-
--- vim.keymap.set("n", "<leader>ld", vim.diagnostic.setqflist, { desc = "Lsp show diagnostics(error, warnings etc.)" })
+vim.keymap.set("n", "<leader>lb", vim.diagnostic.setqflist, { desc = "Lsp show diagnostics(error, warnings etc.)" })
