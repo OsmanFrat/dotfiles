@@ -60,7 +60,7 @@ alias cb='cmake --build build && cd build/ && ./game'
 
 
 # Cpp
-alias rcpp='g++ -std=c++17 % -o %:r && ./%:r'
+alias rcpp='file=$(find . -type f -name "*.cpp" | fzf) && g++ -std=c++17 "$file" -o "${file%.*}" && "${file%.*}"'
 
 
 
