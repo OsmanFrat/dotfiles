@@ -103,11 +103,3 @@ vim.keymap.set("n", "<leader>ld", ":Telescope diagnostics<CR>", { desc = "Telesc
 vim.keymap.set("n", "<leader>lb", vim.diagnostic.setqflist, { desc = "Lsp show diagnostics(error, warnings etc.)" })
 
 -- go to normal mode when lsp suggesting window closed with esc
-vim.api.nvim_create_autocmd("User", {
-	pattern = "BlinkCmpMenuClosed", -- blink.cmp'nin menü kapandığında tetiklediği event
-	callback = function()
-		if vim.fn.mode() == "i" then -- Sadece Insert moddaysa
-			vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", true)
-		end
-	end,
-})
