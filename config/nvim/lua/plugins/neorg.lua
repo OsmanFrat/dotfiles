@@ -13,6 +13,8 @@ return {
 						workspaces = {
 							notes = "~/github/new-notes/",
 						},
+						default_workspace = "notes",
+						index = "notes.norg", -- Ana dizin dosyası
 					},
 				},
 			},
