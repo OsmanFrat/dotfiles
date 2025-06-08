@@ -1,0 +1,8 @@
+vsync = true
+title-hidden = true
+theme = "auto"
+wsl = false
+
+[font]
+normal = [] # use build in default - fira code
+size = 14.0
