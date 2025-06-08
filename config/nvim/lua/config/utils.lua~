@@ -96,3 +96,8 @@ if vim.fn.isdirectory(undodir) == 0 then
 end
 vim.opt.undodir = undodir
 vim.opt.undofile = true
+
+-- lsp shortcuts
+vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, {})
+-- Tanıları (diagnostics) listelemek için (örneğin, <space>d)
+vim.keymap.set("n", "<leader>ld", vim.diagnostic.setqflist, {})
