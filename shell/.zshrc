@@ -58,6 +58,12 @@ alias senv='source venv/bin/activate'
 # C programing
 alias cb='cmake --build build && cd build/ && ./game'
 
+
+# Cpp
+alias rcpp='g++ -std=c++17 % -o %:r && ./%:r'
+
+
+
 # General
 alias n='nvim'
 alias v='vim'
