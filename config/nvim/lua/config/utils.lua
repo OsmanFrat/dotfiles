@@ -101,5 +101,3 @@ vim.opt.undofile = true
 vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, { desc = "Lsp quick auto fix" })
 vim.keymap.set("n", "<leader>ld", ":Telescope diagnostics<CR>", { desc = "Telescope: Show diagnostics" })
 vim.keymap.set("n", "<leader>lb", vim.diagnostic.setqflist, { desc = "Lsp show diagnostics(error, warnings etc.)" })
-
--- go to normal mode when lsp suggesting window closed with esc
