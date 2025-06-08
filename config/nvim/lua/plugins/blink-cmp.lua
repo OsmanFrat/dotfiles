@@ -19,7 +19,6 @@ return {
 
 		completion = {
 			documentation = { auto_show = false },
-			autocomplete = false,
 		},
 
 		sources = {
