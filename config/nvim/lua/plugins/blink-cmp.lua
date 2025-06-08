@@ -19,7 +19,7 @@ return {
 
 		completion = {
 			documentation = { auto_show = false },
-			select = false,
+			autocomplete = false,
 		},
 
 		sources = {
