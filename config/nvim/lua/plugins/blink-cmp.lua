@@ -19,13 +19,11 @@ return {
 
 		completion = {
 			documentation = { auto_show = false },
-			-- Aşağıdaki ayarı ekleyin
-			preselect = false, -- veya false da olabilir
+			select = false,
 		},
 
 		sources = {
 			default = { "lsp", "path", "snippets", "buffer" },
-			preselect = false,
 		},
 
 		fuzzy = {
