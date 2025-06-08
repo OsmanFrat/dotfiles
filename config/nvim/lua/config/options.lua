@@ -21,7 +21,7 @@ ops.termguicolors = true
 -- ops.wrap = false
 ops.scrolloff = 25
 vim.g.mapleader = " " -- <leader> tuşunu boşluk (space) yapar
-vim.g.maplocalleader = " " -- <localleader> için de aynı (opsiyonel)
+vim.g.maplocalleader = "\" 
 
 -- theme
 vim.cmd([[colorscheme monokai-pro]])
