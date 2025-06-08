@@ -3,16 +3,10 @@ return {
 	event = "VeryLazy",
 	opts = {
 		-- Bildirim süresini 1000ms (1 saniye) olarak ayarla
+		stage = "static",
 		views = {
 			notify = {
 				timeout = 1000,
-			},
-		},
-		-- İsterseniz routes kısmında özel bir timeout da belirleyebilirsiniz
-		routes = {
-			{
-				filter = { event = "notify" },
-				opts = { timeout = 1000 },
 			},
 		},
 	},
