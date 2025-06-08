@@ -60,8 +60,8 @@ alias cb='cmake --build build && cd build/ && ./game'
 
 
 # Cpp
-alias rcpp='file=$(find . -type f -name "*.cpp" | fzf) && g++ -std=c++17 "$file" -o "${file%.*}" && "${file%.*}"'
-alias compilecpp='file=$(find . -type f -name "*.cpp" | fzf) && echo "\033[1;34mDerleniyor: $file\033[0m" && g++ -std=c++17 "$file" -o "${file%.*}" && echo "\033[1;32mÇalıştırılıyor:\033[0m" && "${file%.*}" || echo "\033[1;31mDerleme hatası!\033[0m"'
+# alias rcpp='file=$(find . -type f -name "*.cpp" | fzf) && g++ -std=c++17 "$file" -o "${file%.*}" && "${file%.*}"'
+alias rcpp='file=$(find . -type f -name "*.cpp" | fzf) && echo "\033[1;34mDerleniyor: $file\033[0m" && g++ -std=c++17 "$file" -o "${file%.*}" && echo "\033[1;32mÇalıştırılıyor:\033[0m" && "${file%.*}" || echo "\033[1;31mDerleme hatası!\033[0m"'
 
 
 
