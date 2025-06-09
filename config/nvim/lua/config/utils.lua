@@ -101,3 +101,19 @@ vim.opt.undofile = true
 vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, { desc = "Lsp quick auto fix" })
 vim.keymap.set("n", "<leader>ld", ":Telescope diagnostics<CR>", { desc = "Telescope: Show diagnostics" })
 vim.keymap.set("n", "<leader>lb", vim.diagnostic.setqflist, { desc = "Lsp show diagnostics(error, warnings etc.)" })
+
+-- bigger fonts whit ctrl + mouse wheel
+local function change_font_size(delta)
+	if vim.g.gui_font_size == nil then
+		vim.g.gui_font_size = 12 -- Varsayılan boyut
+	end
+	vim.g.gui_font_size = vim.g.gui_font_size + delta
+	vim.cmd("set guifont=*:h" .. vim.g.gui_font_size)
+end
+
+vim.keymap.set("n", "<C-+>", function()
+	change_font_size(1)
+end)
+vim.keymap.set("n", "<C-->", function()
+	change_font_size(-1)
+end)
