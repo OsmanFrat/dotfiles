@@ -121,6 +121,15 @@ if vim.g.neovide then
 		vim.g.neovide_scale_factor = 1.0
 	end, { silent = true })
 
+	vim.keymap.set({ "n", "v" }, "<C-+>", function()
+		vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1
+	end, { silent = true })
+
+	-- Ctrl + Tekerlek Aşağı → Uzaklaştır
+	vim.keymap.set({ "n", "v" }, "<C-->", function()
+		vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1
+	end, { silent = true })
+
 	-- closing cursor animations
 	vim.g.neovide_position_animation_length = 0
 	vim.g.neovide_cursor_animation_length = 0.00
