@@ -106,28 +106,33 @@ vim.keymap.set("n", "<leader>lb", vim.diagnostic.setqflist, { desc = "Lsp show d
 if vim.g.neovide then
 	vim.g.neovide_scale_factor = 1.0 -- Başlangıç boyutu (1.0 = %100)
 
+	local function change_scale_factor(delta)
+		vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + delta
+	end
+
 	-- Ctrl + Tekerlek Yukarı → Yakınlaştır
 	vim.keymap.set({ "n", "v" }, "<C-ScrollWheelUp>", function()
-		vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1
+		change_scale_factor(0.1)
 	end, { silent = true })
 
 	-- Ctrl + Tekerlek Aşağı → Uzaklaştır
 	vim.keymap.set({ "n", "v" }, "<C-ScrollWheelDown>", function()
-		vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1
+		change_scale_factor(-0.1)
+	end, { silent = true })
+
+	-- Ctrl + + → Yakınlaştır
+	vim.keymap.set({ "n", "v" }, "<C-+>", function()
+		change_scale_factor(0.1)
+	end, { silent = true })
+
+	-- Ctrl + - → Uzaklaştır
+	vim.keymap.set({ "n", "v" }, "<C-->", function()
+		change_scale_factor(-0.1)
 	end, { silent = true })
 
 	-- Bonus: Ctrl+0 ile sıfırla (Opsiyonel)
 	vim.keymap.set("n", "<C-0>", function()
 		vim.g.neovide_scale_factor = 1.0
-	end, { silent = true })
-
-	vim.keymap.set({ "n", "v" }, "<C-+>", function()
-		vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1
-	end, { silent = true })
-
-	-- Ctrl + Tekerlek Aşağı → Uzaklaştır
-	vim.keymap.set({ "n", "v" }, "<C-->", function()
-		vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1
 	end, { silent = true })
 
 	-- closing cursor animations
