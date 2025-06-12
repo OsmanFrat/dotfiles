@@ -11,7 +11,7 @@ return {
 				},
 			},
 			cpp = {
-				{ "clang_format", args = { "-style=file" } },
+				{ "clang_format", args = { "-style=/home/ozu/.config/.clang-format" } },
 			},
 		},
 		format_on_save = {
