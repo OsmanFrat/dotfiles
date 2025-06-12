@@ -273,8 +273,8 @@
       "on-click": "mpc next",
       "on-click-right": "mpc toggle",
       "on-click-middle": "mpc prev",
-      "on-scroll-up": "mpc next",
-      "on-scroll-down": "mpc prev",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
       "tooltip-format": "MPD (connected)",
       "tooltip-format-disconnected": "MPD (disconnected)"
   }
