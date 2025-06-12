@@ -7,7 +7,7 @@ return {
 			c = {
 				{
 					"clang_format",
-					args = { "-style=file" }, -- .clang-format dosyasını kullan
+					args = { "-style=/home/ozu/.config/.clang-format" }, -- .clang-format dosyasını kullan
 				},
 			},
 			cpp = {
