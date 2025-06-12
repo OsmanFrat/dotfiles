@@ -7,11 +7,13 @@ return {
 			c = {
 				{
 					"clang_format",
-					args = { "-style=/home/ozu/.config/.clang-format" }, -- .clang-format dosyasını kullan
+					args = { "-style={BreakBeforeBraces: Allman, IndentWidth: 2}" },
 				},
 			},
 			cpp = {
-				{ "clang_format", args = { "-style=/home/ozu/.config/.clang-format" } },
+				{
+                  "clang_format",
+                  args = { "-style={BreakBeforeBraces: Allman, IndentWidth: 2}" }
 			},
 		},
 		format_on_save = {
