@@ -2,12 +2,18 @@ return {
 	"stevearc/conform.nvim",
 	opts = {
 		formatters_by_ft = {
-			python = { "black" }, -- önce isort, sonra black
+			python = { "black" },
 			lua = { "stylua" },
-			c = { "clang_format" },
-			cpp = { "clang_format" },
+			c = {
+				{
+					"clang_format",
+					args = { "-style=file" }, -- .clang-format dosyasını kullan
+				},
+			},
+			cpp = {
+				{ "clang_format", args = { "-style=file" } },
+			},
 		},
-		-- kaydederken otomatik formatla
 		format_on_save = {
 			timeout_ms = 500,
 			lsp_fallback = true,
