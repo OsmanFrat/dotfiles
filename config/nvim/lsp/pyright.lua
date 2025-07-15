@@ -1,7 +1,6 @@
 return {
 	cmd = {
-		"pyright-langserver",
-		"--stdio",
+		"pyright",
 	},
 	filetypes = {
 		"py",
@@ -10,7 +9,7 @@ return {
 		".git",
 	},
 	-- settings = {
-	-- 	Lua = {
+	-- 	Python = {
 	-- 		diagnostics = {
 	-- 			disable = { "missing-parameters", "missing-fields" },
 	-- 		},
