@@ -21,6 +21,16 @@ inoremap jk <Esc>
 " Leader key settings
 let mapleader = " "  " Space as the leader key
 
+" VimWiki
+set nocompatible
+filetype plugin on
+syntax on
+let g:vimwiki_list = [{ 'syntax': 'markdown', 
+                      \ 'ext': 'md',
+		              \ 'path': '/home/ozu/github/vimwiki-notes'}]
+
+
+
 " ---- WhichKey Shortcuts ----
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
