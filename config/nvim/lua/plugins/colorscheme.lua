@@ -16,7 +16,11 @@ return {
 				annotation = { italic = false },
 				tag_attribute = { italic = false },
 			},
-			filter = "pro", -- classic | octagon | pro | machine | ristretto | spectrum
+            -- Treesitter settings
+            treesitter = {
+              italic = false,
+            },
+                      filter = "pro", -- classic | octagon | pro | machine | ristretto | spectrum
 			day_night = {
 				enable = false,
 				day_filter = "pro",
