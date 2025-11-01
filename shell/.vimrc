@@ -24,9 +24,6 @@ let mapleader = " "  " Space as the leader key
 " ---- WhichKey Shortcuts ----
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
-" -- Python --
-nnoremap <Leader>p :!python main.py<CR>
-
 set termguicolors
 
 " Tokyonight theme settings
@@ -38,20 +35,14 @@ let g:tokyonight_transparent_background = 0
 call plug#begin('~/.vim/plugged')
 
 " C++ dependencies
-Plug 'vim-syntastic/syntastic'
-Plug 'octol/vim-cpp-enhanced-highlight'
-
-" CoC for LSP (Python)
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'vim-syntastic/syntastic'
+" Plug 'octol/vim-cpp-enhanced-highlight'
 
 " Auto pair brackets/parentheses
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
 
 " Tokyonight theme
 Plug 'ghifarit53/tokyonight-vim'
-
-" Cheat sheet for shortcuts (Which Key)
-Plug 'liuchengxu/vim-which-key'
 
 call plug#end()
 
