@@ -8,7 +8,7 @@ return {
 			devicons = true,
 			styles = {
 				comment = { italic = true },
-				keyword = { italic = true },
+				keyword = { italic = false},
 				type = { italic = false },
 				storageclass = { italic = false },
 				structure = { italic = false },

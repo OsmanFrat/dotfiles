@@ -25,3 +25,4 @@ vim.g.maplocalleader = "\\"
 
 -- theme
 vim.cmd([[colorscheme monokai-pro]])
+
