@@ -1,5 +1,4 @@
 " General settings
-set number
 set relativenumber
 set tabstop=4
 set shiftwidth=4
@@ -7,6 +6,7 @@ set expandtab
 set nowrap
 set incsearch
 set hlsearch
+set smartcase
 set completeopt=menu,menuone,noselect
 set showmatch
 set autowrite
@@ -43,6 +43,9 @@ call plug#begin('~/.vim/plugged')
 
 " Tokyonight theme
 Plug 'ghifarit53/tokyonight-vim'
+Plug 'junegunn/fzf', { 'do': './install --bin', 'dir': '~/.fzf' }
+Plug 'junegunn/fzf.vim'
+Plug 'vimwiki/vimwiki'
 
 call plug#end()
 
