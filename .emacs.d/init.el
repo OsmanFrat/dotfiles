@@ -176,8 +176,6 @@
     (vterm)))
 
 
-
-
 (defun my/open-or-create-notes-org ()
   "Open notes.org in current directory, creating it if necessary."
   (interactive)
