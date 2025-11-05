@@ -442,3 +442,15 @@
 		   lsp-ui lua-mode magit org-bullets treesit-auto
 		   vterm yasnippet))
  '(warning-suppress-log-types '((native-compiler))))
+
+;; j ve k tuşlarını Vim'deki gibi jzz / kzz yapmak
+(with-eval-after-load 'evil
+  (evil-define-key 'normal 'global
+    "j" (lambda ()
+          (interactive)
+          (evil-next-line)
+          (recenter))
+    "k" (lambda ()
+          (interactive)
+          (evil-previous-line)
+          (recenter))))
