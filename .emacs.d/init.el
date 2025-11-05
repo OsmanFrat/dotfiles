@@ -237,7 +237,7 @@
   "Create a new .org file inside ~/github/notes/."
   (interactive)
   (let* ((default-directory my-org-notes-directory)
-         (filename (read-string "Yeni not adı (uzantısız): "))
+         (filename (read-string "New note name(without extension): "))
          (filepath (expand-file-name (concat filename ".org") my-org-notes-directory)))
     (if (file-exists-p filepath)
         (message "Dosya zaten var: %s" filepath)
