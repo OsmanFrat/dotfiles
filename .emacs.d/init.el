@@ -240,14 +240,14 @@
          (filename (read-string "New note name(without extension): "))
          (filepath (expand-file-name (concat filename ".org") my-org-notes-directory)))
     (if (file-exists-p filepath)
-        (message "Dosya zaten var: %s" filepath)
+        (message "This file already exists: %s" filepath)
       (progn
         (find-file filepath)
         (insert (format "#+title: %s\n#+date: %s\n\n"
                         filename
                         (format-time-string "%Y-%m-%d")))
         (save-buffer)
-        (message "Yeni not oluşturuldu: %s" filepath)))))
+        (message "New file created: %s" filepath)))))
 
 	
 (use-package general
@@ -266,6 +266,7 @@
     "w" '(save-buffer :wk "Save")
     "q" '(evil-save-and-quit :wk "Save & Quit")
     "Q" '(evil-quit-without-save :wk "Quit without saving")
+    "x" '(kill-current-buffer :wk "Close buffer")
     "r" '(restart-emacs :wk "Restart emacs")
     "g" '(:wk "git")
     "gg" '(my/run-fast-commit :wk "Commit project")
