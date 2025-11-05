@@ -260,7 +260,8 @@
     :non-normal-prefix "C-SPC")
 
   (my-leader-def
-    "n" '(switch-to-buffer :wk "Next buffer")
+;;    "n" '(switch-to-buffer :wk "Next buffer")
+    "n" '(next-buffer :wk "Next buffer")
     "/" '(my/toggle-comment :wk "Toggle comment")
     "i" '(my/toggle-vterm :wk "Toggle vterm")
     "w" '(save-buffer :wk "Save")
