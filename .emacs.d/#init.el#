@@ -367,7 +367,6 @@
          "* TODO %?\n  %u\n  %a")))
 
 (setq org-default-notes-file (concat org-directory "~/github/notes/agenda/notes.org"))
-(setq my-org-notes-directory (expand-file-name "~/github/notes/"))
 
 (require 'org-habit)
 (add-to-list 'org-modules 'org-habit)
