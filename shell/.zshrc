@@ -49,8 +49,6 @@ alias pop='cd $(ls -d ~/github/*/ | fzf)'
 alias not='nvim ~/github/new-notes/notes.norg'
 
 # python aliases
-alias p='python main.py'
-alias pt='python test.py'
 alias py='python'
 alias penv='python -m venv venv'
 alias senv='source venv/bin/activate'
