@@ -232,6 +232,11 @@
   (interactive)
   (dired my-org-notes-directory))
 
+(defun my/open-dired ()
+  "Opens dired."
+  (interactive)
+  (dired default-directory))
+
 ;; SPC o n -> Yeni .org notu oluştur
 (defun my/create-new-org-note ()
   "Create a new .org file inside ~/github/notes/."
@@ -249,9 +254,7 @@
         (save-buffer)
         (message "New file created: %s" filepath)))))
 
-(defun my/open-dired
-  "e" (lambda () (interactive) (dired default-directory)))
-	
+
 (use-package general
   :after evil
   :config
