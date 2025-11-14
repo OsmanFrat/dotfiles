@@ -55,16 +55,6 @@ alias py='python'
 alias penv='python -m venv venv'
 alias senv='source venv/bin/activate'
 
-# C programing
-alias cb='cmake --build build && cd build/ && ./game'
-
-
-# Cpp
-# alias rcpp='file=$(find . -type f -name "*.cpp" | fzf) && g++ -std=c++17 "$file" -o "${file%.*}" && "${file%.*}"'
-alias rcpp='file=$(find . -type f -name "*.cpp" | fzf) && echo "\033[1;34mCompiling: $file\033[0m" && g++ -std=c++17 "$file" -o "${file%.*}" && echo "\033[1;32mRunning:\033[0m" && "${file%.*}" || echo "\033[1;31mDerleme hatası!\033[0m"'
-
-
-
 # General
 alias n='nvim'
 alias v='vim'
