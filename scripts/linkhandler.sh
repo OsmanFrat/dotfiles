@@ -18,22 +18,20 @@ cleanup() {
 }
 trap cleanup EXIT
 
+
 play_media() {
     case "$1" in
         *youtube.com/watch*|*youtube.com/playlist*|*youtube.com/shorts*|*youtu.be*)
-            # YouTube için optimize edilmiş ayarlar
-            yt-dlp -f 'bestvideo[ext=mp4][height<=720]+bestaudio[ext=m4a]/best[ext=mp4]/best' \
-                   --geo-bypass \
-                   --no-part \
-                   --merge-output-format mp4 \
-                   "$url" -o - | mpv --cache=yes \
-                                      --force-seekable=yes \
-                                      --no-cache-pause \
-                                      --input-ipc-server=/tmp/mpv-socket \
-                                      - || {
-                echo "YouTube oynatma başarısız, Firefox ile açılıyor..." >&2
-                setsid -f firefox "$url"
-            }
+            mpv --ytdl=yes \
+                --ytdl-format='bestvideo[height<=720][vcodec!=av01]+bestaudio/best[height<=720][vcodec!=av01]/best' \
+                --cache=yes \
+                --force-seekable=yes \
+                --no-cache-pause \
+                --input-ipc-server=/tmp/mpv-socket \
+                "$url" || {
+                    echo "YouTube oynatma başarısız, Firefox ile açılıyor..." >&2
+                    setsid -f firefox "$url"
+                }
             ;;
         *mkv|*webm|*mp4|*hooktube.com|*bitchute.com|*odysee.com)
             mpv --cache=yes "$url" || setsid -f firefox "$url"
