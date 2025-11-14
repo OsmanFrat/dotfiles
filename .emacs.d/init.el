@@ -249,6 +249,8 @@
         (save-buffer)
         (message "New file created: %s" filepath)))))
 
+(defun my/open-dired
+  "e" (lambda () (interactive) (dired default-directory)))
 	
 (use-package general
   :after evil
@@ -266,6 +268,7 @@
     "w" '(save-buffer :wk "Save")
     "q" '(evil-save-and-quit :wk "Save & Quit")
     "Q" '(evil-quit-without-save :wk "Quit without saving")
+    "e" '(my/open-dired :wk "Open file manager")
     "x" '(kill-current-buffer :wk "Close buffer")
     "r" '(restart-emacs :wk "Restart emacs")
     "g" '(:wk "git")
