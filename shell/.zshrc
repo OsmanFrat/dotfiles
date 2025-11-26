@@ -1,5 +1,3 @@
-eval "$(starship init zsh)"
-
 # history
 HISTFILE=~/.zsh_history
 
