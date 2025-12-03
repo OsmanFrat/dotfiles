@@ -27,9 +27,9 @@ require("lazy").setup({
 		-- import your plugins
 		{ import = "plugins.which-key" },
 		{ import = "plugins.noice" },
-		--		{ import = "plugins.blink" },
+		{ import = "plugins.blink" },
 		--		{ import = "plugins.blink-indent" },
-		--		{ import = "plugins.blink-cmp" },
+    	{ import = "plugins.blink-cmp" },
 		{ import = "plugins.treesitter" },
 		{ import = "plugins.lualine" },
 		{ import = "plugins.nvim-web-devicons" },
