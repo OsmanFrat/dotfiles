@@ -40,7 +40,7 @@ require("lazy").setup({
 		{ import = "plugins.toggleterm" },
 		{ import = "plugins.yazi" },
 		{ import = "plugins.colorscheme" },
-		{ import = "plugins.checkmate" },
+		-- { import = "plugins.checkmate" },
 		{ import = "plugins.nvim-autopairs" },
 		--		{ import = "plugins.conform" },
 		{ import = "plugins.neorg" },
