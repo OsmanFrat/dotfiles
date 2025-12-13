@@ -12,7 +12,7 @@
   "neorg": { "branch": "main", "commit": "e206c9642f4a115cd836e76c98ef785623d335bc" },
   "noice.nvim": { "branch": "main", "commit": "7bfd942445fb63089b59f97ca487d605e715f155" },
   "nui.nvim": { "branch": "main", "commit": "de740991c12411b663994b2860f1a4fd0937c130" },
-  "nvim-autopairs": { "branch": "master", "commit": "7a2c97cccd60abc559344042fefb1d5a85b3e33b" },
+  "nvim-autopairs": { "branch": "master", "commit": "d9e44e54384e5b0f3536339c65484f2e41b528e3" },
   "nvim-nio": { "branch": "master", "commit": "21f5324bfac14e22ba26553caf69ec76ae8a7662" },
   "nvim-notify": { "branch": "master", "commit": "8701bece920b38ea289b457f902e2ad184131a5d" },
   "nvim-treesitter": { "branch": "master", "commit": "42fc28ba918343ebfd5565147a42a26580579482" },
@@ -23,5 +23,5 @@
   "telescope.nvim": { "branch": "master", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
   "toggleterm.nvim": { "branch": "main", "commit": "50ea089fc548917cc3cc16b46a8211833b9e3c7c" },
   "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" },
-  "yazi.nvim": { "branch": "main", "commit": "6d107d47b3ccc9a4130b28530912da3a28073bb5" }
+  "yazi.nvim": { "branch": "main", "commit": "56333cddeb008a69c12e73d586a5d825a8da96a1" }
 }
