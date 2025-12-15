@@ -3,7 +3,7 @@
 
 # Inserts a blank line between shell prompts
 add_newline = false
-command_timeout = 100
+# command_timeout = 100
 
 # Disable the package module, hiding it from the prompt completely
 [package]
