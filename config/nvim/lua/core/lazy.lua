@@ -45,8 +45,8 @@ require("lazy").setup({
 		--		{ import = "plugins.conform" },
 		{ import = "plugins.neorg" },
 		{ import = "plugins.plenary" },
-        { import = "plugins.render-markdown"},
-        { import = "plugins.mini-icons"},
+        -- { import = "plugins.render-markdown"},
+        -- { import = "plugins.mini-icons"},
 	},
 	-- Configure any other settings here. See the documentation for more details.
 	-- colorscheme that will be used when installing plugins.
