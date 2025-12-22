@@ -22,12 +22,12 @@ inoremap jk <Esc>
 let mapleader = " "  " Space as the leader key
 
 " VimWiki
-set nocompatible
-filetype plugin on
-syntax on
-let g:vimwiki_list = [{ 'syntax': 'markdown', 
-                      \ 'ext': 'md',
-		              \ 'path': '/home/ozu/github/vimwiki-notes'}]
+" set nocompatible
+" filetype plugin on
+" syntax on
+" let g:vimwiki_list = [{ 'syntax': 'markdown', 
+"                       \ 'ext': 'md',
+" 		              \ 'path': '/home/ozu/github/vimwiki-notes'}]
 
 
 
