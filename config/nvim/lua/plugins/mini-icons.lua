@@ -1,19 +1,4 @@
 return
 {
-  'nvim-mini/mini-icons.nvim',
-  version = false ,
-  -- Icon style: 'glyph' or 'ascii'
-  style = 'glyph',
-
-  -- Customize per category. See `:h MiniIcons.config` for details.
-  default   = {},
-  directory = {},
-  extension = {},
-  file      = {},
-  filetype  = {},
-  lsp       = {},
-  os        = {},
-
-  -- Control which extensions will be considered during "file" resolution
-  use_file_extension = function(md, markdown) return true end,
+  'nvim-mini/mini.icons', version = false,
 }
