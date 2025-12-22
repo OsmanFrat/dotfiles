@@ -55,7 +55,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'junegunn/fzf', { 'do': './install --bin', 'dir': '~/.fzf' }
 Plug 'junegunn/fzf.vim'
-Plug 'vimwiki/vimwiki'
+" Plug 'vimwiki/vimwiki'
+Plug 'liuchengxu/vim-which-key'
 
 call plug#end()
 
