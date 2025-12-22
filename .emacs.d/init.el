@@ -484,4 +484,4 @@
           (recenter))))
 
 ;; latex denemesi
-(add-hook 'org-mode-hook 'org-fragtog-mode)
+;; (add-hook 'org-mode-hook 'org-fragtog-mode)
