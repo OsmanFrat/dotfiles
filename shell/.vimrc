@@ -22,16 +22,6 @@ inoremap jk <Esc>
 " Leader key settings
 let mapleader = " "  " Space as the leader key
 
-" VimWiki
-" set nocompatible
-" filetype plugin on
-" syntax on
-" let g:vimwiki_list = [{ 'syntax': 'markdown', 
-"                       \ 'ext': 'md',
-" 		              \ 'path': '/home/ozu/github/vimwiki-notes'}]
-
-
-
 " ---- WhichKey Shortcuts ----
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
@@ -55,7 +45,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'junegunn/fzf', { 'do': './install --bin', 'dir': '~/.fzf' }
 Plug 'junegunn/fzf.vim'
-" Plug 'vimwiki/vimwiki'
 Plug 'liuchengxu/vim-which-key'
 Plug 'lervag/vimtex'
 
