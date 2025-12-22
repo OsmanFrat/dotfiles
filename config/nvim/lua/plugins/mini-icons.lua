@@ -1,6 +1,6 @@
 return
 {
-  'nvim-mini/mini.nvim',
+  'nvim-mini/mini-icons.nvim',
   version = false ,
   -- Icon style: 'glyph' or 'ascii'
   style = 'glyph',
@@ -15,5 +15,5 @@ return
   os        = {},
 
   -- Control which extensions will be considered during "file" resolution
-  use_file_extension = function(ext, file) return true end,
+  use_file_extension = function(md, markdown) return true end,
 }
