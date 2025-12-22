@@ -3,7 +3,7 @@ return
   'nvim-mini/mini.nvim',
   version = false ,
   -- Icon style: 'glyph' or 'ascii'
-  -- style = 'glyph',
+  style = 'glyph',
 
   -- Customize per category. See `:h MiniIcons.config` for details.
   default   = {},
