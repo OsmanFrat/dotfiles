@@ -37,7 +37,9 @@ return {
             -- Output is evaluated depending on the type.
             -- | function | `value(context)`              |
             -- | string[] | `cycle(value, context.level)` |
-            icons = { '󰲡 ', '󰲣 ', '󰲥 ', '󰲧 ', '󰲩 ', '󰲫 ' },
+            -- icons = { '󰲡 ', '󰲣 ', '󰲥 ', '󰲧 ', '󰲩 ', '󰲫 ' },
+            icons = {"◉", "○", "✿", "◇", "✸"},
+            --  ♥ ● ◇ ✚ ✜ ☯ ◆ ♠ ♣ ♦ ☢ ❀ ◆ ◖ ▶
             -- Determines how icons fill the available space.
             -- | right   | '#'s are concealed and icon is appended to right side                      |
             -- | inline  | '#'s are concealed and icon is inlined on left side                        |
