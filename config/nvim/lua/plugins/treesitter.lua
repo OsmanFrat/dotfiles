@@ -17,6 +17,7 @@ return {
 		"query",
 		"markdown",
 		"markdown_inline",
+        "latex",
 		"norg", -- Neorg temel desteği
 		"norg_meta", -- Neorg metadata
 		"norg_table", -- Neorg tablolar (eğer hala ayrı parser gerekiyorsa)
