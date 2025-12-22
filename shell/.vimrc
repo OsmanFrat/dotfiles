@@ -42,6 +42,12 @@ let g:tokyonight_style = 'night'
 let g:tokyonight_disable_italic_comment = 1
 let g:tokyonight_transparent_background = 0 
 
+" vimtex settings
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+let g:tex_conceal='abdmg'
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 
