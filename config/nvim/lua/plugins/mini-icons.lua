@@ -17,7 +17,6 @@ return {
 
     -- Control which extensions will be considered during "file" resolution
     use_file_extension = function(ext, file)
-    -- use_file_extension = function(md, markdown)
       return true
     end,
   },
