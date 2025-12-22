@@ -482,3 +482,6 @@
           (interactive)
           (evil-previous-line)
           (recenter))))
+
+;; latex denemesi
+(add-hook 'org-mode-hook 'org-fragtog-mode)
