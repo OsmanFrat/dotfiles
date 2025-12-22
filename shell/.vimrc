@@ -32,21 +32,12 @@ let g:tokyonight_style = 'night'
 let g:tokyonight_disable_italic_comment = 1
 let g:tokyonight_transparent_background = 0 
 
-" vimtex settings
-let g:tex_flavor='latex'
-let g:vimtex_view_method='zathura'
-let g:vimtex_quickfix_mode=0
-set conceallevel=1
-let g:tex_conceal='abdmg'
-
 " Plugins
 call plug#begin('~/.vim/plugged')
 
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'junegunn/fzf', { 'do': './install --bin', 'dir': '~/.fzf' }
 Plug 'junegunn/fzf.vim'
-Plug 'liuchengxu/vim-which-key'
-Plug 'lervag/vimtex'
 
 call plug#end()
 
