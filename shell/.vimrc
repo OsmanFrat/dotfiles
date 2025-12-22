@@ -13,6 +13,7 @@ set autowrite
 set mouse=a
 set clipboard=unnamed,unnamedplus
 
+
 syntax enable
 
 " Normal mode change to kj buttons
@@ -44,19 +45,12 @@ let g:tokyonight_transparent_background = 0
 " Plugins
 call plug#begin('~/.vim/plugged')
 
-" C++ dependencies
-" Plug 'vim-syntastic/syntastic'
-" Plug 'octol/vim-cpp-enhanced-highlight'
-
-" Auto pair brackets/parentheses
-" Plug 'jiangmiao/auto-pairs'
-
-" Tokyonight theme
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'junegunn/fzf', { 'do': './install --bin', 'dir': '~/.fzf' }
 Plug 'junegunn/fzf.vim'
 " Plug 'vimwiki/vimwiki'
 Plug 'liuchengxu/vim-which-key'
+Plug 'lervag/vimtex'
 
 call plug#end()
 
