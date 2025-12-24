@@ -2,6 +2,7 @@ vim.lsp.enable({
 	"lua_ls",
 	"clangd",
 	"pyright",
+    "jdtlp",
 })
 
 vim.diagnostic.config({
