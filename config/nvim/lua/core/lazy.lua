@@ -48,6 +48,7 @@ require("lazy").setup({
         -- { import = "plugins.render-markdown"},
         -- { import = "plugins.mini-icons"},
 		{ import = "plugins.nvim-orgmode" },
+        { import = "plugins.org-bullets"}
 	},
 	-- Configure any other settings here. See the documentation for more details.
 	-- colorscheme that will be used when installing plugins.

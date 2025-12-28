@@ -6,13 +6,16 @@ return {
     },
     config = function()
       require("org-bullets").setup({
-  symbols = {
-    headlines = { "◉", "○", "✸", "✿" },
-    checkboxes = {
-      half = { "", "OrgTSCheckboxHalfChecked" },
-      done = { "✓", "OrgDone" },
-      todo = { " ", "OrgTODO" },
-    },
+        symbols = {
+          headlines = { "◉", "○", "✿", "✸" },
+          checkboxes = {
+            half = { "", "OrgTSCheckboxHalfChecked" },
+            done = { "✓", "OrgDone" },
+            todo = { " ", "OrgTODO" },
+          },
+        },
+      })
     end,
   },
 }
+
