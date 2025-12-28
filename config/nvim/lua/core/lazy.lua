@@ -49,6 +49,7 @@ require("lazy").setup({
         -- { import = "plugins.mini-icons"},
 		{ import = "plugins.nvim-orgmode" },
         { import = "plugins.org-bullets"},
+        { import = "plugins.orgmode-babel"},
         -- { import = "plugins.headlines"}
 	},
 	-- Configure any other settings here. See the documentation for more details.
