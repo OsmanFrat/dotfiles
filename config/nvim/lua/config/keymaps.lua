@@ -43,7 +43,7 @@ vim.keymap.set(
 
 -- open notes
 -- change.set("n", "<leader>on", ":not<CR>", { desc = "Open notes.norg file" })
-change.set("n", "<leader>on", ":e ~/github/new-notes/notes.norg<CR>", { desc = "Open notes.norg file" })
+change.set("n", "<leader>on", ":e ~/github/notes/notes.org<CR>", { desc = "Open notes.org file" })
 
 -- open settings
 change.set("n", "<leader>os", ":e ~/.config/nvim/init.lua<CR>", { desc = "Open notes.norg file" })
