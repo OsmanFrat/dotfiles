@@ -11,7 +11,7 @@ return {
           checkboxes = {
             half = { "", "OrgTSCheckboxHalfChecked" },
             done = { "✓", "OrgDone" },
-            todo = { " ", "OrgTODO" },
+            todo = { "", "OrgTODO" },
           },
         },
       })
