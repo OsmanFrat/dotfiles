@@ -2,7 +2,6 @@ return {
         "lukas-reineke/headlines.nvim",
         dependencies = "nvim-treesitter/nvim-treesitter",
         config = {
-         , -- or `opts = {}`
         opts = {
            org = {
             query = vim.treesitter.parse_query(
@@ -45,6 +44,9 @@ return {
             fat_headlines = true,
             fat_headline_upper_string = "▄",
             fat_headline_lower_string = "▀",
-        }}}
+        },
+      }
+        }, -- or `opts = {}`
+
 }
 
