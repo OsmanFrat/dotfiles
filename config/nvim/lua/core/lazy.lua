@@ -49,7 +49,7 @@ require("lazy").setup({
         -- { import = "plugins.mini-icons"},
 		{ import = "plugins.nvim-orgmode" },
         { import = "plugins.org-bullets"},
-        { import = "plugins.headlines"}
+        -- { import = "plugins.headlines"}
 	},
 	-- Configure any other settings here. See the documentation for more details.
 	-- colorscheme that will be used when installing plugins.
