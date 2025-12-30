@@ -46,6 +46,8 @@ vim.keymap.set(
 vim.keymap.set("n", "<leader>fs", function()
   require("telescope.builtin").find_files({
     cwd = "~/.config/nvim",
+    find_command = { "rg", "--files", "--glob", "*.lua" },
+    no_ignore = true,
   })
 end, { desc = "Open settings" })
 
@@ -54,5 +56,6 @@ vim.keymap.set("n", "<leader>fn", function()
   require("telescope.builtin").find_files({
     cwd = "~/github/notes",
     find_command = { "rg", "--files", "--glob", "*.org" },
+    no_ignore = true,
   })
 end, { desc = "Open notes" })
