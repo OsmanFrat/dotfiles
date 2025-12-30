@@ -41,17 +41,13 @@ vim.keymap.set(
 	{ desc = "Toggle comment for selection" }
 )
 
--- open notes
--- change.set("n", "<leader>on", ":not<CR>", { desc = "Open notes.norg file" })
-change.set("n", "<leader>on", ":e ~/github/notes/notes.org<CR>", { desc = "Open notes.org file" })
-
 -- open settings
 -- change.set("n", "<leader>os", ":e ~/.config/nvim/init.lua<CR>", { desc = "Open setting file" })
 vim.keymap.set("n", "<leader>fs", function()
   require("telescope.builtin").find_files({
-    cwd = "~/github/notes",
+    cwd = "~/.config/nvim",
   })
-end, { desc = "Open notes" })
+end, { desc = "Open settings" })
 
 -- open notes
 vim.keymap.set("n", "<leader>fn", function()
