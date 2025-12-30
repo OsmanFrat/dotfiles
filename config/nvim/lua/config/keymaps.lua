@@ -53,5 +53,6 @@ end, { desc = "Open settings" })
 vim.keymap.set("n", "<leader>fn", function()
   require("telescope.builtin").find_files({
     cwd = "~/github/notes",
+    find_command = { "rg", "--files", "--glob", "*.org" },
   })
 end, { desc = "Open notes" })
