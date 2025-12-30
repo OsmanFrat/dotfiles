@@ -279,8 +279,8 @@
     "f" '(:wk "Find")
     "ff" '(counsel-find-file :wk "Find file")
     "fo" '(counsel-recentf :wk "Recent files")
+    "fn" '(my/open-notes-directory :wk "Open notes directory")
     "o" '(:wk "Org / Notes")
-    "oo" '(my/open-notes-directory :wk "Open notes directory")
     "on" '(my/create-new-org-note :wk "New org note")
     "a" '(:wk "Agenda")  ;; Agenda için bir prefix
     "aa" '(org-agenda :wk "Open agenda")  ;; Agenda'yı aç
