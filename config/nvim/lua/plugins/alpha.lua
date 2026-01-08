@@ -24,7 +24,7 @@ return {
 			dashboard.button("SPC b", "󰎜 New file"),
 			dashboard.button("SPC f f", "  Search"),
 			dashboard.button("SPC f o", "󱋡  Recent files"),
-			dashboard.button("SPC o n", "󰠮  Notes"),
+			dashboard.button("SPC f n", "󰠮  Notes"),
             dashboard.button("SPC o s", "  Settings"),
 			dashboard.button("SPC Q", "󰈆  Exit"),
 		}
