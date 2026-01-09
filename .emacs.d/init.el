@@ -14,6 +14,8 @@
 (setq use-package-always-ensure t)
 (require 'use-package);; Temel ayarlar
 
+;; line wrapping
+(setq-default word-wrap t) 
 
 (setq inhibit-startup-message t)
 (tool-bar-mode -1)
