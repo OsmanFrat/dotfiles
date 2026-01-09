@@ -16,6 +16,7 @@
 
 ;; line wrapping
 (setq-default word-wrap t) 
+(global-visual-line-mode 1)
 
 (setq inhibit-startup-message t)
 (tool-bar-mode -1)
