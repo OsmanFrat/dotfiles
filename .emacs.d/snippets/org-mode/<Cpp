@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
 # name:Cpp code block 
-# key:<Cpp
+# key:<cpp
 # --
-#+begin_src Cpp
+#+begin_src cpp
 $0
 #+end_src
