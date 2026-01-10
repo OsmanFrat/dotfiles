@@ -43,7 +43,7 @@ require("lazy").setup({
 		-- { import = "plugins.checkmate" },
 		{ import = "plugins.nvim-autopairs" },
 		-- { import = "plugins.conform" },
-		{ import = "plugins.neorg" },
+		-- { import = "plugins.neorg" },
 		{ import = "plugins.plenary" },
         -- { import = "plugins.render-markdown"},
         -- { import = "plugins.mini-icons"},
