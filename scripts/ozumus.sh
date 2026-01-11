@@ -4,7 +4,7 @@ function update_local_song_and_play {
   cd "$HOME/Music" || { echo "Error: Could not cd to $HOME/Muzic"; exit 1; }
   mpc clear
   mpc add /
-  mpc play
+  mpc random play
 }
 
 
