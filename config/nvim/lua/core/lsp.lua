@@ -3,6 +3,7 @@ vim.lsp.enable({
 	"clangd",
 	"pyright",
     "jdtls",
+    "omnisharp"
 })
 
 vim.diagnostic.config({
