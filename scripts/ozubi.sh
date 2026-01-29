@@ -26,18 +26,18 @@ if [[ -z "$query" ]]; then
 fi
 
 if [[ -z "$query" ]]; then
-echo Search for torrents on the piratebay
-echo 
-echo USAGE:
-echo     ozubi [OPTIONS] <query>
-echo 
-echo OPTIONS:
-echo     -h, --help         Print help information
-echo     -m, --magnet       Copy magnet link
-echo     -d, --download     Download with qbittorrent
-echo 
-echo     search      Search for torrents
-    exit 1
+  echo Search, watch, download torrent files from piratebay
+  echo 
+  echo USAGE:
+  echo "    ozubi [OPTIONS] <query>"
+  echo 
+  echo "ozubi <query> : open selected Torrent with mpv"
+  echo OPTIONS:
+  echo     -h, --help         Print help information
+  echo     -m, --magnet       Copy magnet link
+  echo     -d, --download     Download with qbittorrent
+  echo 
+  exit 1
 fi
 
 # -----------------------------
