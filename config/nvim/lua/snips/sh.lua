@@ -4,10 +4,16 @@ local t  = ls.text_node
 local i  = ls.insert_node
 
 ls.add_snippets("org", {
-  s("fila", {
-    t({ "#+begin_src sh", "" }),
-    i(0),
-    t({ "", "#+end_src" }),
-  }),
+  s(
+    {
+      trig = "<sh",
+      wordTrig = false,   -- <<< ÇOK ÖNEMLİ
+    },
+    {
+      t({ "#+begin_src sh", "" }),
+      i(0),
+      t({ "", "#+end_src" }),
+    }
+  ),
 })
 
