@@ -142,7 +142,6 @@ fi
 # default output (hiç parametre yoksa)
 # -----------------------------
 if [ "$copy" = false ] && [ "$download" = false ]; then
-  echo
   echo "Video mpv player ile aciliyor..."
   printf '%s' "$secilen_torrent" | wl-copy
   btplay -p mpv "$secilen_torrent"
