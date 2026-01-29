@@ -18,9 +18,10 @@ shift $((OPTIND - 1))
 query="$*"
 
 if [[ -z "$query" ]]; then
-  echo "Usage: $0 [-m] [-d] <query>"
-  echo "-m: $0 copy magnet link"
-  echo "-d: $0 download with qbittorrent"
+  echo "Usage: ozubi [-m] [-d] <query>"
+  echo "-m: copy magnet link"
+  echo "-d: download with qbittorrent"
+  echo "ozubi <query> : open selected Torrent with mpv"
   exit 1
 fi
 
