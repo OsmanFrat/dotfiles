@@ -25,6 +25,25 @@ if [[ -z "$query" ]]; then
   exit 1
 fi
 
+if [[ -z "$query" ]]; then
+Search for torrents on the piratebay
+
+USAGE:
+    piratebay [OPTIONS] <SUBCOMMAND>
+
+OPTIONS:
+    -h, --help       Print help information
+    -j, --json       Output results in json format
+    -V, --version    Print version information
+
+SUBCOMMANDS:
+    category    List torrents in a category
+    help        Print this message or the help of the given subcommand(s)
+    info        Get information about a torrent
+    search      Search for torrents
+    exit 1
+fi
+
 # -----------------------------
 # Video category whitelist
 # -----------------------------
