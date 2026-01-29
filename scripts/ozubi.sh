@@ -26,21 +26,17 @@ if [[ -z "$query" ]]; then
 fi
 
 if [[ -z "$query" ]]; then
-Search for torrents on the piratebay
-
-USAGE:
-    piratebay [OPTIONS] <SUBCOMMAND>
-
-OPTIONS:
-    -h, --help       Print help information
-    -j, --json       Output results in json format
-    -V, --version    Print version information
-
-SUBCOMMANDS:
-    category    List torrents in a category
-    help        Print this message or the help of the given subcommand(s)
-    info        Get information about a torrent
-    search      Search for torrents
+echo Search for torrents on the piratebay
+echo 
+echo USAGE:
+echo     ozubi [OPTIONS] <query>
+echo 
+echo OPTIONS:
+echo     -h, --help         Print help information
+echo     -m, --magnet       Copy magnet link
+echo     -d, --download     Download with qbittorrent
+echo 
+echo     search      Search for torrents
     exit 1
 fi
 
