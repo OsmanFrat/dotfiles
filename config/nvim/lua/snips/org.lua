@@ -7,7 +7,7 @@ ls.add_snippets("org", {
   s(
     {
       trig = "<sh",
-      wordTrig = false,   -- <<< ÇOK ÖNEMLİ
+      wordTrig = false,
     },
     {
       t({ "#+begin_src sh", "" }),
