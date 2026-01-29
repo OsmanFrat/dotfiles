@@ -41,7 +41,7 @@ definitions=$(echo "$body" | jq -r '
   | join("\n\n")
 ')
 
-notify-send -t 20000 "$word" "$definitions"
+notify-send -t 6000 "$word" "$definitions"
 
 # ===== AUDIO (fast start) =====
 audio_url=$(echo "$body" | jq -r '
