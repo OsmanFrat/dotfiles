@@ -1,35 +1,33 @@
 #!/usr/bin/env bash
 
-# Word priority:
-# 1) argument
-# 2) primary selection
-# 3) clipboard
 word="${1:-$(wl-paste -p 2>/dev/null || wl-paste 2>/dev/null)}"
 
-# Empty or invalid input check
 if [[ -z "$word" || "$word" =~ [\/[:space:]] ]]; then
   notify-send -u critical -t 3000 "Invalid input"
   exit 0
 fi
 
-# API request
-query=$(curl -fsS --connect-timeout 5 --max-time 10 \
-  "https://api.dictionaryapi.dev/api/v2/entries/en/$word")
+# API request (IPv4 forced)
+response=$(curl -4 -sS --connect-timeout 5 --max-time 10 \
+  -w "\n%{http_code}" \
+  "https://api.dictionaryapi.dev/api/v2/entries/en_US/$word")
 
-# Curl error
-if [[ $? -ne 0 || -z "$query" ]]; then
-  notify-send -u critical -t 3000 "Connection error"
+body=$(echo "$response" | sed '$d')
+status=$(echo "$response" | tail -n1)
+
+# HTTP error
+if [[ "$status" != "200" ]]; then
+  notify-send -u critical -t 3000 "Connection error" "HTTP $status"
   exit 1
 fi
 
 # Invalid word
-if grep -q "No Definitions Found" <<< "$query"; then
+if grep -q "No Definitions Found" <<< "$body"; then
   notify-send -u critical -t 3000 "Invalid word"
   exit 0
 fi
 
-# First 3 definitions
-definitions=$(echo "$query" | jq -r '
+definitions=$(echo "$body" | jq -r '
   [.[0].meanings[]
    | {pos: .partOfSpeech, def: .definitions[0].definition}]
   | .[:3]
@@ -37,5 +35,5 @@ definitions=$(echo "$query" | jq -r '
   | join("\n\n")
 ')
 
-# Notification
 notify-send -t 60000 "$word" "$definitions"
+
