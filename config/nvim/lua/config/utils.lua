@@ -41,6 +41,15 @@ vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, { desc = "Lsp quick a
 vim.keymap.set("n", "<leader>ld", ":Telescope diagnostics<CR>", { desc = "Telescope: Show diagnostics" })
 vim.keymap.set("n", "<leader>lb", vim.diagnostic.setqflist, { desc = "Lsp show diagnostics(error, warnings etc.)" })
 
+
+-- LuaSnips
+vim.keymap.set({"i", "s"}, "<Tab>", function()
+  return require("luasnip").expand_or_jumpable() and "<Plug>luasnip-expand-or-jump" or "<Tab>"
+end, {expr = true, silent = true})
+
+vim.keymap.set({"i", "s"}, "<S-Tab>", "<Plug>luasnip-jump-prev", {})
+
+
 -- neovide options
 if vim.g.neovide then
 	vim.g.neovide_scale_factor = 1.0 -- Başlangıç boyutu (1.0 = %100)
