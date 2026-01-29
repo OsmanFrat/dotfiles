@@ -19,6 +19,8 @@ query="$*"
 
 if [[ -z "$query" ]]; then
   echo "Usage: $0 [-m] [-d] <query>"
+  echo "-m: $0 copy magnet link"
+  echo "-d: $0 download with qbittorrent"
   exit 1
 fi
 
