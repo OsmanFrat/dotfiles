@@ -51,6 +51,7 @@ require("lazy").setup({
         { import = "plugins.org-bullets"},
         -- { import = "plugins.orgmode-babel"},
         -- { import = "plugins.headlines"}
+        { import = "plugins.luasnip"},
 	},
 	-- Configure any other settings here. See the documentation for more details.
 	-- colorscheme that will be used when installing plugins.
