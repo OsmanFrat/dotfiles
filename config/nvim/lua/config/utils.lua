@@ -49,6 +49,7 @@ end, {expr = true, silent = true})
 
 vim.keymap.set({"i", "s"}, "<S-Tab>", "<Plug>luasnip-jump-prev", {})
 
+
 -- neovide options
 if vim.g.neovide then
 	vim.g.neovide_scale_factor = 1.0 -- Başlangıç boyutu (1.0 = %100)

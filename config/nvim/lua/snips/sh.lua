@@ -3,11 +3,11 @@ local s  = ls.snippet
 local t  = ls.text_node
 local i  = ls.insert_node
 
-ls.add_snippets("sh", {
+ls.add_snippets("org", {
   s("fila", {
-    t({"#+begin_src sh", ""}),
-    i(0),           -- cursor buraya gelecek
-    t({"", "#+end_src"}),
+    t({ "#+begin_src sh", "" }),
+    i(0),
+    t({ "", "#+end_src" }),
   }),
 })
 
