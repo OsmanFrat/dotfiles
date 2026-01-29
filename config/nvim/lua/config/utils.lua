@@ -43,12 +43,12 @@ vim.keymap.set("n", "<leader>lb", vim.diagnostic.setqflist, { desc = "Lsp show d
 
 
 -- LuaSnips
-vim.keymap.set({"i", "s"}, "<Tab>", function()
-  return require("luasnip").expand_or_jumpable() and "<Plug>luasnip-expand-or-jump" or "<Tab>"
-end, {expr = true, silent = true})
-
-vim.keymap.set({"i", "s"}, "<S-Tab>", "<Plug>luasnip-jump-prev", {})
-
+-- vim.keymap.set({"i", "s"}, "<Tab>", function()
+--   return require("luasnip").expand_or_jumpable() and "<Plug>luasnip-expand-or-jump" or "<Tab>"
+-- end, {expr = true, silent = true})
+--
+-- vim.keymap.set({"i", "s"}, "<S-Tab>", "<Plug>luasnip-jump-prev", {})
+--
 
 -- neovide options
 if vim.g.neovide then
