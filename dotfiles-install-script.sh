@@ -61,7 +61,7 @@ sudo pacman -S --noconfirm adw-gtk-theme neovim neovide vim newsboat fastfetch u
 ttf-fira-code noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra noto-fonts-emoji \
 zsh starship stylua prettier python-black pyright alacritty mpc qutebrowser firefox waybar hyprpaper less ripgrep lsd bat fzf aria2 jq fd \
 syncplay pyside6 python-adblock python-mutagen mpv vlc sed curl grep yt-dlp ffmpeg patch github-cli \
-steam pavucontrol qbittorent 
+steam pavucontrol qbittorent btfs
 
 echo "Installing yay..."
 sudo pacman -S --needed --noconfirm git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm
