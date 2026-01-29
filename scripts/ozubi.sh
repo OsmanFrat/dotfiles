@@ -6,25 +6,53 @@ download=false
 # -----------------------------
 # Flag parsing
 # -----------------------------
-while getopts ":md" opt; do
+while getopts ":mdh" opt; do
   case "$opt" in
     m) copy=true ;;
     d) download=true ;;
+    h) 
+      echo "Search, watch, download torrent files from piratebay"
+      echo
+      echo "USAGE:"
+      echo "    ozubi [OPTIONS] <query>"
+      echo
+      echo "OPTIONS:"
+      echo "    -h, --help         Print help information"
+      echo "    -m, --magnet       Copy magnet link"
+      echo "    -d, --download     Download with qbittorrent"
+      echo "    ozubi <query>      Open selected Torrent with mpv"
+      echo
+      exit 0
+      ;;
+    \?) 
+      echo "Unknown option: -$OPTARG" >&2
+      exit 1
+      ;;
   esac
 done
 
 shift $((OPTIND - 1))
 
+# -----------------------------
+# Long option --help kontrolü
+# -----------------------------
+if [[ "$1" == "--help" ]]; then
+  echo "Search, watch, download torrent files from piratebay"
+  echo
+  echo "USAGE:"
+  echo "    ozubi [OPTIONS] <query>"
+  echo
+  echo "OPTIONS:"
+  echo "    -h, --help         Print help information"
+  echo "    -m, --magnet       Copy magnet link"
+  echo "    -d, --download     Download with qbittorrent"
+  echo "    ozubi <query>      Open selected Torrent with mpv"
+  echo
+  exit 0
+fi
+
 query="$*"
-#
-# if [[ -z "$query" ]]; then
-#   echo "Usage: ozubi [-m] [-d] <query>"
-#   echo "-m: copy magnet link"
-#   echo "-d: download with qbittorrent"
-#   echo "ozubi <query> : open selected Torrent with mpv"
-#   exit 1
-# fi
-#
+
 if [[ -z "$query" ]]; then
   echo "Search, watch, download torrent files from piratebay"
   echo 
