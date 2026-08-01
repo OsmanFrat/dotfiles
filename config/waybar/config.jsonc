@@ -236,7 +236,7 @@
   },
 
   "hyprland/language": {
-    "format": " {short}",
+    "format": "  {short}",
     "on-click": "hyprctl keyword input:kb_layout tr",
     "on-click-right": "hyprctl keyword input:kb_layout us"
   },
