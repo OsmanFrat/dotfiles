@@ -110,7 +110,8 @@
     "clock": {
         "format": "{:%b %d | %H:%M | %A}",
         "rotate": 0,
-       "on-click": "/usr/local/bin/ags -t ActivityCenter",
+        "on-click": "/usr/local/bin/ags -t ActivityCenter",
+        "timezone": "Asia/Seoul",
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
             "mode": "month",
